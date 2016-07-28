@@ -226,6 +226,10 @@ a {
   height: 150px;
 }
 
+table{
+
+}
+
 /*******************************/
 
 .pc-client{
@@ -317,7 +321,7 @@ a {
     margin-left: 20px;
   }
 
-  .rule-notice p{
+  .rule-notice{
     -webkit-text-size-adjust: 100%;
     font-family: 'Helvetica', '微軟正黑體';
     font-size: 15px;

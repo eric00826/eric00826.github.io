@@ -28,6 +28,8 @@ main = function (){
 	        'font-size': '26px',
 	        'line-height': '32px'
 	      });
+
+	      
 	    }
 
 			init();

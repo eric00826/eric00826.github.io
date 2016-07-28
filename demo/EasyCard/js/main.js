@@ -24,12 +24,12 @@ main = function (){
 	    if(iOS){
 	    	// alert('iOS line-height');
 
-	    	$('.rule-notice')find('p').css({
+	    	$('.rule-notice').find('p').css({
 	        'font-size': '26px',
 	        'line-height': '32px'
 	      });
 
-	      $('.rule-notice').css({
+	      $('.no-li').css({
 	        'font-size': '26px',
 	        'line-height': '32px'
 	      });

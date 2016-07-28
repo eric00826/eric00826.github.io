@@ -22,8 +22,10 @@ main = function (){
 			var iOS = /iPad|iPhone|iPod/.test(navigator.platform);
 
 	    if(iOS){
+	    	alert('iOS');
+
 	      $('.rule-notice').find('p').css({
-	        ' font-size': '32px'
+	        ' font-size': '36px'
 	      });
 	    }
 

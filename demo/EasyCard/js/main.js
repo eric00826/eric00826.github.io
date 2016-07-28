@@ -29,7 +29,10 @@ main = function (){
 	        'line-height': '32px'
 	      });
 
-	      
+	      $('.rule-notice').find('p').css({
+	        'font-size': '26px',
+	        'line-height': '32px'
+	      });
 	    }
 
 			init();

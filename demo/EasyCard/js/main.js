@@ -25,7 +25,7 @@ main = function (){
 	    	alert('iOS');
 
 	      $('.rule-notice').find('p').css({
-	        ' font-size': '36px'
+	        'font-size': '36px'
 	      });
 	    }
 

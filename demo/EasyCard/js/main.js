@@ -18,6 +18,15 @@ main = function (){
 
 	{
 		$(document).ready(function() {
+
+			var iOS = /iPad|iPhone|iPod/.test(navigator.platform);
+
+	    if(iOS){
+	      $('.rule-notice').find('p').css({
+	        ' font-size': '32px'
+	      });
+	    }
+
 			init();
 		});
 	}

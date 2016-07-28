@@ -54,6 +54,7 @@ a {
 
 .menu-btn{
   float: right;
+  display: none;
 }
 
 .menu{

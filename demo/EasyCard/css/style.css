@@ -291,12 +291,15 @@ a {
   }
 
   .rule-notice p {
+    font-family: 'Helvetica', '微軟正黑體';
     font-size: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 35px;
     text-indent: -35px;
     line-height: 24px;
+
+    color: #ccc;
   }
 
   .rule-btn{

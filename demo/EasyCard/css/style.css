@@ -272,7 +272,6 @@ a {
   .rule-notice{
     width: 600px;
     margin-left: 20px;
-    margin-left: -5px;
   }
 
   .rule-notice p {
@@ -303,6 +302,7 @@ a {
     height: 479px;
     background-image: url(../images/mobile/rule-link-dummy.png);
     padding-top: 22px;
+    margin-left: -5px;
   }
 }
 

@@ -222,6 +222,22 @@ a {
     margin: 0 auto;
     background-image: url(../images/top-kv-dummy-1000.png);
   }
+
+  .top-btn-1 {
+    top: 428px;
+    left: 536px;
+    width: 235px;
+    height: 56px;
+    background-image: url(../images/top-btn-1.png);
+  }
+
+  .top-btn-2 {
+    top: 428px;
+    left: 794px;
+    width: 191px;
+    height: 56px;
+    background-image: url(../images/top-btn-2.png);
+  }
 }
 
 @media only screen and (max-width: 640px) {

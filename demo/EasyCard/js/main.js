@@ -22,7 +22,7 @@ main = function (){
 			var iOS = /iPad|iPhone|iPod/.test(navigator.platform);
 
 	    if(iOS){
-	    	alert('iOS line-height');
+	    	// alert('iOS line-height');
 
 	      $('.rule-notice').find('p').css({
 	        'font-size': '24px',

@@ -29,7 +29,7 @@
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
           ga('create', 'UA-81403308-2', 'auto');
-          ga('send', 'pageview');
+          ga('send', 'pv_index');
 
         </script>
     </head>
@@ -47,8 +47,8 @@
 
             <div id="top-page">
                 <div class="top-kv">
-                    <a href="https://ezweb.easycard.com.tw/" target="_blank" alt="馬上記名GO"><div class="top-btn top-btn-1"></div></a>
-                    <div class="top-btn top-btn-2"></div>
+                    <a href="https://ezweb.easycard.com.tw/" target="_blank" alt="馬上記名GO" onClick="ga_ButtonClick('bt_name');"><div class="top-btn top-btn-1"></div></a>
+                    <a href="#" target="_blank" alt="馬上記名GO" onClick="ga_ButtonClick('bt_winner');"><div class="top-btn top-btn-2"></div></a>
                 </div>
             </div><!-- #top-page -->
 
@@ -82,10 +82,10 @@
                     <p>8、欲了解UUPON，請至點鑽整合行銷股份公司官網查詢：<a href="http://UUPON.tw" target="_blank">UUPON.tw<a></p>
                 </div>
                 <div class="rule-link">
-                    <a href="https://ezweb.easycard.com.tw/" target="_blank" alt="馬上記名賺點數"><div class="rule-btn rule-btn-1"></div></a>
-                    <a href="https://ezweb.easycard.com.tw/eccl2/manual.jsp" target="_blank" alt="記名操作流程"><div class="rule-btn rule-btn-2"></div></a>
-                    <a href="https://uupon.tw/index.do" target="_blank" alt="點數兌換方式"><div class="rule-btn rule-btn-3"></div></a>
-                    <a href="https://uupon.tw/news/detail.do?id=20160722232112507609" target="_blank" alt="悠遊卡集點兌換儲值金"><div class="rule-btn rule-btn-4"></div></a>
+                    <a href="https://ezweb.easycard.com.tw/" target="_blank" alt="馬上記名賺點數" onClick="ga_ButtonClick('bt_name');"><div class="rule-btn rule-btn-1"></div></a>
+                    <a href="https://ezweb.easycard.com.tw/eccl2/manual.jsp" target="_blank" alt="記名操作流程" onClick="ga_ButtonClick('bt_rule');"><div class="rule-btn rule-btn-2"></div></a>
+                    <a href="https://uupon.tw/index.do" target="_blank" alt="點數兌換方式" onClick="ga_ButtonClick('bt_uupon1');"><div class="rule-btn rule-btn-3"></div></a>
+                    <a href="https://uupon.tw/news/detail.do?id=20160722232112507609" target="_blank" alt="悠遊卡集點兌換儲值金" onClick="ga_ButtonClick('bt_uupon2');"><div class="rule-btn rule-btn-4"></div></a>
                 </div>
             </div><!-- #rule-page -->
 

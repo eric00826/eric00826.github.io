@@ -25,8 +25,8 @@ main = function (){
 	    	// alert('iOS line-height');
 
 	      $('.rule-notice').find('p').css({
-	        'font-size': '24px',
-	        'line-height': '28px'
+	        'font-size': '26px',
+	        'line-height': '30px'
 	      });
 	    }
 

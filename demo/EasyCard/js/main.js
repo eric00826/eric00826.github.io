@@ -26,7 +26,7 @@ main = function (){
 
 	      $('.rule-notice').find('p').css({
 	        'font-size': '24px',
-	        'line-height': '28px';
+	        'line-height': '28px'
 	      });
 	    }
 

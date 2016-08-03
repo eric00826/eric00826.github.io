@@ -326,10 +326,10 @@
 
   }
 
-}
-
-.lists {
+  .lists {
     margin-top: 0.5em;
+  }
+
 }
 
 @media screen and (max-width: 900px){

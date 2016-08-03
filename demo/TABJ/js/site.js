@@ -15,25 +15,25 @@ $(function(){
 
   TweenMax.to($(".ani"),.4 ,{x:'5',ease:Linear.easeOut ,yoyo:true ,repeat:-1});
 
-  /*$('.lists .btn').mouseover(function(event) {
+  ('.lists .btn a').mouseover(function(event) {
     $(this).find('.ani').css('display', 'none');
     $(this).find('.over').css('display', 'inline');
   });
 
-  $('.lists .btn').mouseout(function(event) {
+  $('.lists .btn a').mouseout(function(event) {
     $(this).find('.ani').css('display', 'inline');
     $(this).find('.over').css('display', 'none');
   });
 
-  $('.sub1').mouseover(function(event) {
+  $('.sub1 a').mouseover(function(event) {
     $(this).find('.ani').css('display', 'none');
     $(this).find('.over').css('display', 'inline');
   });
 
-  $('.sub1').mouseout(function(event) {
+  $('.sub1 a').mouseout(function(event) {
     $(this).find('.ani').css('display', 'inline');
     $(this).find('.over').css('display', 'none');
-  });*/
+  });
 });
 
 function act1(){

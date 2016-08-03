@@ -115,6 +115,10 @@
   display: none;
 }
 
+#main_box .sub1 .ani-mb{
+  display: none;
+}
+
 
 .list_box{
  margin:0 3%;
@@ -290,9 +294,27 @@
    position:static;
    width:100%;
    height:3em;
+
+   background:#00b0e6;
+   color: #fff;
+   border:1px #fff solid;
   }
   .sub1 a:hover{
-   background:#007ED5;
+   background:#00b0e6;
+   color: #fff;
+   border:1px #fff solid;
+  }
+
+  .sub1 .over{
+    display: inline-block;
+  }
+
+  #main_box .sub1 .ani-pc{
+    display: none;
+  }
+
+  #main_box .sub1 .ani-mb{
+    display: inline-block;
   }
 
   .lists .txt{
@@ -300,6 +322,7 @@
   	 padding:0;
   	 height:11em;
   }
+
   .sub1 a{
    font-size:2.125em;
   }

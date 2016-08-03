@@ -27,12 +27,12 @@ $(function(){
     });
 
     $('.sub1').mouseover(function(event) {
-      $(this).find('.ani').css('display', 'none');
+      $(this).find('.ani-pc').css('display', 'none');
       $(this).find('.over').css('display', 'inline');
     });
 
     $('.sub1').mouseout(function(event) {
-      $(this).find('.ani').css('display', 'inline');
+      $(this).find('.ani-pc').css('display', 'inline');
       $(this).find('.over').css('display', 'none');
     });
   }

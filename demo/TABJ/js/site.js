@@ -15,25 +15,29 @@ $(function(){
 
   TweenMax.to($(".ani"),.4 ,{x:'5',ease:Linear.easeOut ,yoyo:true ,repeat:-1});
 
-  ('.lists .btn').find('a').mouseover(function(event) {
-    $(this).find('.ani').css('display', 'none');
-    $(this).find('.over').css('display', 'inline');
-  });
+  if($('body').width() > 960){
+    $('.lists .btn').mouseover(function(event) {
+      $(this).find('.ani').css('display', 'none');
+      $(this).find('.over').css('display', 'inline');
+    });
 
-  $('.lists .btn').find('a').mouseout(function(event) {
-    $(this).find('.ani').css('display', 'inline');
-    $(this).find('.over').css('display', 'none');
-  });
+    $('.lists .btn').mouseout(function(event) {
+      $(this).find('.ani').css('display', 'inline');
+      $(this).find('.over').css('display', 'none');
+    });
 
-  $('.sub1').find('a').mouseover(function(event) {
-    $(this).find('.ani').css('display', 'none');
-    $(this).find('.over').css('display', 'inline');
-  });
+    $('.sub1').mouseover(function(event) {
+      $(this).find('.ani').css('display', 'none');
+      $(this).find('.over').css('display', 'inline');
+    });
 
-  $('.sub1').find('a').mouseout(function(event) {
-    $(this).find('.ani').css('display', 'inline');
-    $(this).find('.over').css('display', 'none');
-  });
+    $('.sub1').mouseout(function(event) {
+      $(this).find('.ani').css('display', 'inline');
+      $(this).find('.over').css('display', 'none');
+    });
+  }
+
+  
 });
 
 function act1(){

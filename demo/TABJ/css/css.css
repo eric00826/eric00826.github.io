@@ -343,6 +343,16 @@
    line-height:2.2em;
   }
 
+  .lists .btn2:hover{
+ background:#fff;
+ box-shadow: inset  0px -100em 0em -100em #fff;
+ box-sizing: border-box;
+ border: 1px;
+ border-style:solid;
+ border-color: #00b0e6;
+ color: #00b0e6;
+}
+
   .lists .btn:hover{
    background:initial;
    box-shadow: initial;

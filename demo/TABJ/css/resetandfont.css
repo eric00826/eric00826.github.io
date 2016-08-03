@@ -1,0 +1,57 @@
+﻿/* 官網的 RESET 可刪除 */
+html,body{font-size:100%;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,table,th,td,form,fieldset,legend,textarea,input,select,textarea,button,figure,figcaption{margin:0;padding:0;}
+fieldset,li,img{border:0;vertical-align:top;}
+ul,ol{list-style:none;}
+button{overflow:visible;border:0;background-color:transparent;cursor:pointer;}
+button::-moz-focus-inner{padding:0;}
+input,button{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+address,caption,em{font-style:normal;}
+a,a:focus,a:active,a:hover{text-decoration:none;}
+hr{display:none}/*官網有隱藏水平線*/
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, hr, pre, code, form, fieldset, legend, input, textarea, button,  p, blockquote, th, td, a {
+	font-family:'Samsung_Regular','Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
+	-webkit-text-size-adjust:none;
+	text-size-adjust:none;
+	}
+/* 官網的 RESET 可刪除以上 */
+
+
+
+
+@font-face {/*Samsung LOGO 用字體*/
+  font-family: Samsung;
+  src:
+  url(../font/SamsungSharpSans-Bold.woff) format("woff"),
+  url(../font/SamsungSharpSans-Bold.svg) format("svg"),
+  url(../font/SamsungSharpSans-Bold.eot) format("embedded-opentype");
+}
+@font-face {/* Samsung One*/
+  font-family: Samsung_Regular;
+  src:
+  url(../font/SamsungOneTCN-450_20160318.woff) format("woff"),
+  url(../font/SamsungOneTCN-450_20160318.svg) format("svg"),
+  url(../font/SamsungOneTCN-450_20160318.eot) format("embedded-opentype");
+}
+.S_Regular{font-family:Samsung_Regular !important;}/*Samsung ONE 一般體*/
+.S_logo{font-family:Samsung !important;}/*Samsung LOGO 字型*/
+
+
+
+
+/*模擬官網BAR的高度  第一屏可視範圍1366x650  可刪除*/
+.bar{
+	width:100%;
+	height:90px;
+	background-color:#1428a0;
+	color:#CCCCCC;
+	}
+.barfooter{
+	width:100%;
+	height:468px;
+	background-color:#f2f2f2;
+	border-top: 1px solid #dadee2;
+	}
+@media (max-width: 700px){.bar{ height:50px;}}
+/*以上可刪除*/

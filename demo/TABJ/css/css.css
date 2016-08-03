@@ -325,24 +325,6 @@
     transition-duration: 0s;
   }
 
-    .lists .btn2{
-   display:block;
-   width:100%;
-   max-width:266px;
-   height:2.2em;
-   background:#00b0e6;
-   box-shadow: inset  0px -101.1em 0em -100em #009bca;
-   box-sizing: border-box;
-   margin:5% auto;
-   border-radius: 1.2em;
-   font-size:2em;
-   font-weight:normal;
-   color:#fff;
-   text-align:center;
-   vertical-align:middle;
-   line-height:2.2em;
-  }
-
   .lists .btn:hover{
 background:#00b0e6;
  box-shadow: inset  0px -101.1em 0em -100em #009bca;

@@ -439,7 +439,7 @@
   /*************************/
 
   #content-app{
-    height:600px;
+    height:37em;
     font-size: initial;
   }
 
@@ -486,6 +486,11 @@
 #content-wrapper{
  font-size:10px;
 }
+
+#content-app{
+    height:30em;
+    font-size: initial;
+  }
 
   .main-app-txt p{
    font-size: 1.0em;

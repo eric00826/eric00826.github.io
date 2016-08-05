@@ -443,7 +443,7 @@
   /*************************/
 
   #content-app{
-    height:37em;
+    height:30em;
     font-size: initial;
   }
 
@@ -457,12 +457,12 @@
     color: #4e4e4e;
     font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
     padding-right: 20px;
-    font-size: 1.5em;
-    padding: 1.5em;
+    font-size: 1.4em;
+    padding: 1.2em;
   }
 
   #content-note p {
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
 }
 
@@ -492,8 +492,14 @@
 }
 
 #content-app{
-    height:30em;
+    height:25em;
     font-size: initial;
+  }
+
+  #content-app p {
+    line-height: 1.5em;
+    font-size: 1.2em;
+    padding: 1.0em;
   }
 
   .main-app-txt p{
@@ -532,6 +538,18 @@
     margin-left: 0.5em;
     margin-right: 0.5em;
   }
+
+  #content-app{
+    height:20em;
+    font-size: initial;
+  }
+
+  #content-app p {
+    line-height: 1.5em;
+    font-size: 1.0em;
+    padding: 1em;
+  }
+
 }
 @media screen and (max-width: 420px){
 #content-wrapper{

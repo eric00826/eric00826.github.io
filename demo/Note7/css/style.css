@@ -393,8 +393,8 @@
 
   .content-menu-open{
     position: absolute;
-    width: 5em;
-    height: 5em;
+    width: 80px;
+    height: 80px;
     top:0;
     left:-5.5%;
     background-image: url(../images/mobile/menu-open.png);

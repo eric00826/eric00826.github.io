@@ -106,7 +106,7 @@
     letter-spacing:3px;
     margin-top: 5px;
     margin-bottom: 15px;
-    font-family: 'Microsoft JhengHei', '微軟正黑體' ;
+    /*font-family: 'Microsoft JhengHei', '微軟正黑體' ;*/
   }
 
   .main-title p{
@@ -114,7 +114,7 @@
     font-weight: normal;
     letter-spacing:1px;
     line-height: 1.5em;
-    font-family: 'Microsoft JhengHei', '微軟正黑體' ;
+    /*font-family: 'Microsoft JhengHei', '微軟正黑體' ;*/
   }
 
   .main-app{
@@ -140,7 +140,7 @@
   }
 
   .main-app-txt p{
-    font-family: 'Microsoft JhengHei', '微軟正黑體' ;
+    /*font-family: 'Microsoft JhengHei', '微軟正黑體' ;*/
     font-size: 1.3em;
     font-weight: bold;
   }
@@ -163,7 +163,7 @@
     background-color: #fff;
     font-weight: bold;
 
-    font-family: 'Microsoft JhengHei', '微軟正黑體' ;
+    /*font-family: 'Microsoft JhengHei', '微軟正黑體' ;*/
     
     margin-right: 0.4em;
 
@@ -219,7 +219,7 @@
 
   .content-flow-step p{
     font-size: 0.95em;
-    font-family: 'Microsoft JhengHei', '微軟正黑體';
+    font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
     font-weight: bold;
   }
 
@@ -227,7 +227,7 @@
     color: #1abae6;
     text-decoration: underline;
     cursor: auto;
-    font-family: 'Microsoft JhengHei', '微軟正黑體';
+    font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
   }
 
   .content-flow-step img{
@@ -262,7 +262,7 @@
   #content-app p{
     line-height: 26px;
     color: #4e4e4e;
-    font-family: 'Microsoft JhengHei', '微軟正黑體';
+    font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
     padding-right: 20px;
   }
 
@@ -272,7 +272,7 @@
     margin-top: 2em;
     margin-bottom: 2em;
     color: #525252;
-    font-family: 'Microsoft JhengHei', '微軟正黑體';
+    font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
   }
 
   /******************************/
@@ -389,11 +389,12 @@
 
   .content-menu-open{
     position: absolute;
-    width: 82px;
-    height: 82px;
+    width: 5em;
+    height: 5em;
     top:0;
     left:-5.5%;
     background-image: url(../images/mobile/menu-open.png);
+    background-size: 100% 100%;
     z-index: 99999;
   }
 
@@ -450,7 +451,7 @@
   #content-app p {
     line-height: 1.5em;
     color: #4e4e4e;
-    font-family: 'Microsoft JhengHei', '微軟正黑體';
+    font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
     padding-right: 20px;
     font-size: 1.5em;
     padding: 1.5em;

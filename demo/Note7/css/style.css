@@ -601,8 +601,8 @@
 
   .content-menu-open{
     position: absolute;
-    width: 4em;
-    height: 4em;
+    width: 5em;
+    height: 5em;
     top:0;
     left:-5.5%;
     background-image: url(../images/mobile/menu-open.png);
@@ -918,8 +918,8 @@
 
   .content-menu-open-2{
     position: absolute;
-    width: 4em;
-    height: 4em;
+    width: 5em;
+    height: 5em;
     top: 1em;
     left: 2%;
     background-image: url(../images/mobile/menu-open-2.png);

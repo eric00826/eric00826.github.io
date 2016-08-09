@@ -52,11 +52,15 @@ a {
   float: left;
 }
 
-.menu-btn{
+/*.menu-btn{
   float: right;
-  /*display: none;*/
-
   cursor: pointer;
+}*/
+
+.menu-btn{
+  position: fixed;
+  top:0;
+  right: 0;
 }
 
 .menu{

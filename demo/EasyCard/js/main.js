@@ -19,6 +19,9 @@ main = function (){
 		});
 
 		initScrollTop();
+
+		TweenMax.set($('.blogger-box'),{autoAlpha:0});
+		$('.blogger-box').css('display', 'block');
 	}
 
 	function shareFB(_url) {
@@ -34,10 +37,10 @@ main = function (){
     console.log('initScrolltop');
     updateScrollTop();
 
-    $('#wrapper').scroll(function(event) {
+    $(window).scroll(function(event) {
       nowScrollTop = $(window).scrollTop();
 
-      console.log(nowScrollTop);
+      // console.log(nowScrollTop);
 
       updateScrollTop();
     });

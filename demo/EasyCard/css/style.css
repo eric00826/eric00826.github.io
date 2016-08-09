@@ -319,6 +319,47 @@ table{
 
 /*******************************/
 
+.blogger-box{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+
+  background: #0096e0;
+  z-index: 5000;
+
+  display: none;
+}
+
+.blogger-img{
+  position: absolute;
+  width: 976px;
+  height: 690px;
+  top:50%;
+  left:50%;
+  margin-left: -488px;
+  margin-top: -345px;
+  background-image: url(../images/blogger-img.jpg);
+}
+
+.blogger-close{
+  position: absolute;
+  width: 57px;
+  height: 57px;
+  right: 20px;
+  top:20px;
+  background-image: url(../images/close-btn.png);
+  cursor: pointer;
+}
+
+.blogger-close:hover{
+  opacity: .7;
+  filter: alpha(opacity=70);
+}
+
+/*******************************/
+
 .pc-client{
   display: block;
 }

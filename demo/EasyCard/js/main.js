@@ -15,7 +15,7 @@ main = function (){
 
 		$('.fb-btn').click(function(event) {
 			/* Act on the event */
-			shareFB('http://eric00826.github.io/demo/EasyCard/');
+			shareFB('http://event.easycard.com.tw/name/');
 		});
 
 		TweenMax.set($('.blogger-box'),{autoAlpha:0});

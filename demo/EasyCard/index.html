@@ -146,11 +146,13 @@
         <script src="js/main.js"></script>
 
         <script>
-            if(!isMobile){
-              ga_pageView('pv_index');
-            }else{
-              ga_pageView('pv_m_index');
-            }
+            $(document).ready(function(){
+              if(!isMobile){
+                  ga_pageView('pv_index');
+                }else{
+                  ga_pageView('pv_m_index');
+                }
+            });
         </script>
     </body>
 </html>

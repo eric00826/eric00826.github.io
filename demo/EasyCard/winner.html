@@ -219,11 +219,13 @@
         <script src="js/utlis.js"></script>
         <script src="js/main.js"></script>
         <script>
-            if(!isMobile){
-              ga_pageView('pv_winner');
-            }else{
-              ga_pageView('pv_m_winner');
-            }
+            $(document).ready(function(){
+              if(!isMobile){
+                ga_pageView('pv_winner');
+              }else{
+                ga_pageView('pv_m_winner');
+              }
+            });
         </script>
     </body>
 </html>

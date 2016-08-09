@@ -712,6 +712,10 @@ table{
     margin-left: 120px;
     margin-bottom: 20px;
   }
+
+  .cta-btn:hover{
+    background-position: 0 0;
+  }
 }
 
 

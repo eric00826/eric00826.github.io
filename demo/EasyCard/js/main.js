@@ -15,7 +15,7 @@ main = function (){
 
 		$('.fb-btn').click(function(event) {
 			/* Act on the event */
-			shareFB('http://event.easycard.com.tw/name/');
+			shareFB('http://eric00826.github.io/demo/EasyCard/');
 		});
 
 		TweenMax.set($('.blogger-box'),{autoAlpha:0});
@@ -31,12 +31,12 @@ main = function (){
 
 		$('.blogger-img-s').click(function(event) {
 			TweenMax.to($('.blogger-box'),0.5,{autoAlpha:1});
-			// $('#wrapper').css('display', 'none');
+			$('body').css('overflow', 'hidden');
 		});
 
 		$('.blogger-box').find('.blogger-close').click(function(event) {
 			TweenMax.to($('.blogger-box'),0.3,{autoAlpha:0});
-			// $('#wrapper').css('display', 'block');
+			$('body').css('overflow', 'auto');
 		});
 
 		TweenMax.set($('.menu'),{autoAlpha:0});

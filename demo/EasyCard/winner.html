@@ -37,7 +37,6 @@
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
           ga('create', 'UA-81403308-1', 'auto');
-          ga('send', 'pageview', 'pv_winner');
 
         </script>
     </head>
@@ -219,6 +218,12 @@
         <script src="js/libs/TweenMax.min.js"></script>
         <script src="js/utlis.js"></script>
         <script src="js/main.js"></script>
-
+        <script>
+            if(!isMobile){
+              ga_pageView('pv_winner');
+            }else{
+              ga_pageView('pv_m_winner');
+            }
+        </script>
     </body>
 </html>

@@ -18,10 +18,88 @@ main = function (){
 			shareFB('http://eric00826.github.io/demo/EasyCard/');
 		});
 
-		initScrollTop();
-
 		TweenMax.set($('.blogger-box'),{autoAlpha:0});
 		$('.blogger-box').css('display', 'block');
+
+		$('.blogger-img-s').mouseover(function(event) {
+			TweenMax.to($('.blogger-img-s'),0.3,{scale:1.02,alpha:1});
+		});
+
+		$('.blogger-img-s').mouseout(function(event) {
+			TweenMax.to($('.blogger-img-s'),0.3,{scale:1,alpha:1});
+		});
+
+		$('.blogger-img-s').click(function(event) {
+			TweenMax.to($('.blogger-box'),0.5,{autoAlpha:1});
+			// $('#wrapper').css('display', 'none');
+		});
+
+		$('.blogger-box').find('.blogger-close').click(function(event) {
+			TweenMax.to($('.blogger-box'),0.3,{autoAlpha:0});
+			// $('#wrapper').css('display', 'block');
+		});
+
+		TweenMax.set($('.menu'),{autoAlpha:0});
+		$('.menu').css('display', 'block');
+
+		$('.menu-btn').click(function(event) {
+			TweenMax.to($('.menu'),0.5,{autoAlpha:1});
+			// $('#wrapper').css('display', 'none');
+		});
+
+		$('.menu').find('.menu-close').click(function(event) {
+			TweenMax.to($('.menu'),0.3,{autoAlpha:0});
+			// $('#wrapper').css('display', 'block');
+		});
+
+		//////////////////////////
+
+		$('.menu-option-0').click(function(event) {
+			if(!isMobile){
+	      ga_ButtonClick('bt_navi_home');
+	    }else{
+	      ga_ButtonClick('bt_m_navi_home');
+	    }
+
+			location.href = 'index.html#top-page';
+			TweenMax.to($('.menu'),0.3,{autoAlpha:0});
+		});
+
+		$('.menu-option-1').click(function(event) {
+			if(!isMobile){
+	      ga_ButtonClick('bt_navi_blogger');
+	    }else{
+	      ga_ButtonClick('bt_m_navi_blogger');
+	    }
+
+			location.href = 'index.html#comic-page';
+			TweenMax.to($('.menu'),0.3,{autoAlpha:0});
+		});
+
+		$('.menu-option-2').click(function(event) {
+
+			if(!isMobile){
+	      ga_ButtonClick('bt_navi_rule');
+	    }else{
+	      ga_ButtonClick('bt_m_navi_rule');
+	    }
+
+			location.href = 'index.html#rule-page';
+			TweenMax.to($('.menu'),0.3,{autoAlpha:0});
+		});
+
+		$('.menu-option-3').click(function(event) {
+			if(!isMobile){
+	      ga_ButtonClick('bt_navi_winner');
+	    }else{
+	      ga_ButtonClick('bt_m_navi_winner');
+	    }
+
+			location.href = 'winner.html';
+			// TweenMax.to($('.menu'),0.3,{autoAlpha:0});
+		});
+
+		initScrollTop();
 	}
 
 	function shareFB(_url) {

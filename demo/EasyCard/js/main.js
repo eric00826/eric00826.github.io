@@ -99,7 +99,7 @@ main = function (){
 			// TweenMax.to($('.menu'),0.3,{autoAlpha:0});
 		});
 
-		initScrollTop();
+		if(nowPage == "index" ) initScrollTop();
 	}
 
 	function shareFB(_url) {

@@ -127,7 +127,7 @@ main = function (){
   function updateScrollTop() {
     pageTopArray[0] = $('#top-page').offset().top;
     pageTopArray[1] = $('#comic-page').offset().top;
-    
+
     pageTopArray[2] = $('#rule-page').offset().top;
 
     // pageTopArray[2] = $('#tvc-page').offset().top;
@@ -143,7 +143,7 @@ main = function (){
 
     if(_count != nowPageCount){
       nowPageCount = _count;
-      console.log(nowPageCount);
+      // console.log(nowPageCount);
       updatePageview();
     }
   }

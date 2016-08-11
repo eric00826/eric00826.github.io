@@ -15,7 +15,7 @@ main = function (){
 
 		$('.fb-btn').click(function(event) {
 			/* Act on the event */
-			shareFB('http://eric00826.github.io/demo/EasyCard/blogger-share-test.html');
+			shareFB('http://event.easycard.com.tw/name/blogger-share.html');
 		});
 
 		TweenMax.set($('.blogger-box'),{autoAlpha:0});
@@ -152,15 +152,17 @@ main = function (){
     }else if(nextIndex == 2){
       _tag = 'blogger';
     }else if(nextIndex == 3){
-      _tag = 'tvc';
+      _tag = '';
     }else if(nextIndex == 4){
       _tag = 'rule';
     }
 
-    if(!isMobile){
-      ga_pageView('pv_' + _tag);
-    }else{
-      ga_pageView('pv_m_' + _tag);
+    if(_tag != ''){
+      if(!isMobile){
+        ga_pageView('pv_' + _tag);
+      }else{
+        ga_pageView('pv_m_' + _tag);
+      }
     }
   };
 

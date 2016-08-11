@@ -127,8 +127,11 @@ main = function (){
   function updateScrollTop() {
     pageTopArray[0] = $('#top-page').offset().top;
     pageTopArray[1] = $('#comic-page').offset().top;
-    pageTopArray[2] = $('#tvc-page').offset().top;
-    pageTopArray[3] = $('#rule-page').offset().top;
+    
+    pageTopArray[2] = $('#rule-page').offset().top;
+
+    // pageTopArray[2] = $('#tvc-page').offset().top;
+    // pageTopArray[3] = $('#rule-page').offset().top;
 
     var _count;
 
@@ -140,6 +143,7 @@ main = function (){
 
     if(_count != nowPageCount){
       nowPageCount = _count;
+      console.log(nowPageCount);
       updatePageview();
     }
   }
@@ -152,7 +156,8 @@ main = function (){
     }else if(nextIndex == 2){
       _tag = 'blogger';
     }else if(nextIndex == 3){
-      _tag = '';
+      // _tag = 'tvc';
+      _tag = 'rule';
     }else if(nextIndex == 4){
       _tag = 'rule';
     }

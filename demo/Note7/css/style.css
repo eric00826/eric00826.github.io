@@ -1190,6 +1190,7 @@
   .topic-article-box .content-flow-step-row p {
     font-size: 0.95em;
     line-height: 1.4em;
+    font-weight: normal;
   }
 
   .content-flow-step img{

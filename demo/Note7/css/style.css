@@ -964,7 +964,7 @@
     width: auto;
 
     margin-left:0.5em;
-}
+  }
 
   /****************************/
 
@@ -1131,6 +1131,18 @@
 
   .topic-article ol {
     padding-left: 1em;
+    font-size: 2.5em;
+  }
+
+  .topic-article ol p{
+    font-size: 1em !important;
+  }
+
+  .about-tab .active:hover{
+     border-bottom-color:#1abae6;
+     background-color:#fff;
+     border-right-color:#1abae6;
+     color:#1abae6;
   }
 
 }

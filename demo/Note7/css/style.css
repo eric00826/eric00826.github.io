@@ -1272,7 +1272,7 @@
 
 
   .qa-header p{
-    font-size: 3em;
+    font-size: 4em;
   }
 
   .qa-topic{
@@ -1286,7 +1286,7 @@
 
   .qa-topic .qa-topic-title{
     background-position: 1.2em center;
-    background-size: auto 20px;
+    background-size: auto 1.5em;
     padding-left: 4em;
     padding-right: 3.2em;
   }

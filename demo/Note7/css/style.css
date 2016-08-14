@@ -613,6 +613,10 @@
     color: #1abae6;
   }
 
+  .qa-header span{
+    display: none;
+  }
+
   .qa-topic{
     position: relative;
     width: 100%;
@@ -1264,10 +1268,9 @@
   /***********************/
 
   .qa-header{
-    margin-left: 0.5em;
+    padding-left: 1em;
     margin-bottom: 1em;
-    background-position: left center;
-    background-size: auto 24px;
+    background: none;
   }
 
 
@@ -1275,10 +1278,18 @@
     font-size: 4em;
   }
 
+  .qa-header span{
+    display: inline;
+  }
+
   .qa-header img{
     height: 1em;
     margin-top: 0.2em;
     margin-right: 0.5em;
+  }
+
+  .qa-header::before{
+    content: '';
   }
 
   .qa-topic{

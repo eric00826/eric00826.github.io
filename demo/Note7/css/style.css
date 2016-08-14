@@ -1285,9 +1285,9 @@
   }
 
   .qa-topic .qa-topic-title{
-    background-position: 1.2em 1.7em;
+    background-position: 1.2em center;
     background-size: auto 20px;
-    padding-left: 3.2em;
+    padding-left: 4em;
     padding-right: 3.2em;
   }
 

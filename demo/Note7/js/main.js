@@ -14,6 +14,28 @@ main = function (){
 		console.log('main is loaded.');
 
 		initMenu();
+		initAboutTab();
+
+		var touch = window.ontouchstart
+            || (navigator.MaxTouchPoints > 0)
+            || (navigator.msMaxTouchPoints > 0);
+
+		if (touch) { // remove all :hover stylesheets
+		    try { // prevent exception on browsers not supporting DOM styleSheets properly
+		        for (var si in document.styleSheets) {
+		            var styleSheet = document.styleSheets[si];
+		            if (!styleSheet.rules) continue;
+
+		            for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+		                if (!styleSheet.rules[ri].selectorText) continue;
+
+		                if (styleSheet.rules[ri].selectorText.match(':hover')) {
+		                    styleSheet.deleteRule(ri);
+		                }
+		            }
+		        }
+		    } catch (ex) {}
+		}
 	}
 
 	function initMenu() {
@@ -28,6 +50,26 @@ main = function (){
 				$('.content-menu-open').css('background-image', '');
 			}
 		});
+	}
+
+	function initAboutTab() {
+		if($('.about-tab').width() != null){
+
+			$('.about-tab').find('.tab-left').click(function(event) {
+				$('.content-article-1').css('display', 'block');
+				$('.content-article-2').css('display', 'none');
+				$('.about-tab').find('.tab-left').addClass('active');
+				$('.about-tab').find('.tab-right').removeClass('active');
+			});
+
+			$('.about-tab').find('.tab-right').click(function(event) {
+				$('.content-article-1').css('display', 'none');
+				$('.content-article-2').css('display', 'block');
+				$('.about-tab').find('.tab-left').removeClass('active');
+				$('.about-tab').find('.tab-right').addClass('active');
+			});
+
+		}
 	}
 
 	//constructor

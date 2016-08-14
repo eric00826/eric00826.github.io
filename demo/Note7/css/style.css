@@ -106,7 +106,7 @@
     letter-spacing:3px;
     margin-top: 5px;
     margin-bottom: 15px;
-    /*font-family: 'Microsoft JhengHei', '微軟正黑體' ;*/
+    font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
   }
 
   .main-title p{
@@ -114,7 +114,7 @@
     font-weight: normal;
     letter-spacing:1px;
     line-height: 1.5em;
-    /*font-family: 'Microsoft JhengHei', '微軟正黑體' ;*/
+    font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
   }
 
   .main-app{
@@ -140,7 +140,7 @@
   }
 
   .main-app-txt p{
-    /*font-family: 'Microsoft JhengHei', '微軟正黑體' ;*/
+    font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
     font-size: 1.3em;
     font-weight: bold;
   }
@@ -163,7 +163,7 @@
     background-color: #fff;
     font-weight: bold;
 
-    font-family: 'SamsungOneLt','Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
+    font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
     letter-spacing: -0.05em;
     margin-right: 0.4em;
 
@@ -437,6 +437,154 @@
 
   /******************************/
 
+  .content-no-title{
+    display: block !important;
+  }
+
+  /*****************************/
+  /*about*/
+
+  .about-tab{
+    position: relative;
+    width: 99%;
+    margin: 0 auto;
+  }
+
+  .about-tab-btn{
+    display: inline-block;
+    width: 49.8%;
+    text-align: center;
+    border-bottom: 0.2em #d6d6d6 solid;
+    cursor: pointer;
+    color: #d6d6d6;
+
+    box-sizing:border-box;
+  }
+
+  .about-tab-btn:hover{
+   border-bottom: 0.2em #1abae6 solid;
+   background-color: #1abae6;
+   color: #fff;
+  }
+
+  .about-tab-btn p{
+    font-size: 2em;
+    margin: 0.5em;
+    transition-property: color;
+    transition-duration: 0s;
+  }
+
+  .about-tab .tab-left{
+    float: left;
+    border-right: 1px #d6d6d6 solid;
+  }
+
+  .about-tab .tab-right{
+     float: right;
+  }
+
+  .about-tab .active{
+    border-bottom-color:#1abae6;
+    border-right-color: #1abae6;
+    color: #1abae6;
+  }
+
+  .about-tab .active:hover{
+     border-bottom-color: #1abae6;
+     background-color: #1abae6;
+     border-right-color: #1abae6;
+     color: #fff;
+  }
+
+  /******************************/
+
+  .content-article{
+    padding: 2em;
+  }
+
+  .content-article-2{
+    display: none;  
+  }
+
+  .content-article p {
+    line-height: 1.8em;
+    font-size: 1.125em;
+    font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
+    letter-spacing: 0.05em;
+  }
+
+  .about-topic{
+    position: relative;
+    margin-top: 1.5em;
+  }
+
+  .about-topic .topic-title{
+    background-image: url(../images/topic-icon.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 1.37em;
+    padding-left: 1.8em;
+  }
+
+  .about-topic .topic-title p{
+    font-size: 1.37em;
+    font-weight: bold;
+    color: #1abae6;
+  }
+
+  .about-topic .topic-article{
+    padding-left: 1.8em;
+  }
+
+  .topic-article-box{
+    border:1px #1abae6 solid;
+    border-radius: 5px;
+    width: 100%;
+    min-height: 3em;
+    margin-top: 0.8em;
+    background: #fff;
+  }
+
+  .topic-article-box .content-flow-step-row{
+    width: 49%;
+  }
+
+  .topic-article-box .content-flow-step-row p{
+    font-size: 0.85em;
+    line-height: 1.5em;
+  }
+
+  .topic-article ol {
+    padding-left: 1.5em;
+    list-style: decimal;
+    line-height: 0em;
+    font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
+  }
+
+  .topic-article li{
+    line-height: 1.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+  }
+
+  .topic-article li p{
+    font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
+  }
+
+  .topic-article .topic-pic img{
+    width: 100%;
+    height: auto;
+  }
+
+  .topic-article a {
+    color: #1abae6;
+    text-decoration: underline;
+    cursor: auto;
+    font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
+}
+
+  /******************************/
+
   .pc-client{
     display: block;
   }
@@ -578,7 +726,7 @@
   .content-menu-option .btn {
     display: block;
     width: 100%;
-    padding: 1.5em;
+    padding: 1.0em;
     border-radius: 0px;
     background-color: transparent;
     font-weight: bold;
@@ -590,7 +738,7 @@
     cursor: pointer;
     color: #000;
 
-    font-size: 2.375em;
+    font-size: 3.5em;
     border-bottom: 1px #abe7f7 solid;
 
     background-image: url(../images/mobile/menu-arr.png);
@@ -670,7 +818,8 @@
   }
 
   #content-note p {
-    font-size: 1.8em;
+    font-size: 2.2em;
+    line-height: 1.8em;
   }
 
   /******************************/
@@ -704,6 +853,11 @@
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: 10em auto;
+  }
+
+  .content-no-title .mobile-title{
+    height: 8em !important;
+    background:none !important;
   }
 
   .mobile-logo{
@@ -876,7 +1030,7 @@
 
   .result-number p, .result-status-txt p {
     padding: 0em;
-    font-size: 2.2em;
+    font-size: 2.5em;
     font-weight: normal;
     margin-left: 0.5em;
     line-height: 2em;
@@ -890,7 +1044,7 @@
   .result-info-txt p {
     margin-left: 0.5em;
     line-height: 2em;
-    font-size: 2.2em;
+    font-size: 2.5em;
   }
 
   .result-info-txt .info-title {
@@ -927,6 +1081,56 @@
     z-index: 99999;
 
     cursor: pointer;
+  }
+
+
+  /***********************/
+
+  .content-container {
+    width: 96%;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px #00b0e6 solid;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .content-article{
+    padding: 1em;
+  }
+
+  .content-article p {
+    line-height: 1.8em;
+    font-size: 2.5em;
+    font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
+    letter-spacing: 0.02em;
+  }
+
+  .about-tab-btn{
+    font-size: 1.5em;
+  }
+
+  .about-topic .topic-title p {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #1abae6;
+  }
+
+  .topic-article-box .content-flow-step-row p {
+    font-size: 0.65em;
+    line-height: 1.2em;
+  }
+
+  .content-flow-step img{
+    width: 2em;
+  }
+
+  .about-topic .topic-article{
+    padding-left: 0em;
+  }
+
+  .topic-article ol {
+    padding-left: 1em;
   }
 
 }

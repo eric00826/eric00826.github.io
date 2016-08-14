@@ -588,6 +588,7 @@
     font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
   }
 
+
   /*******************************/
   /* Q&A */
 
@@ -597,6 +598,12 @@
     background-position: left center;
     background-size: auto 2em;
     padding-left: 2.2em;
+
+    margin-top: 3em;
+  }
+
+  .first-qa{
+    margin-top: 0em;
   }
 
   .qa-header p{
@@ -613,8 +620,7 @@
     border:1px #00b0e6 solid;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-
-    padding-left: 1.25em;
+    background-color: #fff;
   }
 
   .qa-topic p{
@@ -622,11 +628,24 @@
   }
 
   .qa-topic .qa-topic-title{
+    position: relative;
     background-image: url(../images/qa-topic-icon.png);
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: 1.2em center;
     background-size: auto 1.4em;
-    padding-left: 2em;
+    cursor: pointer;
+    padding-left: 3em;
+    padding-left: 3em;
+  }
+
+  .qa-topic .qa-topic-title:hover{
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    background-color: #40caf0;
+  }
+
+  .qa-topic .active{
+    background-color: #1abae6;
   }
 
   .qa-topic .qa-topic-title::after{
@@ -635,7 +654,7 @@
     height: 100%;
     position: absolute;
     right: 0;
-    bottom: 0;
+    top: 0;
 
     background-image: url(../images/qa-open-icon.png);
     background-repeat: no-repeat;
@@ -647,6 +666,31 @@
     font-size: 1.25em;
     padding-top: 0.8em;
     padding-bottom: 0.8em;
+  }
+
+  .qa-topic .qa-topic-article{
+    padding: 1em;
+
+    display: none;
+
+    background-color: #fff;
+  }
+
+  .qa-topic .qa-topic-article p{
+    font-size: 1.125em;
+    line-height: 1.8em;
+  }
+
+  .qa-topic .topic-pic img{
+    width: 100%;
+    height: auto;
+  }
+
+  .qa-topic-article a {
+    color: #1abae6;
+    text-decoration: underline;
+    cursor: auto;
+    font-family: 'Microsoft JhengHei', '微軟正黑體', 'Arial', 'sans-serif';
   }
 
   /******************************/
@@ -1215,6 +1259,29 @@
      background-color:#fff;
      border-right-color:#1abae6;
      color:#1abae6;
+  }
+
+  /***********************/
+
+  .qa-header{
+    margin-left: 0.5em;
+    margin-bottom: 1em;
+    background-position: left 0.25em;
+  }
+
+  .qa-header p{
+    font-size: 3em;
+  }
+
+  .qa-topic{
+    width: 96%;
+    margin-left: auto;
+    margin-right:  auto;
+  }
+
+  .qa-topic .qa-topic-title p, .qa-topic .qa-topic-article p{
+    font-size: 2.5em;
+    line-height: 1.8em;
   }
 
 }

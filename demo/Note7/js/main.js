@@ -15,6 +15,7 @@ main = function (){
 
 		initMenu();
 		initAboutTab();
+		initQA();
 
 		var touch = window.ontouchstart
             || (navigator.MaxTouchPoints > 0)
@@ -70,6 +71,23 @@ main = function (){
 			});
 
 		}
+	}
+
+	function initQA() {
+		$('.qa-topic').data('isOpen', false);
+		$('.qa-topic').find('.qa-topic-title').click(function(event) {
+			var _topic = $(this).parent();
+			// alert(_topic.data('isOpen'));
+			if(!_topic.data('isOpen')){
+				_topic.data('isOpen', true);
+				_topic.find('.qa-topic-title').addClass('active');
+				_topic.find('.qa-topic-article').css('display', 'block');
+			}else{
+				_topic.data('isOpen', false);
+				_topic.find('.qa-topic-title').removeClass('active');
+				_topic.find('.qa-topic-article').css('display', 'none');
+			}
+		});
 	}
 
 	//constructor

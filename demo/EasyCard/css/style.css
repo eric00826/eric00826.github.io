@@ -345,28 +345,33 @@ table{
   width:100%;
   height: 700px;
 
-  display: none;
+  background-repeat: repeat;
+
+  overflow: hidden;
 }
 
 .tvc-content{
-  position: relative;
-  width: 1000px;
+  position: absolute;
+  width: 1366px;
   height: 700px;
   background: url(../images/tvc-content-dummy.png);
-  margin: 0 auto;
+  left:50%;
+  top:0;
+
+  margin-left: -683px;
 }
 
 .tvc-content .cta-btn{
-    top: 233px;
-    left: 621px;
+    top: 240px;
+    left: 804px;
 }
 
 .tvc-content .fb-btn{
-    top: 430px;
-    left: 187px;
-  width: 222px;
-  height: 50px;
-  background-image: url(../images/fb-btn.png);
+    top: 502px;
+    left: 358px;
+    width: 256px;
+    height: 57px;
+    background-image: url(../images/fb-btn-tvc.png);
 }
 
 .fb-btn{
@@ -649,6 +654,8 @@ table{
     height: 100%;
     background: url(../images/mobile/tvc-content-dummy.png);
     margin: 0;
+
+    left:0;
   }
 
   .tvc-content .cta-btn{
@@ -657,11 +664,11 @@ table{
   }
 
   .tvc-content .fb-btn{
-    top: 692px;
-    left: 209px;
-    width: 222px;
-    height: 50px;
-    background-image: url(../images/fb-btn.png);
+    top: 699px;
+    left: 192px;
+    width: 256px;
+    height: 57px;
+    background-image: url(../images/fb-btn-tvc.png);
   }
 
   /***********************/

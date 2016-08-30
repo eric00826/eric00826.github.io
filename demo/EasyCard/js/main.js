@@ -13,10 +13,15 @@ main = function (){
 	function init () {
 		console.log('main is loaded.');
 
-		$('.fb-btn').click(function(event) {
+		$('#comic-page').find('.fb-btn').click(function(event) {
 			/* Act on the event */
 			shareFB('http://event.easycard.com.tw/name/blogger-share.html');
 		});
+
+    $('#tvc-page').find('.fb-btn').click(function(event) {
+      /* Act on the event */
+      shareFB('http://event.easycard.com.tw/name/');
+    });
 
 		TweenMax.set($('.blogger-box'),{autoAlpha:0});
 		$('.blogger-box').css('display', 'block');
@@ -128,10 +133,10 @@ main = function (){
     pageTopArray[0] = $('#top-page').offset().top;
     pageTopArray[1] = $('#comic-page').offset().top;
 
-    pageTopArray[2] = $('#rule-page').offset().top;
+    // pageTopArray[2] = $('#rule-page').offset().top;
 
-    // pageTopArray[2] = $('#tvc-page').offset().top;
-    // pageTopArray[3] = $('#rule-page').offset().top;
+    pageTopArray[2] = $('#tvc-page').offset().top;
+    pageTopArray[3] = $('#rule-page').offset().top;
 
     var _count;
 
@@ -156,8 +161,7 @@ main = function (){
     }else if(nextIndex == 2){
       _tag = 'blogger';
     }else if(nextIndex == 3){
-      // _tag = 'tvc';
-      _tag = 'rule';
+      _tag = 'tvc';
     }else if(nextIndex == 4){
       _tag = 'rule';
     }

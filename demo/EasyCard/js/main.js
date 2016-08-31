@@ -104,6 +104,18 @@ main = function (){
 			// TweenMax.to($('.menu'),0.3,{autoAlpha:0});
 		});
 
+    $('.menu-option-4').click(function(event) {
+
+      if(!isMobile){
+        ga_ButtonClick('bt_navi_video');
+      }else{
+        ga_ButtonClick('bt_m_navi_video');
+      }
+
+      location.href = 'index.html#tvc-page';
+      TweenMax.to($('.menu'),0.3,{autoAlpha:0});
+    });
+
 		if(nowPage == "index" ) initScrollTop();
 	}
 

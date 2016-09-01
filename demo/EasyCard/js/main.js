@@ -20,7 +20,8 @@ main = function (){
 
     $('#tvc-page').find('.fb-btn').click(function(event) {
       /* Act on the event */
-      shareFB('http://event.easycard.com.tw/name/');
+      // shareFB('http://event.easycard.com.tw/name/tvc-share.html');
+      shareFB('http://eric00826.github.io/demo/EasyCard/tvc-share.html');
     });
 
 		TweenMax.set($('.blogger-box'),{autoAlpha:0});

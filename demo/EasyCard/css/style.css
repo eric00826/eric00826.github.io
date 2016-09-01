@@ -212,9 +212,11 @@ a {
 /***********************/
 
 .rule-link{
-  position: relative;
-  height: 200px;
-  margin:0 auto;
+    position: relative;
+    /* height: 200px; */
+    margin: 0 auto;
+    padding-bottom: 40px;
+    background-repeat: no-repeat;
 }
 
 .rule-btn{
@@ -376,6 +378,52 @@ table{
 
 .fb-btn{
   cursor: pointer;
+}
+
+.video-frame{
+  position: absolute;
+  top: 139px;
+  left: 208px;
+}
+
+.video-player{
+  position: absolute;
+  width: 548px;
+  height: 308px;
+  background-color: rgba(0,0,0,.7);
+  top:0;
+  left: 0;
+}
+
+#YTplayer-2{
+  display: none;
+}
+
+.video-tab{
+  position: absolute;
+  top: 68px;
+  left: 200px;
+}
+
+.video-tab-btn{
+  position: absolute;
+  width: 299px;
+  height: 54px;
+  background-image: url(../images/video-tab-btn.png);
+  background-position: 0 0;
+  font-size: 0;
+}
+
+.tab-btn{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tab-btn:hover{
+  background-color: rgba(255,255,255,.33);
 }
 
 /*******************************/
@@ -595,6 +643,9 @@ table{
     background-image: url(../images/mobile/rule-link-dummy.png);
     padding-top: 22px;
     margin-left: -5px;
+
+    padding-bottom: 0px;
+    background-repeat: no-repeat;
   }
 
   /**********************/
@@ -659,16 +710,28 @@ table{
   }
 
   .tvc-content .cta-btn{
-    top: 245px;
+    top: 230px;
     left: 199px;
   }
 
   .tvc-content .fb-btn{
-    top: 699px;
+    top: 785px;
     left: 192px;
     width: 256px;
     height: 57px;
     background-image: url(../images/fb-btn-tvc.png);
+  }
+
+  .video-frame {
+    position: absolute;
+    top: 412px;
+    left: 40px;
+  }
+
+  .video-tab {
+    position: absolute;
+    top: 339px;
+    left: 169px;
   }
 
   /***********************/

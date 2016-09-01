@@ -16,12 +16,24 @@ main = function (){
 		$('#comic-page').find('.fb-btn').click(function(event) {
 			/* Act on the event */
 			shareFB('http://event.easycard.com.tw/name/blogger-share.html');
+
+      // if(!isMobile){
+      //   ga_ButtonClick('bt_blog_share');
+      // }else{
+      //   ga_ButtonClick('bt_m_blog_share');
+      // }
 		});
 
     $('#tvc-page').find('.fb-btn').click(function(event) {
       /* Act on the event */
       // shareFB('http://event.easycard.com.tw/name/tvc-share.html');
       shareFB('http://eric00826.github.io/demo/EasyCard/tvc-share.html');
+
+      // if(!isMobile){
+      //   ga_ButtonClick('bt_video_share');
+      // }else{
+      //   ga_ButtonClick('bt_m_video_share');
+      // }
     });
 
 		TweenMax.set($('.blogger-box'),{autoAlpha:0});

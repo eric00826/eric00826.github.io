@@ -175,9 +175,9 @@ main = function (){
     var nextIndex = nowPageCount+1;
     var _tag;
 
-    if(YTPlayer_1.B == true){
+    /*if(YTPlayer_1.B == true){
         YTPlayer_1.pauseVideo();
-      }
+      }*/
 
     if(nextIndex == 1){
       _tag = 'index';
@@ -187,6 +187,7 @@ main = function (){
       _tag = 'tvc';
 
       var _autoplayTimeout = setInterval(function() {
+        console.log(YTPlayer_1.B);
         if(YTPlayer_1.B == true && !isPlay){
           clearInterval(_autoplayTimeout);
           isPlay = true;

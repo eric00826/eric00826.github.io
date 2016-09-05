@@ -186,14 +186,18 @@ main = function (){
     }else if(nextIndex == 3){
       _tag = 'tvc';
 
-      var _autoplayTimeout = setInterval(function() {
-        console.log(YTPlayer_1.B);
-        if(YTPlayer_1.B == true && !isPlay){
-          clearInterval(_autoplayTimeout);
-          isPlay = true;
-          YTPlayer_1.playVideo();
-        }
-      },500);
+      if(iOS){
+
+        var _autoplayTimeout = setInterval(function() {
+          console.log(YTPlayer_1.B);
+          if(YTPlayer_1.B == true && !isPlay){
+            clearInterval(_autoplayTimeout);
+            isPlay = true;
+            YTPlayer_1.playVideo();
+          }
+        },500);
+
+      }
 
     }else if(nextIndex == 4){
       _tag = 'rule';
@@ -222,11 +226,12 @@ main = function (){
 
 
 	//constructor
+  var iOS;
 
 	{
 		$(document).ready(function() {
 
-			var iOS = /iPad|iPhone|iPod/.test(navigator.platform);
+			iOS = /iPad|iPhone|iPod/.test(navigator.platform);
 
 	    if(iOS){
 	    	// alert('iOS line-height');

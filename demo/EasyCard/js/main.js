@@ -16,24 +16,13 @@ main = function (){
 		$('#comic-page').find('.fb-btn').click(function(event) {
 			/* Act on the event */
 			shareFB('http://event.easycard.com.tw/name/blogger-share.html');
-
-      // if(!isMobile){
-      //   ga_ButtonClick('bt_blog_share');
-      // }else{
-      //   ga_ButtonClick('bt_m_blog_share');
-      // }
+      // shareFB('http://eric00826.github.io/demo/EasyCard/blogger-share.html');
 		});
 
     $('#tvc-page').find('.fb-btn').click(function(event) {
       /* Act on the event */
-      // shareFB('http://event.easycard.com.tw/name/tvc-share.html');
-      shareFB('http://eric00826.github.io/demo/EasyCard/tvc-share.html');
-
-      // if(!isMobile){
-      //   ga_ButtonClick('bt_video_share');
-      // }else{
-      //   ga_ButtonClick('bt_m_video_share');
-      // }
+      shareFB('http://event.easycard.com.tw/name/tvc-share.html');
+      // shareFB('http://eric00826.github.io/demo/EasyCard/tvc-share.html');
     });
 
 		TweenMax.set($('.blogger-box'),{autoAlpha:0});
@@ -180,15 +169,31 @@ main = function (){
     }
   }
 
+  var isPlay = false;
+
   function updatePageview() {
     var nextIndex = nowPageCount+1;
     var _tag;
+
+    if(YTPlayer_1.B == true){
+        YTPlayer_1.pauseVideo();
+      }
+
     if(nextIndex == 1){
       _tag = 'index';
     }else if(nextIndex == 2){
       _tag = 'blogger';
     }else if(nextIndex == 3){
       _tag = 'tvc';
+
+      var _autoplayTimeout = setInterval(function() {
+        if(YTPlayer_1.B == true && !isPlay){
+          clearInterval(_autoplayTimeout);
+          isPlay = true;
+          YTPlayer_1.playVideo();
+        }
+      },500);
+
     }else if(nextIndex == 4){
       _tag = 'rule';
     }

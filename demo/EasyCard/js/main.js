@@ -186,7 +186,7 @@ main = function (){
     }else if(nextIndex == 3){
       _tag = 'tvc';
 
-      if(iOS){
+      if(!iOS){
 
         var _autoplayTimeout = setInterval(function() {
           console.log(YTPlayer_1.B);

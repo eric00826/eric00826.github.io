@@ -1,0 +1,789 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Eric Hsiao, JWT TAIPEI (eric.hsiao@jwt.com)
+ * @date    2013-12-10 20:43:44
+ * @version $Id$
+ */
+
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Content class
+   ========================================================================== */
+
+html,
+body {
+  margin:0;
+  padding:0;
+  height:100% !important;
+  width: 100% !important;
+  /*overflow: hidden;*/
+}
+
+.content-page{
+  position: relative;
+  width: 100%;
+  /*overflow: hidden;*/
+  background-position: center 0;
+}
+
+.fixed-width{
+  position: absolute;
+  width: :1100px;
+  left:50%;
+  margin-left: -550px;
+}
+
+.loading-mask{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+
+  background-color: #fff;
+  z-index: 1000;
+}
+
+/********************/
+
+#top-page{
+  height: 600px;
+  background-image: url(../images/top-bg.jpg);
+}
+
+#top-girl 
+{ 
+   left: 545px; 
+   top: -173px; 
+   position: absolute; 
+   width: 545px;
+   height: 743px;
+} 
+
+ #top-sub-copy 
+{ 
+   left: 142px; 
+   top: 460px; 
+   position: absolute; 
+   width: 304px;
+   height: 50px;
+} 
+
+ #btn-cta-bg 
+{ 
+   left: 166px; 
+   top: 375px; 
+   position: absolute; 
+   width: 257px;
+   height: 50px;
+} 
+
+ #btn-cta-copy 
+{ 
+   left: 241px; 
+   top: 389px; 
+   position: absolute; 
+   width: 94px;
+   height: 22px;
+} 
+
+ #btn-cta-arr 
+{ 
+   left: 350px; 
+   top: 390px; 
+   position: absolute; 
+   width: 11px;
+   height: 21px;
+} 
+
+ #top-title-copy-2 
+{ 
+   left: 76px; 
+   top: 300px; 
+   position: absolute; 
+   width: 436px;
+   height: 23px;
+} 
+
+ #top-title-line 
+{ 
+   left: 69px; 
+   top: 267px; 
+   position: absolute; 
+   width: 450px;
+   height: 1px;
+} 
+
+ #top-title-copy-1 
+{ 
+   left: 110px; 
+   top: 224px; 
+   position: absolute; 
+   width: 368px;
+   height: 38px;
+} 
+
+ #logo 
+{ 
+   left: 103px; 
+   top: 93px; 
+   position: absolute; 
+   width: 382px;
+   height: 44px;
+} 
+
+.btn-cta{
+  left: 166px;
+  top: 375px;
+  position: absolute;
+  width: 257px;
+  height: 50px;
+  background-color: #f19cab;
+
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+
+.btn-cta:hover{
+  background-color: #ef7389;
+}
+
+.btn-cta-copy{
+  position: absolute;
+  left: 75px;
+  top: 14px;
+}
+
+.btn-cta-arr{
+  position: absolute;
+  left: 184px;
+  top: 15px;
+}
+
+/*************************************/
+
+#product-page{
+  height: 1500px;
+  background-image: url(../images/product-bg.jpg);
+
+  overflow: hidden;
+}
+
+#num4 
+{ 
+   left: 430px; 
+   top: 1097px; 
+   position: absolute; 
+   width: 43px;
+   height: 42px;
+   z-index:1;
+} 
+
+ #num3 
+{ 
+   left: 758px; 
+   top: 890px; 
+   position: absolute; 
+   width: 43px;
+   height: 42px;
+   z-index:2;
+} 
+
+ #num2 
+{ 
+   left: 1050px; 
+   top: 1022px; 
+   position: absolute; 
+   width: 43px;
+   height: 42px;
+   z-index:3;
+} 
+
+ #num1 
+{ 
+   left: 897px; 
+   top: 1202px; 
+   position: absolute; 
+   width: 43px;
+   height: 42px;
+   z-index:4;
+} 
+
+ #product2copy4 
+{ 
+   left: 430px; 
+   top: 1303px; 
+   position: absolute; 
+   width: 321px;
+   height: 137px;
+   z-index:5;
+} 
+
+ #product2copy3 
+{ 
+   left: 20px; 
+   top: 1303px; 
+   position: absolute; 
+   width: 321px;
+   height: 137px;
+   z-index:6;
+} 
+
+ #product2copy2 
+{ 
+   left: 20px; 
+   top: 1139px; 
+   position: absolute; 
+   width: 320px;
+   height: 113px;
+   z-index:7;
+} 
+
+ #product2copy1 
+{ 
+   left: 20px; 
+   top: 971px; 
+   position: absolute; 
+   width: 320px;
+   height: 111px;
+   z-index:8;
+} 
+
+ #product2title 
+{ 
+   left: 47px; 
+   top: 780px; 
+   position: absolute; 
+   width: 263px;
+   height: 105px;
+   z-index:9;
+} 
+
+ #product2line 
+{ 
+   left: 8px; 
+   top: 914px; 
+   position: absolute; 
+   width: 349px;
+   height: 1px;
+   z-index:10;
+} 
+
+ #pro 
+{ 
+   left: -90px; 
+   top: -402px; 
+   position: absolute; 
+   width: 902px;
+   height: 1301px;
+   z-index:11;
+} 
+
+ #product1copyc 
+{ 
+   left: 655px; 
+   top: 515px; 
+   position: absolute; 
+   width: 419px;
+   height: 77px;
+   z-index:12;
+} 
+
+ #product1copyb 
+{ 
+   left: 654px; 
+   top: 399px; 
+   position: absolute; 
+   width: 420px;
+   height: 77px;
+   z-index:13;
+} 
+
+ #product1copya 
+{ 
+   left: 654px; 
+   top: 284px; 
+   position: absolute; 
+   width: 421px;
+   height: 77px;
+   z-index:14;
+} 
+
+ #product1title 
+{ 
+   left: 676px; 
+   top: 114px; 
+   position: absolute; 
+   width: 378px;
+   height: 91px;
+   z-index:15;
+} 
+
+ #product1line 
+{ 
+   left: 646px; 
+   top: 242px; 
+   position: absolute; 
+   width: 437px;
+   height: 1px;
+   z-index:16;
+} 
+
+
+/**********************************/
+
+#video-page{
+  width: 100%;
+  height: 694px;
+  background-image: url(../images/video-bg.jpg);
+}
+
+#videotitle 
+{ 
+   left: 172px; 
+   top: 80px; 
+   position: absolute; 
+   width: 447px;
+   height: 37px;
+   z-index:1;
+} 
+
+ #videoplayer
+{ 
+   left: 174px; 
+   top: 175px; 
+   position: absolute; 
+   width: 750px;
+   height: 420px;
+   z-index:2;
+   background-color: #f4d8d3;
+} 
+
+ #btnvideocta 
+{ 
+   left: 935px; 
+   top: 555px; 
+   position: absolute; 
+   width: 157px;
+   height: 42px;
+   z-index:3;
+} 
+
+ #btnvideoctatxt 
+{ 
+    left: 40px;
+    top: 12px;
+   position: absolute; 
+   width: 58px;
+   height: 18px;
+   z-index:4;
+} 
+
+.videosubtitle-float{
+  position: relative;
+}
+
+#videosubtitle{
+    left: 701px;
+    top: -117px;
+   position: absolute; 
+}
+
+#btnvideocta .btn-cta-arr{
+    left: 110px;
+    top: 10px;
+}
+
+
+/***********************************/
+
+#blogger-page{
+  height: 593px;
+  background-image: url(../images/blogger-bg.jpg);
+}
+
+#blogger-content{
+  width: 1100px;
+  height: 593px;
+  background-image: url(../images/blogger.png);
+}
+
+
+/********************************/
+
+#form-page{
+  height: 707px;
+  background-image: url(../images/form-bg.jpg);
+}
+
+#form-area
+{ 
+   left: 558px; 
+   top: 80px; 
+   position: absolute; 
+   width: 487px;
+   height: 579px;
+   z-index:1;
+
+   background-image: url(../images/form.png);
+} 
+
+.input-txt{
+  position: absolute;
+  /*background-color: rgba(0,0,0,.5);*/
+}
+
+.input-txt input{
+  font-size: 18px;
+  width:100%;
+  height: 100%;
+  color: #585b5d;
+  font-family: '微軟正黑體';
+  background: transparent;
+  outline: none;
+  border: none;
+  text-indent: 10px;
+}
+
+.input-select{
+  position: absolute;
+  /*background-color: rgba(0,0,0,.5);*/
+}
+
+.input-select select{
+  font-size: 14px;
+  width:100%;
+  height: 100%;
+  color: #585b5d;
+  font-family: '微軟正黑體';
+  background: transparent;
+  outline: none;
+  border: none;
+  text-indent: 10px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.input-1{
+  left: 70px;
+  top: 204px;
+  width: 414px;
+  height: 33px;
+}
+
+.input-2{
+  left: 70px;
+  top: 247px;
+  width: 414px;
+  height: 33px;
+}
+
+.input-3{
+    left: 70px;
+    top: 290px;
+    width: 414px;
+    height: 33px;
+}
+
+.input-4{
+    left: 70px;
+    top: 333px;
+    width: 204px;
+    height: 33px;
+}
+
+.input-5{
+    left: 280px;
+    top: 333px;
+    width: 204px;
+    height: 33px;
+}
+
+.input-6{
+  position: absolute;
+  left: 3px;
+  top: 399px;
+  width: 18px;
+  height: 18px;
+}
+
+.input-6 input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.input-7{
+    position: absolute;
+    left: 28px;
+    top: 399px;
+    width: 130px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.alert-mask{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.75);
+
+  top:0;
+  z-index: 500;
+}
+
+.alert-message{
+  position: absolute;
+  width: 600px;
+  height: 232px;
+  left: 50%;
+  top:50%;
+  margin-left: -300px;
+  margin-top: -116px;
+  background-image: url(../images/alert-message.png);
+}
+
+.alert-close{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -4px;
+  right: 46px;
+  cursor: pointer;
+}
+
+ #btnformsubmitbg 
+{ 
+   left: 818px; 
+   top: 467px; 
+   position: absolute; 
+   width: 225px;
+   height: 42px;
+   z-index:2;
+} 
+
+ #btnformsubmittxt 
+{ 
+    left: 40px;
+    top: 14px;
+   position: absolute; 
+   width: 121px;
+   height: 18px;
+   z-index:3;
+} 
+
+ #btnformsubmitarr 
+{ 
+    left: 173px;
+    top: 14px;
+   position: absolute; 
+   width: 9px;
+   height: 17px;
+   z-index:4;
+} 
+
+#btn-form-submit{
+  left: 818px; 
+   top: 467px; 
+   position: absolute; 
+   width: 225px;
+   height: 42px;
+   z-index:2;
+}
+
+.brn-blogger-play{
+  position: absolute;
+  width: 242px;
+  height: 242px;
+  background-image: url(../images/btn-blogger.png);
+  background-repeat: no-repeat;
+  background-position: 242px;
+  top:0;
+
+  /*background-color: rgba(0,0,0,.5);*/
+}
+
+.brn-blogger-play:hover{
+  background-position: 0px;
+}
+
+.brn-blogger-more{
+    position: absolute;
+    left: 85px;
+    top: 293px;
+    width: 76px;
+    color:#4e5153;
+    text-decoration: underline;
+}
+
+.brn-blogger-more:hover{    
+    color:#5bb7f3;
+    /*text-decoration: none;*/
+}
+
+#brn-blogger-1{
+  position: absolute;
+  left: 106px;
+  top: 210px;
+}
+
+#brn-blogger-2{
+  position: absolute;
+  left: 430px;
+  top: 210px;
+}
+
+#brn-blogger-3{
+  position: absolute;
+  left: 752px;
+  top: 210px;
+}
+
+/******************************/
+
+#promo-page{
+  height: 583px;
+  background-image: url(../images/promo-bg.jpg);
+}
+
+ #promo 
+{ 
+   left: 0px; 
+   top: 31px; 
+   position: absolute; 
+   width: 1100px;
+   height: 514px;
+   z-index:1;
+} 
+
+
+ #btnpromotxt 
+{ 
+    left: 55px;
+    top: 17px;
+   position: absolute; 
+   width: 161px;
+   height: 18px;
+   z-index:3;
+} 
+
+ #btnpromoarr 
+{ 
+    left: 229px;
+    top: 18px;
+   position: absolute; 
+   width: 10px;
+   height: 17px;
+   z-index:4;
+} 
+
+ #btnpromo 
+{ 
+   left: 409px; 
+   top: 467px; 
+   position: absolute; 
+   width: 282px;
+   height: 51px;
+   z-index:5;
+   /*background-image: url(../images/btnpromo.png);*/
+
+   border-radius: 25px;
+} 
+
+/*****************************/
+
+#footer-page{
+  height: 211px;
+  background-image: url(../images/footer.png);
+}
+
+
+
+/* ==========================================================================
+   Responsive class
+   ========================================================================== */
+
+
+@media only screen and (max-width: 640px) {
+
+
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}

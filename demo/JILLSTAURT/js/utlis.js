@@ -64,7 +64,7 @@ utlis = function (){
 
 		$(document).ready(function() {
 
-			if($('body').width() <= 640){
+			if($('body').width() <= 1100){
 		      isMobile = true;
 		  }else{
 		    	isMobile = false;

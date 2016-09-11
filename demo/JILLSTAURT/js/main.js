@@ -15,27 +15,37 @@ main = function (){
 	function init () {
 		console.log('main is loaded.');
 
-		topIntro();
-		productIntro();
-		productIntro_2();
+		if(!isMobile){
 
-		promoIntro_t = new TimelineMax();
-		promoIntro_t.from('#btnpromo',1.5,{x:-20,width:0,autoAlpha:0,ease: Expo.easeInOut});
-		promoIntro_t.stop();
+			topIntro();
+			productIntro();
+			productIntro_2();
 
-		setSkrollr($('#video-content'), [[1300, 'opacity:0;top:100px'], [1750, 'opacity:1;top:50px'], [2000, 'opacity:1;top:-50px']]);
-		setSkrollr($('#blogger-content'), [[2100, 'opacity:0;top:100px'], [2600, 'opacity:1;top:50px'], [3200, 'opacity:1;top:-50px']]);
-		setSkrollr($('#form-content'), [[2600, 'opacity:0;top:150px'], [3100, 'opacity:1;top:0px'], [3600, 'opacity:1;top:-100px']]);
+			promoIntro_t = new TimelineMax();
+			promoIntro_t.from('#btnpromo',1.5,{x:-20,width:0,autoAlpha:0,ease: Expo.easeInOut});
+			promoIntro_t.stop();
 
-		updateScrollTop();
+			setSkrollr($('#video-content'), [[1300, 'opacity:0;top:100px'], [1750, 'opacity:1;top:50px'], [2000, 'opacity:1;top:-50px']]);
+			setSkrollr($('#blogger-content'), [[2100, 'opacity:0;top:100px'], [2600, 'opacity:1;top:50px'], [3200, 'opacity:1;top:-50px']]);
+			setSkrollr($('#form-content'), [[2600, 'opacity:0;top:150px'], [3100, 'opacity:1;top:0px'], [3600, 'opacity:1;top:-100px']]);
 
-		$(window).scroll(function(event) {
 			updateScrollTop();
-		});
 
-		skrollr.init({
-      smoothScrolling: true
-    });
+			$(window).scroll(function(event) {
+				updateScrollTop();
+			});
+
+			skrollr.init({
+	      smoothScrolling: true
+	    });
+
+    }else{
+    	TweenMax.to('.top-girl-img',5,{y:10, rotation:6 , yoyo:true,ease: Sine.easeInOut,repeat:-1});
+			TweenMax.to('.top-girl-img-2',3,{y:-30, yoyo:true,ease: Sine.easeInOut,repeat:-1});
+
+    	TweenMax.to('.loading-mask',2,{autoAlpha:0});
+    	TweenMax.to('.btn-cta-arr',0.5,{x:5,yoyo:true,ease:Power2.easeOut,repeat:-1});
+    }
 
     /**********************/
 

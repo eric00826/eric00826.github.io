@@ -60,6 +60,8 @@ body {
 #top-page{
   height: 600px;
   background-image: url(../images/top-bg.jpg);
+
+  overflow: hidden;
 }
 
 #top-girl 

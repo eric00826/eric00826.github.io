@@ -25,7 +25,7 @@ main = function (){
 			promoIntro_t.from('#btnpromo',1.5,{x:-20,width:0,autoAlpha:0,ease: Expo.easeInOut});
 			promoIntro_t.stop();
 
-			setSkrollr($('#video-content'), [[1300, 'opacity:0;top:100px'], [1750, 'opacity:1;top:50px'], [2000, 'opacity:1;top:-50px']]);
+			setSkrollr($('#video-content'), [[1300, 'opacity:0;top:200px'], [1750, 'opacity:1;top:100px'], [2000, 'opacity:1;top:0px']]);
 			setSkrollr($('#blogger-content'), [[2100, 'opacity:0;top:100px'], [2600, 'opacity:1;top:50px'], [3200, 'opacity:1;top:-50px']]);
 			setSkrollr($('#form-content'), [[2600, 'opacity:0;top:150px'], [3100, 'opacity:1;top:0px'], [3600, 'opacity:1;top:-100px']]);
 

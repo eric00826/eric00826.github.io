@@ -1,0 +1,85 @@
+<!--
+	NOTES:
+	1. All tokens are represented by '$' sign in the template.
+	2. You can write your code only wherever mentioned.
+	3. All occurrences of existing tokens will be replaced by their appropriate values.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>flower_ani</title>
+<!-- write your code here -->
+
+
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="flower_ani.js?1467626676669"></script>
+<script src="flower_ani2.js"></script>
+
+<script>
+
+var exportRoot, exportRoot_2;
+
+function init() {
+	// --- write your JS code here ---
+	
+	var canvas, stage;
+	createjs.MotionGuidePlugin.install();
+
+	canvas = document.getElementById("canvas");
+	exportRoot = new lib.flower_ani();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+
+	exportRoot.stop();
+}
+
+function init2() {
+  var canvas, stage;
+	createjs.MotionGuidePlugin.install();
+
+	canvas = document.getElementById("canvas2");
+	exportRoot_2 = new lib.flower_ani2();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot_2);
+	stage.update();
+
+	createjs.Ticker.setFPS(24);
+	createjs.Ticker.addEventListener("tick", stage);
+
+	exportRoot_2.stop();
+}
+
+function moviePlay() {
+
+	var _i = Math.floor((Math.random()*10))%2;
+
+	console.log(_i);
+
+	if(_i == 0){
+		exportRoot.stop();
+		exportRoot.gotoAndPlay(0);
+	}else if(_i == 1){
+		exportRoot_2.stop();
+		exportRoot_2.gotoAndPlay(0);
+	}
+}
+
+</script>
+
+<!-- write your code here -->
+
+</head>
+<body onload="init();init2();">
+	<canvas id="canvas" width="200" height="200" style="background-color:#FFFFFF"></canvas>
+	<canvas id="canvas2" width="200" height="200" style="background-color:#FFFFFF"></canvas>
+	<button onClick="moviePlay();">knockknock</button>
+</body>
+</html>

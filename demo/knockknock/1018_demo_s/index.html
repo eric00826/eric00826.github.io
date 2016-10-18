@@ -27,15 +27,29 @@
 
 	#wrapper{
 		position: relative;
-		width: 800px;
-		height: 250px;
+		width: 1920px;
+		height: 953px;
 
 		/*border: 1px solid #000;*/
 		/*margin: 0 auto;*/
+
+		background-image: url(index2.jpg);
 	}
 
 	#wrapper canvas{
-		float: left;
+		/*float: left;*/
+	}
+
+	#canvas-1{
+		position: absolute;
+    left: 165px;
+    top: 98px;
+	}
+
+	#canvas-2{
+		position: absolute;
+    left: 1018px;
+    top: 673px;
 	}
 </style>
 
@@ -105,7 +119,7 @@ function updateScreenSize() {
 	var _w = $(window).width();
 	var _h = $(window).height();
 
-	var _d = _w/800;
+	var _d = _w/1920;
 
 	console.log(_d);
 	TweenMax.to('#wrapper',0.3,{transformOrigin:"0% 0%", scale:_d,z:0.01});

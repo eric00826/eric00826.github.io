@@ -308,12 +308,14 @@ main = function (){
 
 		console.log(_save);
 
-		for (var i = 0; i < mySave.child.length; i++) {
+		for (var i = 0; i < _save.child.length; i++) {
 			var _data = _save.child[i];
 
 			//loadData
 			var _load = stage.addChild(new simpleObject(_data.objType,_data.originWidth,_data.originHeight,_data.option,_data.status));
 			_load.transformMatrix = _data.status.transformMatrixInfo;
+
+			console.log('child[' + i + '] = ' + _data.objType)
 		};
 	}
 

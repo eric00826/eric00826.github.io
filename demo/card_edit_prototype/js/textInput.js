@@ -103,7 +103,7 @@ class textInput extends createjs.Container {
       this._bg.graphics.clear();
     }
 
-    this._bg.graphics.setStrokeStyle(3).beginFill("rgba(255,255,255,.01)").beginStroke("#ccc").drawRect(0, 0, this.option.width, this.option.fontSize* (1 + this.option.fontOffset*2));
+    this._bg.graphics.setStrokeStyle(3).beginStroke("#666").drawRect(0, 0, this.option.width, this.option.fontSize* (1 + this.option.fontOffset*2));
   }
 
   _setupPlaceHolderText() {

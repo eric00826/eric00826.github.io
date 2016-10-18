@@ -264,7 +264,7 @@ class textInput extends createjs.Container {
     } else {
       this._deSelectInput();
       this._cursor.visible = false;
-      this._bg.alpha = 0.05;
+      this._bg.alpha = 0;
     }
   }
 

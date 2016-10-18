@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html class="ie6 lte9 lte8 lte7" lang="zh-tw"><![endif]-->
+<!--[if IE 8]><html class="ie8 lte9 lte8" lang="zh-tw"><![endif]-->
+<!--[if IE 9]><html class="ie9 lte9" lang="zh-tw"><![endif]-->
+<!--[if IE 7]><html class="ie7 lte9 lte8 lte7" lang="zh-tw"><![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8) | !(IE 9)  ]><!--><html  lang="zh-tw"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta content-language="zh-TW">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=1200,user-scalable=1">
+        <meta property="og:title" content=""/>
+        <meta property="og:description" content=""/>
+        <meta property="og:url" content=""/>
+        <meta property="og:image" content=""/>
+
+         <title></title>
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanstc.css">
+        <script src="js/libs/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+
+        <div id="wrapper">
+            <canvas id="mainCanvas" width="1080" height="660">
+                alternate content
+            </canvas>
+
+            <fieldset id="tools">
+                <legend>工具列</legend>
+                <button class="btn btn-default btn-addImageObj-1">新增圖片1</button>
+                <button class="btn btn-default btn-addImageObj-2">新增圖片2</button>
+                <br>
+                <button class="btn btn-default btn-addShapeObj-1">新增圖案1</button>
+                <button class="btn btn-default btn-addShapeObj-2">新增圖案2</button>
+                <br>
+                <button class="btn btn-default btn-addTextObj">新增文字</button>
+                <br><br>
+                <div>
+                   <button class="btn btn-success btn-load">載入範例</button> 
+                   <button class="btn btn-success btn-load-2">載入範例2</button>
+                   <br>
+                   <button class="btn btn-default btn-save">產生存檔</button> 
+                </div>
+
+                <div>
+                   <a id="download-large" download="原圖.png"><button class="btn btn-default btn-large">下載原圖</button></a>
+                   <a id="download-small" download="縮圖.jpg"><button class="btn btn-default btn-small">下載縮圖</button></a>
+
+                </div>
+
+                <br><br>
+                <!-- <button class="btn btn-default btn-upGroup">解散群組</button> -->
+
+                <div class="tools-option tools-simple">
+                    
+                    <button class="btn btn-default btn-clone">複製</button>
+                    <button class="btn btn-default btn-remove">刪除</button>
+                    <br>
+                    <br>
+                    等比
+                    <button class="btn btn-default btn-upScale">放大</button>
+                    <button class="btn btn-default btn-downScale">縮小</button>
+                    <br>
+                    寬度
+                    <button class="btn btn-default btn-upScaleX">放大</button>
+                    <button class="btn btn-default btn-downScaleX">縮小</button>
+                    <br>
+                    高度
+                    <button class="btn btn-default btn-upScaleY">放大</button>
+                    <button class="btn btn-default btn-downScaleY   ">縮小</button>
+                    <br>
+                    旋轉
+                    <button class="btn btn-default btn-upRotate">順時鐘</button>
+                    <button class="btn btn-default btn-downRotate">逆時鐘</button>
+                    <br><br>
+                </div>
+
+                <div class="tools-option tools-shape">
+                    色彩
+                    <button class="btn btn-default btn-shapeColor-1">#CCC</button>
+                    <button class="btn btn-default btn-shapeColor-2">#666</button>
+                    <button class="btn btn-default btn-shapeColor-3">#000</button>
+                    <br><br>
+                </div>
+
+                <div class="tools-option tools-text">
+                    <div>
+                        字體
+                        <button class="btn btn-default btn-fontWeight-100">細體</button>
+                        <button class="btn btn-default btn-fontWeight-400">粗體</button>
+                        <button class="btn btn-default btn-fontWeight-700">特粗體</button>
+                    </div>
+                    <div>
+                        大小
+                        <button class="btn btn-default btn-fontSize-20">20px</button>
+                        <button class="btn btn-default btn-fontSize-40">40px</button>
+                        <button class="btn btn-default btn-fontSize-60">60px</button>
+                    </div>
+                    <div>
+                        對齊
+                        <button class="btn btn-default btn-textAlign-left">置左</button>
+                        <button class="btn btn-default btn-textAlign-center">置中</button>
+                    </div>
+                    <div>
+                        色彩
+                        <button class="btn btn-default btn-fontColor-1">#CCC</button>
+                        <button class="btn btn-default btn-fontColor-2">#666</button>
+                        <button class="btn btn-default btn-fontColor-3">#000</button>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div id="DLImg"></div>
+
+        </div><!-- #wrapper -->
+        
+        <script src="js/libs/jquery-1.11.1.min.js"></script>
+        <script src="js/libs/easeljs-NEXT.min.js"></script>
+        <script src="js/libs/canvas2image.js"></script>
+        <script src="js/libs/html2canvas.min.js"></script>
+        <script src="js/textInput.js"></script>
+        <script src="js/simpleObject.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

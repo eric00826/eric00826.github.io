@@ -114,7 +114,7 @@ main = function (){
     	}*/
 
     	// TweenMax.from($point,3,{delay:i*.2,rotation:360,x:_nX,y:_nY,ease: Elastic.easeOut.config(1, 0.5)});
-    	TweenMax.from($point,2,{delay:i*.1,rotation:360,x:_nX,y:_nY,ease: Elastic.easeOut.config(1, 0.8)});
+    	TweenMax.from($point,2.5,{delay:i*.1,rotation:360,x:_nX,y:_nY,ease: Elastic.easeOut.config(1, 0.8)});
 		};
 
 		setTimeout(function () {
@@ -127,10 +127,10 @@ main = function (){
 			initKnock();
 		},1600);
 
-		TweenMax.to('#title-0',8,{delay:0,autoAlpha:1,ease: Expo.easeOut});
+		TweenMax.to('#title-0',9,{delay:0,autoAlpha:1,ease: Expo.easeOut});
 		// TweenMax.to('#title-0',8,{scale:1,ease: Expo.easeOut});
-		TweenMax.to('#title-1',3,{delay:0.5,autoAlpha:1,scale:1,y:0,ease: Expo.easeOut});
-		TweenMax.to('#title-2',2,{delay:0.8,autoAlpha:1,scale:1,y:0,ease: Expo.easeOut});
+		TweenMax.to('#title-1',3.5,{delay:0.6,autoAlpha:1,scale:1,y:0,ease: Expo.easeOut});
+		TweenMax.to('#title-2',2.5,{delay:1,autoAlpha:1,scale:1,y:0,ease: Expo.easeOut});
 	}
 
 	function initHandAni() {

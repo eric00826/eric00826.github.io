@@ -241,6 +241,8 @@ main = function (){
 	 			isPlayCount += 1;
 	 			stopAutoPlay();
 	 			$(this).parent().data('isPlay',true);
+
+	 			TweenMax.to($(this).parent(),0.1,{y:-5,yoyo:true,repeat:3})
 	 		}
  			
  		});

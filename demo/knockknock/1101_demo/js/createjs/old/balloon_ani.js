@@ -1470,7 +1470,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,16.9,26.7);
 	this.instance = new lib.handle();
 	this.instance.setTransform(75,263.3,1,1,0,0,0,1.9,0);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(24).to({x:80.2,y:263},14,cjs.Ease.get(1)).wait(256).to({x:75,y:263.3},8).wait(8));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:80.2,y:263},14,cjs.Ease.get(1)).wait(256).to({x:75,y:263.3},8).wait(8));
 
 	// door_open
 	this.shape = new cjs.Shape();
@@ -1629,14 +1629,14 @@ p.nominalBounds = new cjs.Rectangle(0,0,16.9,26.7);
 	this.shape_38.graphics.f("#FFFFFF").s().p("AkSBBIFQkAIDVBdIlKEig");
 	this.shape_38.setTransform(80.1,271);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).to({state:[{t:this.shape_1},{t:this.shape}]},24).to({state:[{t:this.shape_3},{t:this.shape_2}]},1).to({state:[{t:this.shape_5},{t:this.shape_4}]},1).to({state:[{t:this.shape_7},{t:this.shape_6}]},1).to({state:[{t:this.shape_9},{t:this.shape_8}]},1).to({state:[{t:this.shape_11},{t:this.shape_10}]},1).to({state:[{t:this.shape_13},{t:this.shape_12}]},1).to({state:[{t:this.shape_15},{t:this.shape_14}]},1).to({state:[{t:this.shape_17},{t:this.shape_16}]},1).to({state:[{t:this.shape_19},{t:this.shape_18}]},1).to({state:[{t:this.shape_21},{t:this.shape_20}]},1).to({state:[{t:this.shape_23},{t:this.shape_22}]},1).to({state:[{t:this.shape_25},{t:this.shape_24}]},1).to({state:[{t:this.shape_27},{t:this.shape_26}]},1).to({state:[{t:this.shape_29},{t:this.shape_28}]},1).to({state:[{t:this.shape_29},{t:this.shape_28}]},256).to({state:[{t:this.shape_19},{t:this.shape_18}]},1).to({state:[{t:this.shape_15},{t:this.shape_14}]},1).to({state:[{t:this.shape_31},{t:this.shape_30}]},1).to({state:[{t:this.shape_9},{t:this.shape_32}]},1).to({state:[{t:this.shape_34},{t:this.shape_33}]},1).to({state:[{t:this.shape_36},{t:this.shape_35}]},1).to({state:[{t:this.shape_38},{t:this.shape_37}]},1).to({state:[{t:this.shape_1},{t:this.shape}]},1).wait(8));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).to({state:[{t:this.shape_3},{t:this.shape_2}]},1).to({state:[{t:this.shape_5},{t:this.shape_4}]},1).to({state:[{t:this.shape_7},{t:this.shape_6}]},1).to({state:[{t:this.shape_9},{t:this.shape_8}]},1).to({state:[{t:this.shape_11},{t:this.shape_10}]},1).to({state:[{t:this.shape_13},{t:this.shape_12}]},1).to({state:[{t:this.shape_15},{t:this.shape_14}]},1).to({state:[{t:this.shape_17},{t:this.shape_16}]},1).to({state:[{t:this.shape_19},{t:this.shape_18}]},1).to({state:[{t:this.shape_21},{t:this.shape_20}]},1).to({state:[{t:this.shape_23},{t:this.shape_22}]},1).to({state:[{t:this.shape_25},{t:this.shape_24}]},1).to({state:[{t:this.shape_27},{t:this.shape_26}]},1).to({state:[{t:this.shape_29},{t:this.shape_28}]},1).to({state:[{t:this.shape_29},{t:this.shape_28}]},256).to({state:[{t:this.shape_19},{t:this.shape_18}]},1).to({state:[{t:this.shape_15},{t:this.shape_14}]},1).to({state:[{t:this.shape_31},{t:this.shape_30}]},1).to({state:[{t:this.shape_9},{t:this.shape_32}]},1).to({state:[{t:this.shape_34},{t:this.shape_33}]},1).to({state:[{t:this.shape_36},{t:this.shape_35}]},1).to({state:[{t:this.shape_38},{t:this.shape_37}]},1).to({state:[{t:this.shape_1},{t:this.shape}]},1).wait(8));
 
 	// bird05
 	this.instance_1 = new lib.bird_02();
 	this.instance_1.setTransform(44.9,94.5,0.622,0.624,0,-28.7,151.3,3.8,14.5);
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(192).to({_off:false},0).to({x:89.1,y:77.9},88,cjs.Ease.get(0.5)).to({scaleX:0.62,scaleY:0.62,skewX:-28.6,skewY:151.4,x:105.8,y:71.5,alpha:0},14).wait(16));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(168).to({_off:false},0).to({x:89.1,y:77.9},88,cjs.Ease.get(0.5)).to({scaleX:0.62,scaleY:0.62,skewX:-28.6,skewY:151.4,x:105.8,y:71.5,alpha:0},14).wait(16));
 
 	// 圖層 20 (mask)
 	var mask = new cjs.Shape();
@@ -1654,8 +1654,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,16.9,26.7);
 
 	this.instance_2.mask = this.instance_3.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_2}]},50).to({state:[{t:this.instance_2}]},141).to({state:[{t:this.instance_3}]},1).wait(118));
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(50).to({_off:false},0).to({x:43,y:93.6},141,cjs.Ease.get(0.5)).to({_off:true},1).wait(118));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_2}]},26).to({state:[{t:this.instance_2}]},141).to({state:[{t:this.instance_3}]},1).wait(118));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(26).to({_off:false},0).to({x:43,y:93.6},141,cjs.Ease.get(0.5)).to({_off:true},1).wait(118));
 
 	// bird04
 	this.instance_4 = new lib.bird_01();
@@ -1664,7 +1664,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,16.9,26.7);
 
 	this.instance_4.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(185).to({_off:false},0).to({x:122.6,y:88.9},88,cjs.Ease.get(0.5)).to({x:133.8,y:87.3,alpha:0},21).wait(16));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(161).to({_off:false},0).to({x:122.6,y:88.9},88,cjs.Ease.get(0.5)).to({x:133.8,y:87.3,alpha:0},21).wait(16));
 
 	// b_04
 	this.instance_5 = new lib.b_04();
@@ -1676,8 +1676,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,16.9,26.7);
 
 	this.instance_5.mask = this.instance_6.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_5}]},47).to({state:[{t:this.instance_5}]},137).to({state:[{t:this.instance_6}]},1).wait(125));
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(47).to({_off:false},0).to({x:79.3,y:118.3},137,cjs.Ease.get(0.5)).to({_off:true,regX:5.4,regY:7.4,scaleX:0.87,scaleY:0.99,rotation:25.9,y:118.2},1).wait(125));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_5}]},23).to({state:[{t:this.instance_5}]},137).to({state:[{t:this.instance_6}]},1).wait(125));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(23).to({_off:false},0).to({x:79.3,y:118.3},137,cjs.Ease.get(0.5)).to({_off:true,regX:5.4,regY:7.4,scaleX:0.87,scaleY:0.99,rotation:25.9,y:118.2},1).wait(125));
 
 	// cloud_02
 	this.instance_7 = new lib.cloud02();
@@ -1687,7 +1687,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,16.9,26.7);
 
 	this.instance_7.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(46).to({_off:false},0).to({x:75.5,alpha:1},104).to({x:104.5,alpha:0},102).wait(58));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(22).to({_off:false},0).to({x:75.5,alpha:1},104).to({x:104.5,alpha:0},102).wait(58));
 
 	// cloud
 	this.instance_8 = new lib.cloud_01();
@@ -1697,7 +1697,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,16.9,26.7);
 
 	this.instance_8.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(80).to({_off:false},0).to({scaleX:0.73,scaleY:0.73,x:73.1,alpha:1},70,cjs.Ease.get(0.5)).to({scaleX:0.75,scaleY:0.75,x:106.8,alpha:0},92,cjs.Ease.get(0.5)).wait(68));
+	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(56).to({_off:false},0).to({scaleX:0.73,scaleY:0.73,x:73.1,alpha:1},70,cjs.Ease.get(0.5)).to({scaleX:0.75,scaleY:0.75,x:106.8,alpha:0},92,cjs.Ease.get(0.5)).wait(68));
 
 	// bird03
 	this.instance_9 = new lib.bird03();
@@ -1706,7 +1706,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,16.9,26.7);
 
 	this.instance_9.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(177).to({_off:false},0).to({regY:3,rotation:-35.5,x:62.1,y:89.6},91,cjs.Ease.get(0.5)).to({x:70.1,y:79.8,alpha:0},26).wait(16));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(153).to({_off:false},0).to({regY:3,rotation:-35.5,x:62.1,y:89.6},91,cjs.Ease.get(0.5)).to({x:70.1,y:79.8,alpha:0},26).wait(16));
 
 	// b_03
 	this.instance_10 = new lib.b_03();
@@ -1718,8 +1718,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,16.9,26.7);
 
 	this.instance_10.mask = this.instance_11.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_10}]},42).to({state:[{t:this.instance_10}]},134).to({state:[{t:this.instance_11}]},1).wait(133));
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(42).to({_off:false},0).to({rotation:10.2,x:56,y:139.3},134,cjs.Ease.get(0.5)).to({_off:true,regX:5.4,regY:7.4,scaleX:0.77,scaleY:0.81,rotation:0,x:55.9,y:139.5},1).wait(133));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_10}]},18).to({state:[{t:this.instance_10}]},134).to({state:[{t:this.instance_11}]},1).wait(133));
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(18).to({_off:false},0).to({rotation:10.2,x:56,y:139.3},134,cjs.Ease.get(0.5)).to({_off:true,regX:5.4,regY:7.4,scaleX:0.77,scaleY:0.81,rotation:0,x:55.9,y:139.5},1).wait(133));
 
 	// bird_02
 	this.instance_12 = new lib.bird_02();
@@ -1728,7 +1728,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,16.9,26.7);
 
 	this.instance_12.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(170).to({_off:false},0).to({regY:8.8,rotation:116.7,x:129.2,y:132.1},86,cjs.Ease.get(0.5)).to({x:132.4,y:122.9,alpha:0},38).wait(16));
+	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(146).to({_off:false},0).to({regY:8.8,rotation:116.7,x:129.2,y:132.1},86,cjs.Ease.get(0.5)).to({x:132.4,y:122.9,alpha:0},38).wait(16));
 
 	// b_02
 	this.instance_13 = new lib.b_02();
@@ -1740,8 +1740,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,16.9,26.7);
 
 	this.instance_13.mask = this.instance_14.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_13}]},38).to({state:[{t:this.instance_13}]},131).to({state:[{t:this.instance_14}]},1).wait(140));
-	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(38).to({_off:false},0).to({x:98.8,y:169.8},131,cjs.Ease.get(0.5)).to({_off:true,regX:5.4,regY:7.4,scaleX:0.76,scaleY:0.9,rotation:21,x:98.7,y:169.5},1).wait(140));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_13}]},14).to({state:[{t:this.instance_13}]},131).to({state:[{t:this.instance_14}]},1).wait(140));
+	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(14).to({_off:false},0).to({x:98.8,y:169.8},131,cjs.Ease.get(0.5)).to({_off:true,regX:5.4,regY:7.4,scaleX:0.76,scaleY:0.9,rotation:21,x:98.7,y:169.5},1).wait(140));
 
 	// bird_01
 	this.instance_15 = new lib.bird_01();
@@ -1750,7 +1750,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,16.9,26.7);
 
 	this.instance_15.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_15).wait(162).to({_off:false},0).to({x:24.2,y:121.6},67,cjs.Ease.get(0.5)).to({x:22.4,y:106.6,alpha:0},65).wait(16));
+	this.timeline.addTween(cjs.Tween.get(this.instance_15).wait(138).to({_off:false},0).to({x:24.2,y:121.6},67,cjs.Ease.get(0.5)).to({x:22.4,y:106.6,alpha:0},65).wait(16));
 
 	// b_01
 	this.instance_16 = new lib.b_01();
@@ -1762,14 +1762,14 @@ p.nominalBounds = new cjs.Rectangle(0,0,16.9,26.7);
 
 	this.instance_16.mask = this.instance_17.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_16}]},35).to({state:[{t:this.instance_16}]},125).to({state:[{t:this.instance_17}]},1).wait(149));
-	this.timeline.addTween(cjs.Tween.get(this.instance_16).wait(35).to({_off:false},0).to({x:37.5,y:176},125,cjs.Ease.get(0.5)).to({_off:true},1).wait(149));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_16}]},11).to({state:[{t:this.instance_16}]},125).to({state:[{t:this.instance_17}]},1).wait(149));
+	this.timeline.addTween(cjs.Tween.get(this.instance_16).wait(11).to({_off:false},0).to({x:37.5,y:176},125,cjs.Ease.get(0.5)).to({_off:true},1).wait(149));
 
 	// door_close
 	this.instance_18 = new lib.door_close();
 	this.instance_18.setTransform(79.9,271.4,1,1,0,0,0,27.4,19.2);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_18).wait(310));
+	this.timeline.addTween(cjs.Tween.get(this.instance_18).wait(286));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(125.9,406,57.7,40.3);

@@ -672,77 +672,77 @@ p.nominalBounds = new cjs.Rectangle(-1,-1,20.6,51.2);
 	this.instance.setTransform(94.1,137.6,0.131,0.131,0,0,0,52.4,37.9);
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(182).to({_off:false},0).to({regY:37.7,scaleX:1,scaleY:1,x:111.3,y:137.2},6).to({scaleX:0.88,scaleY:0.88,x:109,y:137.6},2).to({scaleX:1,scaleY:1,x:109.6,y:137.2},2).to({rotation:-45,x:121.8,y:82.1},13,cjs.Ease.get(0.5)).wait(22).to({regX:52.5,scaleX:0.23,scaleY:0.23,rotation:0,x:104.3,y:138.9},5).to({regX:52.4,scaleX:0.37,scaleY:0.37,x:109.3,y:139.2},4).to({regY:37.6,scaleX:0.16,scaleY:0.16,x:104.3,y:138.9},4).to({_off:true},1).wait(119));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(158).to({_off:false},0).to({regY:37.7,scaleX:1,scaleY:1,x:111.3,y:137.2},6).to({scaleX:0.88,scaleY:0.88,x:109,y:137.6},2).to({scaleX:1,scaleY:1,x:109.6,y:137.2},2).to({rotation:-45,x:121.8,y:82.1},13,cjs.Ease.get(0.5)).wait(22).to({regX:52.5,scaleX:0.23,scaleY:0.23,rotation:0,x:104.3,y:138.9},5).to({regX:52.4,scaleX:0.37,scaleY:0.37,x:109.3,y:139.2},4).to({regY:37.6,scaleX:0.16,scaleY:0.16,x:104.3,y:138.9},4).to({_off:true},1).wait(119));
 
 	// shovel
 	this.instance_1 = new lib.shovel();
 	this.instance_1.setTransform(139.7,139.6,0.128,0.128,105,0,0,39.3,2);
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(93).to({_off:false},0).to({regX:39,regY:1.9,scaleX:1,scaleY:1,rotation:0,x:159.8,y:128.8},7,cjs.Ease.get(0.54)).to({rotation:6.5,x:160.6,y:130.9},2).to({rotation:0,x:159.8,y:128.8},2).wait(4).to({regX:39.1,regY:1.8,rotation:-15,x:128.3,y:60.3},12,cjs.Ease.get(0.5)).to({_off:true},1).wait(239));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(69).to({_off:false},0).to({regX:39,regY:1.9,scaleX:1,scaleY:1,rotation:0,x:159.8,y:128.8},7,cjs.Ease.get(0.54)).to({rotation:6.5,x:160.6,y:130.9},2).to({rotation:0,x:159.8,y:128.8},2).wait(4).to({regX:39.1,regY:1.8,rotation:-15,x:128.3,y:60.3},12,cjs.Ease.get(0.5)).to({_off:true},1).wait(239));
 
 	// pot
 	this.instance_2 = new lib.pot2();
 	this.instance_2.setTransform(44.1,140.5,1,1,0,0,0,14.9,26.8);
 	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(53).to({_off:false},0).to({regY:26.7,rotation:-15,x:44,y:140.4},3).to({regY:26.8,rotation:0,x:44.1,y:140.5},3).to({rotation:6.5,x:44},3).to({rotation:0,x:44.1},3).to({regY:26.7,rotation:-4.7,y:140.4},3).to({regY:26.8,rotation:0,y:140.5},3).to({regX:14.8,rotation:5,x:44},4).to({regX:14.9,rotation:0,x:44.1},4).wait(253).to({regY:26.7,scaleX:0.2,scaleY:0.2,x:40.3,y:121.3},5,cjs.Ease.get(1)).to({scaleX:0.32,scaleY:0.32,x:40.9,y:124.3},2).to({scaleX:0.2,scaleY:0.2,x:40.3,y:119.3},2).to({_off:true},1).wait(18));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(29).to({_off:false},0).to({regY:26.7,rotation:-15,x:44,y:140.4},3).to({regY:26.8,rotation:0,x:44.1,y:140.5},3).to({rotation:6.5,x:44},3).to({rotation:0,x:44.1},3).to({regY:26.7,rotation:-4.7,y:140.4},3).to({regY:26.8,rotation:0,y:140.5},3).to({regX:14.8,rotation:5,x:44},4).to({regX:14.9,rotation:0,x:44.1},4).wait(253).to({regY:26.7,scaleX:0.2,scaleY:0.2,x:40.3,y:121.3},5,cjs.Ease.get(1)).to({scaleX:0.32,scaleY:0.32,x:40.9,y:124.3},2).to({scaleX:0.2,scaleY:0.2,x:40.3,y:119.3},2).to({_off:true},1).wait(18));
 
 	// sun
 	this.instance_3 = new lib.sun();
 	this.instance_3.setTransform(110.5,41.3,0.335,0.335,0,0,0,23.4,23.4);
 	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(227).to({_off:false},0).to({scaleX:0.59,scaleY:0.59,rotation:-360,x:43.7,y:51.3},15,cjs.Ease.get(1)).to({scaleX:0.53,scaleY:0.53},2).to({scaleX:0.59,scaleY:0.59},2).to({rotation:-720},86).to({scaleX:0.09,scaleY:0.09,x:41.2,y:108},5).to({_off:true},1).wait(22));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(203).to({_off:false},0).to({scaleX:0.59,scaleY:0.59,rotation:-360,x:43.7,y:51.3},15,cjs.Ease.get(1)).to({scaleX:0.53,scaleY:0.53},2).to({scaleX:0.59,scaleY:0.59},2).to({rotation:-720},86).to({scaleX:0.09,scaleY:0.09,x:41.2,y:108},5).to({_off:true},1).wait(22));
 
 	// flower04
 	this.instance_4 = new lib.flower04();
 	this.instance_4.setTransform(28.9,79.6,0.499,0.499,0,0,0,6.6,6.6);
 	this.instance_4._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(293).to({_off:false},0).to({regY:6.7,scaleX:1.53,scaleY:1.53},6).to({scaleX:1.25,scaleY:1.25},2).to({scaleX:1.53,scaleY:1.53},2).wait(29).to({regX:6.7,regY:6.5,scaleX:0.3,scaleY:0.3,x:37.3,y:109.4},5,cjs.Ease.get(1)).to({regX:6.8,scaleX:0.49,scaleY:0.49,x:36,y:104.7},2).to({regX:6.7,scaleX:0.3,scaleY:0.3,x:37.3,y:107.4},2).to({_off:true},1).wait(18));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(269).to({_off:false},0).to({regY:6.7,scaleX:1.53,scaleY:1.53},6).to({scaleX:1.25,scaleY:1.25},2).to({scaleX:1.53,scaleY:1.53},2).wait(29).to({regX:6.7,regY:6.5,scaleX:0.3,scaleY:0.3,x:37.3,y:109.4},5,cjs.Ease.get(1)).to({regX:6.8,scaleX:0.49,scaleY:0.49,x:36,y:104.7},2).to({regX:6.7,scaleX:0.3,scaleY:0.3,x:37.3,y:107.4},2).to({_off:true},1).wait(18));
 
 	// flower03
 	this.instance_5 = new lib.flower03();
 	this.instance_5.setTransform(40.6,114.1,0.129,0.109,0,0,0,7.4,24.4);
 	this.instance_5._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(279).to({_off:false},0).to({regX:7.3,regY:24.3,scaleX:1.3,scaleY:1.3},10,cjs.Ease.get(1)).to({scaleX:1.25,scaleY:1.25,y:114.2},2).to({scaleX:1.42,scaleY:1.42,y:114.1},2).wait(39).to({regX:7.2,regY:24.4,scaleX:0.28,scaleY:0.28,x:39.6,y:116.2},5,cjs.Ease.get(1)).to({scaleX:0.46,scaleY:0.46,x:39.7,y:115.9},2).to({scaleX:0.28,scaleY:0.28,x:39.6,y:114.2},2).to({_off:true},1).wait(18));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(255).to({_off:false},0).to({regX:7.3,regY:24.3,scaleX:1.3,scaleY:1.3},10,cjs.Ease.get(1)).to({scaleX:1.25,scaleY:1.25,y:114.2},2).to({scaleX:1.42,scaleY:1.42,y:114.1},2).wait(39).to({regX:7.2,regY:24.4,scaleX:0.28,scaleY:0.28,x:39.6,y:116.2},5,cjs.Ease.get(1)).to({scaleX:0.46,scaleY:0.46,x:39.7,y:115.9},2).to({scaleX:0.28,scaleY:0.28,x:39.6,y:114.2},2).to({_off:true},1).wait(18));
 
 	// flower02
 	this.instance_6 = new lib.flower02();
 	this.instance_6.setTransform(48.9,91.7,0.259,0.259,0,0,0,6.8,6.8);
 	this.instance_6._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(265).to({_off:false},0).to({scaleX:1.82,scaleY:1.82,x:48.8,y:80.9},8,cjs.Ease.get(1)).to({regY:6.9,scaleX:1.23,scaleY:1.23,x:48.7,y:84.3},3).to({regY:6.8,scaleX:1.5,scaleY:1.5,y:82.7},3).wait(53).to({regX:6.9,regY:6.7,scaleX:0.29,scaleY:0.29,x:41.2,y:110},5,cjs.Ease.get(1)).to({regX:6.8,scaleX:0.48,scaleY:0.48,x:42.4,y:105.7},2).to({regX:6.9,scaleX:0.29,scaleY:0.29,x:41.2,y:108},2).to({_off:true},1).wait(18));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(241).to({_off:false},0).to({scaleX:1.82,scaleY:1.82,x:48.8,y:80.9},8,cjs.Ease.get(1)).to({regY:6.9,scaleX:1.23,scaleY:1.23,x:48.7,y:84.3},3).to({regY:6.8,scaleX:1.5,scaleY:1.5,y:82.7},3).wait(53).to({regX:6.9,regY:6.7,scaleX:0.29,scaleY:0.29,x:41.2,y:110},5,cjs.Ease.get(1)).to({regX:6.8,scaleX:0.48,scaleY:0.48,x:42.4,y:105.7},2).to({regX:6.9,scaleX:0.29,scaleY:0.29,x:41.2,y:108},2).to({_off:true},1).wait(18));
 
 	// flower01
 	this.instance_7 = new lib.flower01();
 	this.instance_7.setTransform(48.9,114.1,0.2,0.2,0,0,0,8.3,22.5);
 	this.instance_7._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(255).to({_off:false},0).to({regY:22.4,scaleX:1,scaleY:1},10).wait(67).to({regX:8.4,regY:22.3,scaleX:0.2,scaleY:0.2,x:41.2,y:116.2},5,cjs.Ease.get(1)).to({regY:22.4,scaleX:0.32,scaleY:0.32,x:42.4,y:115.8},2).to({regY:22.3,scaleX:0.2,scaleY:0.2,x:41.2,y:114.2},2).to({_off:true},1).wait(18));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(231).to({_off:false},0).to({regY:22.4,scaleX:1,scaleY:1},10).wait(67).to({regX:8.4,regY:22.3,scaleX:0.2,scaleY:0.2,x:41.2,y:116.2},5,cjs.Ease.get(1)).to({regY:22.4,scaleX:0.32,scaleY:0.32,x:42.4,y:115.8},2).to({regY:22.3,scaleX:0.2,scaleY:0.2,x:41.2,y:114.2},2).to({_off:true},1).wait(18));
 
 	// grass
 	this.instance_8 = new lib.grass();
 	this.instance_8.setTransform(44.2,115.6,0.148,0.148,0,0,0,24.9,20.3);
 	this.instance_8._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(242).to({_off:false},0).to({regY:20.1,scaleX:1,scaleY:1},7,cjs.Ease.get(1)).to({scaleX:0.79,scaleY:0.79},3).to({scaleX:1,scaleY:1},3).to({scaleX:0.83,scaleY:0.83,rotation:15},10).to({regX:25,scaleX:0.95,scaleY:0.95,rotation:0},16).to({regX:24.9,regY:20.2,scaleX:0.93,scaleY:0.93,rotation:-7.5,x:44.3,y:115.7},17).to({regX:25,regY:20.1,scaleX:0.95,scaleY:0.95,rotation:0,x:44.2,y:115.6},16).wait(18).to({regX:24.8,regY:20.2,scaleX:0.19,scaleY:0.19,x:40.3,y:116.5},5,cjs.Ease.get(1)).to({regY:20.3,scaleX:0.31,scaleY:0.31,x:40.9,y:116.3},2).to({regY:20.2,scaleX:0.19,scaleY:0.19,x:40.3,y:114.5},2).to({_off:true},1).wait(18));
+	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(218).to({_off:false},0).to({regY:20.1,scaleX:1,scaleY:1},7,cjs.Ease.get(1)).to({scaleX:0.79,scaleY:0.79},3).to({scaleX:1,scaleY:1},3).to({scaleX:0.83,scaleY:0.83,rotation:15},10).to({regX:25,scaleX:0.95,scaleY:0.95,rotation:0},16).to({regX:24.9,regY:20.2,scaleX:0.93,scaleY:0.93,rotation:-7.5,x:44.3,y:115.7},17).to({regX:25,regY:20.1,scaleX:0.95,scaleY:0.95,rotation:0,x:44.2,y:115.6},16).wait(18).to({regX:24.8,regY:20.2,scaleX:0.19,scaleY:0.19,x:40.3,y:116.5},5,cjs.Ease.get(1)).to({regY:20.3,scaleX:0.31,scaleY:0.31,x:40.9,y:116.3},2).to({regY:20.2,scaleX:0.19,scaleY:0.19,x:40.3,y:114.5},2).to({_off:true},1).wait(18));
 
 	// water
 	this.instance_9 = new lib.water();
 	this.instance_9.setTransform(62.8,89.3,0.063,0.063,30,0,0,75.5,4.5);
 	this.instance_9._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(203).to({_off:false},0).to({regX:75,regY:5,scaleX:0.39,scaleY:0.39,rotation:0},10,cjs.Ease.get(1)).to({regY:5.2,scaleX:0.26,scaleY:0.26,rotation:-40.7,x:46.2,y:114.2},14).to({_off:true},1).wait(132));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(179).to({_off:false},0).to({regX:75,regY:5,scaleX:0.39,scaleY:0.39,rotation:0},10,cjs.Ease.get(1)).to({regY:5.2,scaleX:0.26,scaleY:0.26,rotation:-40.7,x:46.2,y:114.2},14).to({_off:true},1).wait(132));
 
 	// 圖層 23 (mask)
 	var mask = new cjs.Shape();
 	mask._off = true;
-	var mask_graphics_121 = new cjs.Graphics().p("AqVPKQnOlqqfsvQjfkPi/j/QiljdAOAHUAAZAANAjigA0QRugbRsgcICbaEQ3Ymqivg2ImDgPQgPALgHADQgFACgCgCIgIgHQgBAAALAjQALAtgCAwQgMEOACDBQiaB6jBBcQjRBiibAAQiFAAhchIg");
+	var mask_graphics_97 = new cjs.Graphics().p("AqVPKQnOlqqfsvQjfkPi/j/QiljdAOAHUAAZAANAjigA0QRugbRsgcICbaEQ3Ymqivg2ImDgPQgPALgHADQgFACgCgCIgIgHQgBAAALAjQALAtgCAwQgMEOACDBQiaB6jBBcQjRBiibAAQiFAAhchIg");
 
-	this.timeline.addTween(cjs.Tween.get(mask).to({graphics:null,x:0,y:0}).wait(121).to({graphics:mask_graphics_121,x:40,y:66.3}).wait(239));
+	this.timeline.addTween(cjs.Tween.get(mask).to({graphics:null,x:0,y:0}).wait(97).to({graphics:mask_graphics_97,x:40,y:66.3}).wait(239));
 
 	// soil3
 	this.shape = new cjs.Shape();
@@ -839,7 +839,7 @@ p.nominalBounds = new cjs.Rectangle(-1,-1,20.6,51.2);
 
 	this.shape.mask = this.shape_1.mask = this.shape_2.mask = this.shape_3.mask = this.shape_4.mask = this.shape_5.mask = this.shape_6.mask = this.shape_7.mask = this.shape_8.mask = this.shape_9.mask = this.shape_10.mask = this.shape_11.mask = this.shape_12.mask = this.shape_13.mask = this.shape_14.mask = this.shape_15.mask = this.shape_16.mask = this.shape_17.mask = this.shape_18.mask = this.shape_19.mask = this.shape_20.mask = this.shape_21.mask = this.shape_22.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape}]},145).to({state:[{t:this.shape_1}]},1).to({state:[{t:this.shape_2}]},1).to({state:[{t:this.shape_3}]},1).to({state:[{t:this.shape_4}]},1).to({state:[{t:this.shape_5}]},1).to({state:[{t:this.shape_6}]},1).to({state:[{t:this.shape_7}]},1).to({state:[{t:this.shape_8}]},1).to({state:[{t:this.shape_9}]},1).to({state:[{t:this.shape_10}]},1).to({state:[{t:this.shape_11}]},1).to({state:[{t:this.shape_12}]},1).to({state:[{t:this.shape_13}]},1).to({state:[{t:this.shape_14}]},1).to({state:[{t:this.shape_15}]},1).to({state:[{t:this.shape_16}]},1).to({state:[{t:this.shape_17}]},1).to({state:[{t:this.shape_18}]},1).to({state:[{t:this.shape_19}]},1).to({state:[{t:this.shape_20}]},1).to({state:[{t:this.shape_21}]},1).to({state:[{t:this.shape_22}]},1).to({state:[]},1).wait(192));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape}]},121).to({state:[{t:this.shape_1}]},1).to({state:[{t:this.shape_2}]},1).to({state:[{t:this.shape_3}]},1).to({state:[{t:this.shape_4}]},1).to({state:[{t:this.shape_5}]},1).to({state:[{t:this.shape_6}]},1).to({state:[{t:this.shape_7}]},1).to({state:[{t:this.shape_8}]},1).to({state:[{t:this.shape_9}]},1).to({state:[{t:this.shape_10}]},1).to({state:[{t:this.shape_11}]},1).to({state:[{t:this.shape_12}]},1).to({state:[{t:this.shape_13}]},1).to({state:[{t:this.shape_14}]},1).to({state:[{t:this.shape_15}]},1).to({state:[{t:this.shape_16}]},1).to({state:[{t:this.shape_17}]},1).to({state:[{t:this.shape_18}]},1).to({state:[{t:this.shape_19}]},1).to({state:[{t:this.shape_20}]},1).to({state:[{t:this.shape_21}]},1).to({state:[{t:this.shape_22}]},1).to({state:[]},1).wait(192));
 
 	// soil2
 	this.instance_10 = new lib.補間動畫1("synched",0);
@@ -852,8 +852,8 @@ p.nominalBounds = new cjs.Rectangle(-1,-1,20.6,51.2);
 
 	this.instance_10.mask = this.instance_11.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(126).to({_off:false},0).to({_off:true,rotation:30,x:64.6,y:57.7},10,cjs.Ease.get(0.5)).wait(224));
-	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(126).to({_off:false},10,cjs.Ease.get(0.5)).to({rotation:15,x:54.5,y:83.7},9).to({_off:true},1).wait(214));
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(102).to({_off:false},0).to({_off:true,rotation:30,x:64.6,y:57.7},10,cjs.Ease.get(0.5)).wait(224));
+	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(102).to({_off:false},10,cjs.Ease.get(0.5)).to({rotation:15,x:54.5,y:83.7},9).to({_off:true},1).wait(214));
 
 	// shovel
 	this.instance_12 = new lib.shovel();
@@ -862,14 +862,14 @@ p.nominalBounds = new cjs.Rectangle(-1,-1,20.6,51.2);
 
 	this.instance_12.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(121).to({_off:false},0).to({regY:1.9,rotation:-30,x:109,y:69.1},5).to({regY:1.8,rotation:-5.1,x:92.9,y:53.7},10,cjs.Ease.get(0.5)).to({regX:39.2,regY:1.7,rotation:-28.5,x:77.2,y:67.9},9).wait(22).to({regX:39.1,regY:1.8,scaleX:0.26,scaleY:0.26,rotation:46.5,x:94.5,y:133.9},8).to({regX:38.3,regY:2,scaleX:0.25,scaleY:0.25,x:90.6,y:134.3},3).to({regX:39.1,regY:1.9,scaleX:0.21,scaleY:0.21,x:92.2,y:138.4},3).to({_off:true},1).wait(178));
+	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(97).to({_off:false},0).to({regY:1.9,rotation:-30,x:109,y:69.1},5).to({regY:1.8,rotation:-5.1,x:92.9,y:53.7},10,cjs.Ease.get(0.5)).to({regX:39.2,regY:1.7,rotation:-28.5,x:77.2,y:67.9},9).wait(22).to({regX:39.1,regY:1.8,scaleX:0.26,scaleY:0.26,rotation:46.5,x:94.5,y:133.9},8).to({regX:38.3,regY:2,scaleX:0.25,scaleY:0.25,x:90.6,y:134.3},3).to({regX:39.1,regY:1.9,scaleX:0.21,scaleY:0.21,x:92.2,y:138.4},3).to({_off:true},1).wait(178));
 
 	// soil
 	this.instance_13 = new lib.soil();
 	this.instance_13.setTransform(89.7,138.6,0.069,0.069,0,0,0,25.5,65.5);
 	this.instance_13._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(89).to({_off:false},0).to({scaleX:1,scaleY:1},5).to({scaleX:0.86,scaleY:0.86,y:138.1},2).to({scaleX:1,scaleY:1,y:138.6},2).to({y:138.1},2).to({y:138.6},2).wait(69).to({regY:65.7,scaleX:0.08,scaleY:0.08},6,cjs.Ease.get(1)).to({regX:25.7,scaleX:0.16,scaleY:0.16},2).to({regX:25.5,scaleX:0.08,scaleY:0.08},2).to({_off:true},1).wait(178));
+	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(65).to({_off:false},0).to({scaleX:1,scaleY:1},5).to({scaleX:0.86,scaleY:0.86,y:138.1},2).to({scaleX:1,scaleY:1,y:138.6},2).to({y:138.1},2).to({y:138.6},2).wait(69).to({regY:65.7,scaleX:0.08,scaleY:0.08},6,cjs.Ease.get(1)).to({regX:25.7,scaleX:0.16,scaleY:0.16},2).to({regX:25.5,scaleX:0.08,scaleY:0.08},2).to({_off:true},1).wait(178));
 
 	// seed
 	this.instance_14 = new lib.seed();
@@ -877,7 +877,7 @@ p.nominalBounds = new cjs.Rectangle(-1,-1,20.6,51.2);
 	this.instance_14.alpha = 0;
 	this.instance_14._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_14).wait(81).to({_off:false},0).to({y:119.1,alpha:1},10,cjs.Ease.get(-0.5)).to({_off:true},1).wait(268));
+	this.timeline.addTween(cjs.Tween.get(this.instance_14).wait(57).to({_off:false},0).to({y:119.1,alpha:1},10,cjs.Ease.get(-0.5)).to({_off:true},1).wait(268));
 
 	// seed
 	this.instance_15 = new lib.seed();
@@ -885,20 +885,20 @@ p.nominalBounds = new cjs.Rectangle(-1,-1,20.6,51.2);
 	this.instance_15.alpha = 0;
 	this.instance_15._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_15).wait(73).to({_off:false},0).to({y:119.1,alpha:1},11,cjs.Ease.get(-0.5)).to({_off:true},1).wait(275));
+	this.timeline.addTween(cjs.Tween.get(this.instance_15).wait(49).to({_off:false},0).to({y:119.1,alpha:1},11,cjs.Ease.get(-0.5)).to({_off:true},1).wait(275));
 
 	// pot
 	this.instance_16 = new lib.pot();
 	this.instance_16.setTransform(108.7,38.5,0.15,0.15,128.8,0,0,14.9,13.8);
 	this.instance_16._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_16).wait(35).to({_off:false},0).to({regY:13.4,scaleX:1,scaleY:1,rotation:0,guide:{path:[108.6,38.3,105.3,38.1,101,38.5,88.5,39.7,78,45.8,44.9,65.2,44.7,127]}},17,cjs.Ease.get(-1)).to({_off:true},1).wait(307));
+	this.timeline.addTween(cjs.Tween.get(this.instance_16).wait(11).to({_off:false},0).to({regY:13.4,scaleX:1,scaleY:1,rotation:0,guide:{path:[108.6,38.3,105.3,38.1,101,38.5,88.5,39.7,78,45.8,44.9,65.2,44.7,127]}},17,cjs.Ease.get(-1)).to({_off:true},1).wait(307));
 
 	// 把手
 	this.instance_17 = new lib.把手();
 	this.instance_17.setTransform(105.8,39,1,1,0,0,0,1.2,1.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_17).wait(24).to({scaleX:0.67,x:117.6},17).wait(259).to({scaleX:1,x:105.8},14).wait(46));
+	this.timeline.addTween(cjs.Tween.get(this.instance_17).to({scaleX:0.67,x:117.6},17).wait(259).to({scaleX:1,x:105.8},14).wait(46));
 
 	// door_open
 	this.shape_23 = new cjs.Shape();
@@ -1069,13 +1069,13 @@ p.nominalBounds = new cjs.Rectangle(-1,-1,20.6,51.2);
 	this.shape_64.graphics.f("#FFFFFF").s().p("AgykEIBlAqIAAGXIhjBIg");
 	this.shape_64.setTransform(115.6,39.3);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_24},{t:this.shape_23}]}).to({state:[{t:this.shape_24},{t:this.shape_23}]},24).to({state:[{t:this.shape_26},{t:this.shape_25}]},1).to({state:[{t:this.shape_28},{t:this.shape_27}]},1).to({state:[{t:this.shape_30},{t:this.shape_29}]},1).to({state:[{t:this.shape_32},{t:this.shape_31}]},1).to({state:[{t:this.shape_34},{t:this.shape_33}]},1).to({state:[{t:this.shape_36},{t:this.shape_35}]},1).to({state:[{t:this.shape_38},{t:this.shape_37}]},1).to({state:[{t:this.shape_40},{t:this.shape_39}]},1).to({state:[{t:this.shape_42},{t:this.shape_41}]},1).to({state:[{t:this.shape_44},{t:this.shape_43}]},1).to({state:[{t:this.shape_46},{t:this.shape_45}]},1).to({state:[{t:this.shape_48},{t:this.shape_47}]},1).to({state:[{t:this.shape_50},{t:this.shape_49}]},1).to({state:[{t:this.shape_52},{t:this.shape_51}]},1).to({state:[{t:this.shape_54},{t:this.shape_53}]},1).to({state:[{t:this.shape_56},{t:this.shape_55}]},1).to({state:[{t:this.shape_58},{t:this.shape_57}]},1).to({state:[{t:this.shape_58},{t:this.shape_57}]},259).to({state:[{t:this.shape_60},{t:this.shape_59}]},1).to({state:[{t:this.shape_52},{t:this.shape_51}]},1).to({state:[{t:this.shape_62},{t:this.shape_61}]},1).to({state:[{t:this.shape_46},{t:this.shape_45}]},1).to({state:[{t:this.shape_64},{t:this.shape_63}]},1).to({state:[{t:this.shape_40},{t:this.shape_39}]},1).to({state:[{t:this.shape_38},{t:this.shape_37}]},1).to({state:[{t:this.shape_36},{t:this.shape_35}]},1).to({state:[{t:this.shape_34},{t:this.shape_33}]},1).to({state:[{t:this.shape_32},{t:this.shape_31}]},1).to({state:[{t:this.shape_30},{t:this.shape_29}]},1).to({state:[{t:this.shape_28},{t:this.shape_27}]},1).to({state:[{t:this.shape_26},{t:this.shape_25}]},1).to({state:[{t:this.shape_24},{t:this.shape_23}]},1).wait(46));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_24},{t:this.shape_23}]}).to({state:[{t:this.shape_26},{t:this.shape_25}]},1).to({state:[{t:this.shape_28},{t:this.shape_27}]},1).to({state:[{t:this.shape_30},{t:this.shape_29}]},1).to({state:[{t:this.shape_32},{t:this.shape_31}]},1).to({state:[{t:this.shape_34},{t:this.shape_33}]},1).to({state:[{t:this.shape_36},{t:this.shape_35}]},1).to({state:[{t:this.shape_38},{t:this.shape_37}]},1).to({state:[{t:this.shape_40},{t:this.shape_39}]},1).to({state:[{t:this.shape_42},{t:this.shape_41}]},1).to({state:[{t:this.shape_44},{t:this.shape_43}]},1).to({state:[{t:this.shape_46},{t:this.shape_45}]},1).to({state:[{t:this.shape_48},{t:this.shape_47}]},1).to({state:[{t:this.shape_50},{t:this.shape_49}]},1).to({state:[{t:this.shape_52},{t:this.shape_51}]},1).to({state:[{t:this.shape_54},{t:this.shape_53}]},1).to({state:[{t:this.shape_56},{t:this.shape_55}]},1).to({state:[{t:this.shape_58},{t:this.shape_57}]},1).to({state:[{t:this.shape_58},{t:this.shape_57}]},259).to({state:[{t:this.shape_60},{t:this.shape_59}]},1).to({state:[{t:this.shape_52},{t:this.shape_51}]},1).to({state:[{t:this.shape_62},{t:this.shape_61}]},1).to({state:[{t:this.shape_46},{t:this.shape_45}]},1).to({state:[{t:this.shape_64},{t:this.shape_63}]},1).to({state:[{t:this.shape_40},{t:this.shape_39}]},1).to({state:[{t:this.shape_38},{t:this.shape_37}]},1).to({state:[{t:this.shape_36},{t:this.shape_35}]},1).to({state:[{t:this.shape_34},{t:this.shape_33}]},1).to({state:[{t:this.shape_32},{t:this.shape_31}]},1).to({state:[{t:this.shape_30},{t:this.shape_29}]},1).to({state:[{t:this.shape_28},{t:this.shape_27}]},1).to({state:[{t:this.shape_26},{t:this.shape_25}]},1).to({state:[{t:this.shape_24},{t:this.shape_23}]},1).wait(46));
 
 	// dooor_close
 	this.instance_18 = new lib.door_close();
 	this.instance_18.setTransform(111.5,38.5,1,1,0,0,0,9.3,24.6);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_18).wait(360));
+	this.timeline.addTween(cjs.Tween.get(this.instance_18).wait(336));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(201.2,113.2,20.6,51.2);

@@ -65,26 +65,18 @@ p.nominalBounds = new cjs.Rectangle(0,0,10.7,3.6);
 (lib.hand_ani = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
-	// timeline functions:
-	this.frame_19 = function() {
-		this.stop();
-	}
-
-	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(19).call(this.frame_19).wait(1));
-
 	// 圖層 2
 	this.instance = new lib.動態2();
 	this.instance.setTransform(32.1,2.4,1,1,0,0,0,6.4,4.6);
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(4).to({_off:false},0).to({_off:true},3).wait(4).to({_off:false},0).to({_off:true},3).wait(6));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(4).to({_off:false},0).to({_off:true},3).wait(4).to({_off:false},0).to({_off:true},3).wait(23));
 
 	// hand2
 	this.instance_1 = new lib.hand2();
 	this.instance_1.setTransform(25.1,21.5,1,1,0,0,0,5.4,9.1);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({regY:9.2,scaleY:1.11,rotation:6.2,x:25.6,y:21.6},2).to({regY:9.1,scaleY:1,rotation:0,x:25.1,y:21.5},2).wait(3).to({regY:9.2,scaleY:1.11,rotation:6.2,x:25.6,y:21.6},2).to({regY:9.1,scaleY:1,rotation:0,x:25.1,y:21.5},2).wait(9));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({regY:9.2,scaleY:1.11,rotation:6.2,x:25.6,y:21.6},2).to({regY:9.1,scaleY:1,rotation:0,x:25.1,y:21.5},2).wait(3).to({regY:9.2,scaleY:1.11,rotation:6.2,x:25.6,y:21.6},2).to({regY:9.1,scaleY:1,rotation:0,x:25.1,y:21.5},2).wait(26));
 
 	// 圖層 1 (mask)
 	var mask = new cjs.Shape();
@@ -119,7 +111,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,10.7,3.6);
 
 	this.shape.mask = this.shape_1.mask = this.shape_2.mask = this.shape_3.mask = this.shape_4.mask = this.shape_5.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).to({state:[{t:this.shape_3},{t:this.shape_2}]},1).to({state:[{t:this.shape_5},{t:this.shape_4}]},1).to({state:[{t:this.shape_3},{t:this.shape_2}]},1).to({state:[{t:this.shape_1},{t:this.shape}]},1).to({state:[{t:this.shape_1},{t:this.shape}]},3).to({state:[{t:this.shape_3},{t:this.shape_2}]},1).to({state:[{t:this.shape_5},{t:this.shape_4}]},1).to({state:[{t:this.shape_3},{t:this.shape_2}]},1).to({state:[{t:this.shape_1},{t:this.shape}]},1).wait(9));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).to({state:[{t:this.shape_3},{t:this.shape_2}]},1).to({state:[{t:this.shape_5},{t:this.shape_4}]},1).to({state:[{t:this.shape_3},{t:this.shape_2}]},1).to({state:[{t:this.shape_1},{t:this.shape}]},1).to({state:[{t:this.shape_1},{t:this.shape}]},3).to({state:[{t:this.shape_3},{t:this.shape_2}]},1).to({state:[{t:this.shape_5},{t:this.shape_4}]},1).to({state:[{t:this.shape_3},{t:this.shape_2}]},1).to({state:[{t:this.shape_1},{t:this.shape}]},1).wait(26));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(31.3,25.4,25.5,33.6);

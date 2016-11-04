@@ -2972,21 +2972,21 @@ p.nominalBounds = new cjs.Rectangle(-3.9,-0.1,97.5,82.7);
 	this.instance_1 = new lib.補間動畫2("synched",0);
 	this.instance_1.setTransform(172,142);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance}]},470).to({state:[{t:this.instance_1}]},15).wait(23));
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(470).to({_off:false},0).to({_off:true,alpha:1},15).wait(23));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance}]},446).to({state:[{t:this.instance_1}]},15).wait(23));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(446).to({_off:false},0).to({_off:true,alpha:1},15).wait(23));
 
 	// typewrite_ani
 	this.ikNode_1 = new lib.typewriter_ani_1();
 	this.ikNode_1.setTransform(175.3,162.5,0.855,0.855,0,0,0,46.8,41.3);
 	this.ikNode_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.ikNode_1).wait(195).to({_off:false},0).wait(313));
+	this.timeline.addTween(cjs.Tween.get(this.ikNode_1).wait(171).to({_off:false},0).wait(313));
 
 	// handle
 	this.instance_2 = new lib.handle();
 	this.instance_2.setTransform(340,195.7,1,1,0,0,0,2.4,1.3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(24).to({x:339.8,y:209.3},6).to({x:339.5,y:215.7},8).wait(433).to({y:215.2},0).to({x:340,y:195.7},14).wait(23));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).to({x:339.8,y:209.3},6).to({x:339.5,y:215.7},8).wait(433).to({y:215.2},0).to({x:340,y:195.7},14).wait(23));
 
 	// door_open
 	this.shape = new cjs.Shape();
@@ -3221,20 +3221,20 @@ p.nominalBounds = new cjs.Rectangle(-3.9,-0.1,97.5,82.7);
 	this.shape_57.graphics.f("#FFFFFF").s().p("Ajpg2IILjFIATEiIppDVg");
 	this.shape_57.setTransform(339.4,205.3);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).to({state:[{t:this.shape_1},{t:this.shape}]},24).to({state:[{t:this.shape_3},{t:this.shape_2}]},1).to({state:[{t:this.shape_5},{t:this.shape_4}]},1).to({state:[{t:this.shape_7},{t:this.shape_6}]},1).to({state:[{t:this.shape_9},{t:this.shape_8}]},1).to({state:[{t:this.shape_11},{t:this.shape_10}]},1).to({state:[{t:this.shape_13},{t:this.shape_12}]},1).to({state:[{t:this.shape_15},{t:this.shape_14}]},1).to({state:[{t:this.shape_17},{t:this.shape_16}]},1).to({state:[{t:this.shape_19},{t:this.shape_18}]},1).to({state:[{t:this.shape_21},{t:this.shape_20}]},1).to({state:[{t:this.shape_23},{t:this.shape_22}]},1).to({state:[{t:this.shape_25},{t:this.shape_24}]},1).to({state:[{t:this.shape_27},{t:this.shape_26}]},1).to({state:[{t:this.shape_29},{t:this.shape_28}]},1).to({state:[{t:this.shape_29},{t:this.shape_28}]},433).to({state:[{t:this.shape_31},{t:this.shape_30}]},1).to({state:[{t:this.shape_33},{t:this.shape_32}]},1).to({state:[{t:this.shape_35},{t:this.shape_34}]},1).to({state:[{t:this.shape_37},{t:this.shape_36}]},1).to({state:[{t:this.shape_39},{t:this.shape_38}]},1).to({state:[{t:this.shape_41},{t:this.shape_40}]},1).to({state:[{t:this.shape_43},{t:this.shape_42}]},1).to({state:[{t:this.shape_45},{t:this.shape_44}]},1).to({state:[{t:this.shape_47},{t:this.shape_46}]},1).to({state:[{t:this.shape_49},{t:this.shape_48}]},1).to({state:[{t:this.shape_51},{t:this.shape_50}]},1).to({state:[{t:this.shape_53},{t:this.shape_52}]},1).to({state:[{t:this.shape_55},{t:this.shape_54}]},1).to({state:[{t:this.shape_57},{t:this.shape_56}]},1).wait(23));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).to({state:[{t:this.shape_3},{t:this.shape_2}]},1).to({state:[{t:this.shape_5},{t:this.shape_4}]},1).to({state:[{t:this.shape_7},{t:this.shape_6}]},1).to({state:[{t:this.shape_9},{t:this.shape_8}]},1).to({state:[{t:this.shape_11},{t:this.shape_10}]},1).to({state:[{t:this.shape_13},{t:this.shape_12}]},1).to({state:[{t:this.shape_15},{t:this.shape_14}]},1).to({state:[{t:this.shape_17},{t:this.shape_16}]},1).to({state:[{t:this.shape_19},{t:this.shape_18}]},1).to({state:[{t:this.shape_21},{t:this.shape_20}]},1).to({state:[{t:this.shape_23},{t:this.shape_22}]},1).to({state:[{t:this.shape_25},{t:this.shape_24}]},1).to({state:[{t:this.shape_27},{t:this.shape_26}]},1).to({state:[{t:this.shape_29},{t:this.shape_28}]},1).to({state:[{t:this.shape_29},{t:this.shape_28}]},433).to({state:[{t:this.shape_31},{t:this.shape_30}]},1).to({state:[{t:this.shape_33},{t:this.shape_32}]},1).to({state:[{t:this.shape_35},{t:this.shape_34}]},1).to({state:[{t:this.shape_37},{t:this.shape_36}]},1).to({state:[{t:this.shape_39},{t:this.shape_38}]},1).to({state:[{t:this.shape_41},{t:this.shape_40}]},1).to({state:[{t:this.shape_43},{t:this.shape_42}]},1).to({state:[{t:this.shape_45},{t:this.shape_44}]},1).to({state:[{t:this.shape_47},{t:this.shape_46}]},1).to({state:[{t:this.shape_49},{t:this.shape_48}]},1).to({state:[{t:this.shape_51},{t:this.shape_50}]},1).to({state:[{t:this.shape_53},{t:this.shape_52}]},1).to({state:[{t:this.shape_55},{t:this.shape_54}]},1).to({state:[{t:this.shape_57},{t:this.shape_56}]},1).wait(23));
 
 	// typewrite
 	this.instance_3 = new lib.typewriter();
 	this.instance_3.setTransform(338.8,209.5,0.096,0.096,0,0,0,47,41.3);
 	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(28).to({_off:false},0).to({regX:46.8,scaleX:0.86,scaleY:0.86,x:175.3,y:188.5},11,cjs.Ease.get(1)).to({x:178.3},3).to({x:175.3},3).wait(3).to({y:162.5},17,cjs.Ease.get(1)).to({_off:true},130).wait(313));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(4).to({_off:false},0).to({regX:46.8,scaleX:0.86,scaleY:0.86,x:175.3,y:188.5},11,cjs.Ease.get(1)).to({x:178.3},3).to({x:175.3},3).wait(3).to({y:162.5},17,cjs.Ease.get(1)).to({_off:true},130).wait(313));
 
 	// door_close
 	this.instance_4 = new lib.door_close();
 	this.instance_4.setTransform(339.5,205.5,1,1,0,0,0,30.9,25.2);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(508));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(484));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(507.5,304.3,63.9,52.3);

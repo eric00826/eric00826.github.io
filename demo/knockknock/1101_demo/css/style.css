@@ -97,11 +97,23 @@ body {
   z-index: 5000;
 }
 
+#knock-it canvas{
+  position: absolute;
+  left:-43px;
+  top:-95px;
+}
+
 #knock-it .knock-it-img{
   position: absolute;
   left:-40px;
-  top:-100px;
+  top:-80px;
 }
+
+#knock-it .knock-it-img img{
+  width: 79px;
+  height: 84px;
+}
+
 
 /**************/
 
@@ -192,6 +204,27 @@ body {
   margin-top: -350px;
   background-image: url(../images/service-dummu.jpg);
 }
+
+.btn-mailTo{
+  position: absolute;
+  width: 182px;
+  height: 16px;
+  left: 477px;
+  top: 666px;
+  /*background-color: rgba(255,255,255,.2);*/
+
+  cursor: pointer;
+}
+
+.btn-mailTo .textline{
+  position: relative;
+  width: 0%;
+  height: 100%;
+  border-bottom: 1px #fff solid;
+  /*margin: 0 auto;*/
+}
+
+/********************/
 
 #loading{
   position: fixed;

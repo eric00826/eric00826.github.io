@@ -34,6 +34,7 @@ main = function (){
 
 	var exportRootArray = [];
 	var exportMouse;
+	var exportKnockit;
 	var isPlayCount = 0;
 	var isIntro = false;
 
@@ -160,6 +161,30 @@ main = function (){
 		document.onmousedown = handleMouseDown;
 	}
 
+	function initknockitAni() {
+		var $canvas, stage;
+		$canvas = $('<canvas></canvas>').attr({
+			width: this['knockit'].properties.width,
+			height: this['knockit'].properties.height
+		}).appendTo($('#knock-it'));
+
+		//動態檔名
+		exportKnockit = new this['knockit']['knockit']();
+		stage = new createjs.Stage($canvas[0]);
+		stage.addChild(exportKnockit);
+		stage.update();
+		createjs.Ticker.setFPS(24);
+		createjs.Ticker.addEventListener("tick", stage);
+		exportKnockit.stop();
+		exportKnockit.loop = false;
+		exportKnockit.on('tick', function(event) {
+ 			// console.log(exportMouse.currentFrame + '/' + exportMouse.totalFrames)
+ 			if(exportKnockit.currentFrame >= exportKnockit.totalFrames){
+ 				exportKnockit.gotoAndStop(0);
+ 			}
+ 		});
+	}
+
 	function handleMouseMove(event) {
     var dot, eventDoc, doc, body, pageX, pageY;
 
@@ -242,7 +267,7 @@ main = function (){
 	 			stopAutoPlay();
 	 			$(this).parent().data('isPlay',true);
 
-	 			TweenMax.to($(this).parent(),0.1,{y:-5,yoyo:true,repeat:3})
+	 			TweenMax.to($(this).parent(),0.1,{y:-3,yoyo:true,repeat:3})
 	 		}
  			
  		});
@@ -326,6 +351,7 @@ main = function (){
 	var isAutoPlay = true;
 
 	function initKnock () {
+		initknockitAni();
 		startAutoPlay();
 	}
 
@@ -351,12 +377,14 @@ main = function (){
 
 		_knock.data('tarLeft',_target.css('left'));
 		_knock.data('tarTop',_target.css('top'));
+		exportKnockit.play();
 
-		TweenMax.set(_knock,{scale:.1});
-		TweenMax.to(_knock, 1.5 ,{scale:1 ,ease: Elastic.easeOut.config(1, 0.4)});
+		// TweenMax.set(_knock,{scale:.1});
+		// TweenMax.to(_knock, 1.5 ,{scale:1 ,ease: Elastic.easeOut.config(1, 0.4)});
 
 		autoPlayTimeout = setTimeout(function () {
-			TweenMax.to(_knock, 1.5 ,{scale:.1 ,ease: Elastic.easeIn.config(1, 0.75), onComplete:nextKnock});
+			// TweenMax.to(_knock, 1.5 ,{scale:.1 ,ease: Elastic.easeIn.config(1, 0.75), onComplete:nextKnock});
+			nextKnock();
 		},2000);
 	}
 
@@ -370,7 +398,7 @@ main = function (){
 
 	function stopAutoPlay () {
 		clearTimeout(autoPlayTimeout);
-		TweenMax.to($('#knock-it'), 0.5 ,{scale:.1 ,onComplete:onComplete});
+		// TweenMax.to($('#knock-it'), 0.5 ,{scale:.1 ,onComplete:onComplete});
 	
 		function onComplete () {
 			$('#knock-it').css({'display':'none'});
@@ -432,6 +460,20 @@ main = function (){
 				TweenMax.to('.service-content',2,{y:-500,ease: Expo.easeInOut});
 				TweenMax.to('.btn-service-arr',0.5,{rotation:0,ease: Power3.easeOut});
 			}
+		});
+
+		$('.btn-mailTo').mouseover(function(event) {
+			var _textline = $(this).find('.textline');
+			TweenMax.to(_textline,0.5,{css:{'width':'100%'}});
+		});
+
+		$('.btn-mailTo').mouseout(function(event) {
+			var _textline = $(this).find('.textline');
+			TweenMax.to(_textline,0.5,{css:{'width':'0%'}});
+		});
+
+		$('.btn-mailTo').click(function(event) {
+			location.href = 'mailto:kate@knockknockcreative.com';
 		});
 	}
 

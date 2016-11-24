@@ -537,7 +537,7 @@ obj.setSelect = function () {
 		}
 
 		this.isSelected = true;
-		// customEditor.onObjSelected();
+		customEditor.onObjSelected();
 	}
 }
 

@@ -16,14 +16,15 @@ class textInput extends createjs.Container {
 
     this.option = {
       fontSize : 40,
-      fontFamily : 'Noto Sans TC',
+      fontFamily : 'Arial',
       fontWeight : '100',
       fontOffset : '0.3',
       textAlign : 'left',
       minWidth : 200,
       width : 200,
       height : 50,
-      inputText : ''
+      inputText : '',
+      fontStyle : 'normal'
     }
 
     if(_option != null){
@@ -70,7 +71,7 @@ class textInput extends createjs.Container {
   }
 
   _getFontStyle() {
-    return this.option.fontWeight + ' ' + this.option.fontSize + 'px' + ' ' + this.option.fontFamily;
+    return this.option.fontStyle + ' ' + this.option.fontWeight + ' ' + this.option.fontSize + 'px' + ' ' + this.option.fontFamily;
   }
 
   _setupDomNode() {
@@ -308,6 +309,12 @@ class textInput extends createjs.Container {
 
   setFontWeight(_fontWeight){
     this.option.fontWeight = _fontWeight;
+    this.update();
+    this.updateTextarea();
+  }
+
+  setFontStyle(_fontStyle){
+    this.option.fontStyle = _fontStyle;
     this.update();
     this.updateTextarea();
   }

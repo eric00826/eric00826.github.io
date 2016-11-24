@@ -230,6 +230,7 @@ customEditor = function (){
 
     /////////////////
     initColorPick();
+    initTextTools();
 
     //////////////////////////
 
@@ -278,6 +279,36 @@ customEditor = function (){
 			var _color = $(this).data('value');
 			onSelectObject.changeShapeColor("#" + _color);
 			updateToolsBar();
+		});
+	}
+
+	function initTextTools() {
+		$('.btn-textTools').data('isActive', false);
+
+		$('.btn-textTools').click(function(event) {
+			if(!$(this).data('isActive')){
+				$(this).data('isActive',true);
+				$(this).css('background-color', '#ccc');
+			}else{
+				$(this).data('isActive',false);
+				$(this).css('background-color', 'transparent');
+			}
+		});
+
+		$('.btn-tools-textBold').click(function(event) {
+			if(!$(this).data('isActive')){
+				onSelectObject.textField.setFontWeight("400");
+			}else{
+				onSelectObject.textField.setFontWeight("700");
+			}
+		});
+
+		$('.btn-tools-textItalic').click(function(event) {
+			if(!$(this).data('isActive')){
+				onSelectObject.textField.setFontStyle("normal");
+			}else{
+				onSelectObject.textField.setFontStyle("italic");
+			}
 		});
 	}
 

@@ -586,7 +586,7 @@ main = function (){
 	//init UI
 
 	function initUIPlayerName() {
-		var _default = '請輸入名子';
+		var _default = '請輸入大名';
 		setDefault('.input-player-name',_default);
 
 		$('.pop-ui-player-name').find('.btn-panel-player-submit').click(function(event) {
@@ -597,7 +597,7 @@ main = function (){
 				UIClose('.pop-ui-player-name');
 				addNewPlayer(_name);
 			}else{
-				alert('請輸入名子');
+				alert('請輸入大名');
 			}
 		});
 	}

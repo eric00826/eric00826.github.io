@@ -306,15 +306,15 @@ main = function (){
 		if(palyerList.length == 2){
 			_pickStepMin = 2;
 		}else if(palyerList.length == 3){
-			_pickStepMin = 5;
+			_pickStepMin = 4;
 		}else if(palyerList.length == 4){
-			_pickStepMin = 7;
+			_pickStepMin = 5;
 		}else if(palyerList.length == 5){
-			_pickStepMin = 9;
+			_pickStepMin = 6;
 		}else if(palyerList.length == 6){
-			_pickStepMin = 10;
+			_pickStepMin = 6;
 		}else{
-			_pickStepMin = 12;
+			_pickStepMin = 6;
 		}
 		return _pickStepMin;
 	}

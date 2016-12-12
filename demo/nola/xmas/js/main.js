@@ -177,6 +177,7 @@ main = function (){
 		});
 
 		TweenMax.from($giftItem,0.5,{scale:.2,autoAlpha:0,ease: Back.easeOut.config(2)});
+		updateGiftCount();
 	}
 
 	function addNewPage(_newPage) {
@@ -195,6 +196,18 @@ main = function (){
 		$('.gift-page-' + _page).css('display', 'block');
 
 		nowPlayerPage = _page;
+		updateGiftCount();
+	}
+
+	function updateGiftCount () {
+		var _nowCount = palyerList.length;
+		if(nowPlayerPage < lastPlayerPage){
+			_nowCount = (nowPlayerPage + 1)*4;
+		}
+
+		var _first = (nowPlayerPage*4) +1;
+
+		$('.gift-count').text(_first + '-' + _nowCount + ' / ' +  palyerList.length);
 	}
 
 	var nowSetectGift;

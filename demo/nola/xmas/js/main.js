@@ -308,13 +308,13 @@ main = function (){
 		}else if(palyerList.length == 3){
 			_pickStepMin = 4;
 		}else if(palyerList.length == 4){
-			_pickStepMin = 5;
+			_pickStepMin = 6;
 		}else if(palyerList.length == 5){
-			_pickStepMin = 6;
+			_pickStepMin = 7;
 		}else if(palyerList.length == 6){
-			_pickStepMin = 6;
+			_pickStepMin = 7;
 		}else{
-			_pickStepMin = 6;
+			_pickStepMin = 0;
 		}
 		return _pickStepMin;
 	}

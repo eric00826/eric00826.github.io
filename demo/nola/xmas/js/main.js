@@ -460,6 +460,7 @@ main = function (){
 
 	function showBtnNext() {
 		$('.btn-next').css('display', 'block');
+		// TweenMax.from($('.btn-next'),0.5,{scale:0.2,autoAlpha:0,ease: Back.easeOut.config(2)});
 	}
 
 	function hideBtnNext() {
@@ -477,9 +478,11 @@ main = function (){
 	/*******************************/
 
 	function KingInto() {
-		TweenMax.set('.share-effect',{autoAlpha:0});
-		TweenMax.set('.share-text',{autoAlpha:0,scale:1.5});
-		TweenMax.set('.btn-share',{autoAlpha:0,scale:0.2});
+		TweenMax.to('.king-effect',8,{rotation:"360", ease:Linear.easeNone, repeat:-1});
+		TweenMax.from('.king-effect',0.5,{autoAlpha:0});
+		TweenMax.from('.king-text',2,{autoAlpha:0,scale:1.5,ease: Elastic.easeOut.config(1, 0.4)});
+		
+		TweenMax.from($('.btn-king'),0.5,{delay:0.5,scale:0.2,autoAlpha:0,ease: Back.easeOut.config(2)});
 
 		$('#content-king').css('display', 'block');
 
@@ -499,6 +502,10 @@ main = function (){
 	var kingRandomSpeed = 100;
 
 	function shareInto() {
+		TweenMax.set('.share-effect',{autoAlpha:0});
+		TweenMax.set('.share-text',{autoAlpha:0,scale:1.5});
+		TweenMax.set('.btn-share',{autoAlpha:0,scale:0.2});
+
 		$('#content-share').css('display', 'block');
 
 		TweenMax.from($('.share-gift'),0.5,{scale:.2,autoAlpha:0,ease: Back.easeOut.config(2)});

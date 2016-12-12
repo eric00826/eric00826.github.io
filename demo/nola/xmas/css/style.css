@@ -124,6 +124,8 @@ body {
   background-image: url(../images/btn-rule.png);
   left: 88px;
   top: 0px;
+
+  background-repeat: no-repeat;
 }
 
 .btn-enter{
@@ -481,6 +483,7 @@ body {
   height: 1250px;
   background-image: url(../images/rule.png);
   margin: 0 auto;
+  background-repeat: no-repeat;
 }
 
 .panel-rule-close{

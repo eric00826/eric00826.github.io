@@ -94,7 +94,6 @@ main = function (){
 
 			$('#input-player-name').val('客人' + (_player));
 			UIOpen('.pop-ui-player-name');
-			$('#input-player-name').focus();
 		});
 
 		$('.btn-start').click(function(event) {
@@ -167,15 +166,14 @@ main = function (){
 		playerObj.getCount = giftCount;
 
 		palyerList.push(playerObj);
-		addNewGift(playerObj);
+		addNewGift(playerObj,palyerList.length - 1);
 
 		// console.log(palyerList);
 	}
 
-	function addNewGift(_playerObj) {
+	function addNewGift(_playerObj,_index) {
 		//先判斷在第幾頁
-		var _last = palyerList.length - 1;
-		var _page = Math.floor(_last/4);
+		var _page = Math.floor(_index/4);
 		
 		if(lastPlayerPage < _page){
 			lastPlayerPage++;
@@ -200,6 +198,21 @@ main = function (){
 
 		TweenMax.from($giftItem,0.5,{scale:.2,autoAlpha:0,ease: Back.easeOut.config(2)});
 		updateGiftCount();
+	}
+
+	function updatePlayerBox () {
+		$('.gift-panel').empty();
+
+		var tempPlayerPage = nowPlayerPage;
+
+		lastPlayerPage = -1;
+		for (var i = 0; i < palyerList.length; i++) {
+			addNewGift(palyerList[i],i);
+		};
+
+		if(tempPlayerPage < lastPlayerPage){
+			gotoPage(tempPlayerPage);
+		}
 	}
 
 	function addNewPage(_newPage) {
@@ -714,6 +727,7 @@ main = function (){
 
 		$('.btn-panel-player-delete').click(function(event) {
 			deletePlayer(nowSetectGift);
+			updatePlayerBox();
 			UIClose('.pop-ui-player-edit');
 		});
 
@@ -750,11 +764,36 @@ main = function (){
 
 	/*************/
 
+	function focusPlayerName () {
+		var editor = $('#input-player-name');
+	  var value = editor.val();
+	  editor.val("");
+	  editor.focus();
+	  editor.val(value);
+	}
+
+	function focusPlayerNameEdit () {
+		var editor = $('#input-player-name-edit');
+	  var value = editor.val();
+	  editor.val("");
+	  editor.focus();
+	  editor.val(value);
+	}
+
 	function UIOpen (_className) {
 		var _ui = $(_className);
 		TweenMax.set(_ui,{autoAlpha:0});
 		_ui.css('display', 'block');
-		TweenMax.to(_ui,0.5,{autoAlpha:1});
+
+		var setFocus = 0;
+
+		if(_className == '.pop-ui-player-name'){
+			TweenMax.to(_ui,0.5,{autoAlpha:1,onComplete:focusPlayerName});
+		}else if(_className == '.pop-ui-player-nameEdit'){
+			TweenMax.to(_ui,0.5,{autoAlpha:1,onComplete:focusPlayerNameEdit});
+		}else{
+			TweenMax.to(_ui,0.5,{autoAlpha:1});
+		}
 	}
 
 	function UIClose (_className) {

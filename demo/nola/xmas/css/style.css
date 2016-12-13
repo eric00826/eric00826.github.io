@@ -515,6 +515,14 @@ body {
     right: 33px;
 }
 
+.pop-test{
+  display: block;
+  background-color:#fff;
+
+  width: 600px;
+  height: 400px;
+}
+
 
 /* ==========================================================================
    Responsive class

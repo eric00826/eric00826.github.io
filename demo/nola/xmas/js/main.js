@@ -88,7 +88,11 @@ main = function (){
 		initUIPlayerEdit();
 
 		$('.btn-add').click(function(event) {
-			$('#input-player-name').val('客人' + (palyerList.length + 1));
+
+			var _player;
+			_player = giftCount + 2;
+
+			$('#input-player-name').val('客人' + (_player));
 			UIOpen('.pop-ui-player-name');
 			$('#input-player-name').focus();
 		});

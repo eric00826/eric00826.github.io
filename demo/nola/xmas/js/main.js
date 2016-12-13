@@ -19,7 +19,6 @@ main = function (){
 
 		//start
 		indexInto();
-		
 	}
 
 	/**************************/
@@ -42,7 +41,10 @@ main = function (){
 		});
 
 		$('.btn-return').click(function(event) {
-			 location.reload();
+			var r = confirm("即將返回首頁，遊戲資料將清除請問是否要繼續？");
+			if (r == true) {
+			    location.reload();
+			}
 		});
 	}
 
@@ -121,6 +123,18 @@ main = function (){
 
 		TweenMax.from($('.btn-start'),0.5,{scale:.2,autoAlpha:0,ease: Back.easeOut.config(2)});
 		TweenMax.from($('.btn-add'),0.5,{delay:0.2,scale:.2,autoAlpha:0,ease: Back.easeOut.config(2)});
+	
+		//批次產生
+		var person = prompt("[測試專用]新增多位客人", 4);
+
+		if (person != null) {
+		    /*document.getElementById("demo").innerHTML =
+		    "Hello " + person + "! How are you today?";*/
+
+		    for (var i = 0; i < person; i++) {
+					addNewPlayer('客人' + (i + 1));
+				};
+		}
 	}
 
 	function playerClose () {
@@ -134,7 +148,7 @@ main = function (){
 	}
 
 	function addNewPlayer(_name) {
-		var playerObj = {playerID:'', name:'',style:'',getCount:''};
+		var playerObj = {playerID:'', name:'',style:'',getCount:'',exchangeTimes:0};
 		playerObj.name = _name;
 
 		var _style = getRandom(1,4);
@@ -147,7 +161,7 @@ main = function (){
 		palyerList.push(playerObj);
 		addNewGift(playerObj);
 
-		console.log(palyerList);
+		// console.log(palyerList);
 	}
 
 	function addNewGift(_playerObj) {
@@ -222,17 +236,29 @@ main = function (){
 	var palyerListResult;
 
 	function gameStart() {
-		palyerListResult = palyerList;
+		palyerListResult = [];
+		palyerListResult = JSON.parse(JSON.stringify(palyerList));
+		
 		runCount = 0;
 		pickCount = 0;
+		pickStepString = [];
 		pickStepList = [];
 
 		console.log('開始交換');
+		console.log('=== palyerList =====');
+		console.log(palyerList);
+		console.log('=== palyerListResult =====');
 		console.log(palyerListResult);
-		doPick();
+
+		startCount++;
+
+		if(startCount < 5){
+			doPick();
+		}
 	}
 
 	var pickCount = 0;
+	var startCount = 0;
 
 	function doPick() {
 		pickCount++;
@@ -248,16 +274,52 @@ main = function (){
 
 		var n = false;
 
-		var prePickID = -1;
+		var prePickID_1;
+		var prePickID_2;
+
 		if(pickCount>1){
 			var prePick = pickStepList[pickStepList.length-1];
-			prePickID = prePick[0].playerID;
+			prePickID_1 = prePick[0].playerID;
+			prePickID_2 = prePick[1].playerID;
+		}
+
+		var maxExchangeTimes = 10;
+		if(palyerListResult.length > 20){
+			maxExchangeTimes = 3;
+		}else if(palyerListResult.length > 10){
+			maxExchangeTimes = 4;
+		}else if(palyerListResult.length > 8){
+			maxExchangeTimes = 8;
+		}
+
+		if(palyerListResult.length > 100){
+			pickCount = 500;
 		}
 
 		//檢查是否重複步驟
-		if(prePickID == pick_1.playerID){
+		if(pickCount > 300){
+			console.log('過多遞迴(>300)，重新開始');
+			gameStart();
+
+		}else if(pick_1.exchangeTimes >= maxExchangeTimes || pick_2.exchangeTimes >= maxExchangeTimes){
 			//重抽
-			console.log('pick : ' + pickCount + ' 重抽');
+			console.log('pick : ' + pickCount + ', 重抽:交換太多次');
+			doPick();
+		}else if(prePickID_1 == pick_1.playerID){
+			//重抽
+			console.log('pick : ' + pickCount + ', 重抽:上一棒次重複');
+			doPick();
+		}else if(prePickID_1 == pick_2.playerID && prePickID_2 == pick_1.playerID){
+			//重抽
+			console.log('pick : ' + pickCount + ', 重抽:上一棒次互換');
+			doPick();
+		}else if(palyerListResult.length > 8 && pick_1.playerID == pick_2.getCount){
+			//對方如果是自己的禮物就重抽
+			console.log('pick : ' + pickCount + ',  重抽:換回自己的禮物');
+			doPick();
+		}else if(palyerListResult.length > 8 &&  pick_2.playerID == pick_1.getCount){
+			//對方如果是自己的禮物就重抽
+			console.log('pick : ' + pickCount + ',  重抽:換回自己的禮物');
 			doPick();
 		}else{
 			//寫入步驟
@@ -266,6 +328,9 @@ main = function (){
 			var tempCount = pick_1.getCount;
 			pick_1.getCount = pick_2.getCount;
 			pick_2.getCount = tempCount;
+
+			pick_1.exchangeTimes++;
+			pick_2.exchangeTimes++;
 
 			var pickStep = [pick_1,pick_2];
 			pickStepList.push(pickStep);
@@ -285,13 +350,16 @@ main = function (){
 							//繼續抽
 							console.log('pick : ' + pickCount + ' === 不夠繼續抽 ===');
 							doPick();
+						}if(pickStepList.length > palyerListResult.length*2){
+							//繼續抽
+							console.log('pick : ' + pickCount + ' === 重玩:太過冗長 ===');
+							gameStart();
 						}else{
 							console.log('pick : ' + pickCount + ' === 交換完畢 ===');
 							console.log(pickStepString);
 							console.log(pickStepList);
 							console.log(palyerListResult);
 							console.log('pickStepMin = ' + pickStepMin());
-
 							playerClose();
 						}
 					}
@@ -310,9 +378,7 @@ main = function (){
 		}else if(palyerList.length == 4){
 			_pickStepMin = 6;
 		}else if(palyerList.length == 5){
-			_pickStepMin = 7;
-		}else if(palyerList.length == 6){
-			_pickStepMin = 7;
+			_pickStepMin = 6;
 		}else{
 			_pickStepMin = 0;
 		}
@@ -436,11 +502,6 @@ main = function (){
 	}
 
 	function pickComplete() {
-		/*if(nowExchangeStep < pickStepList.length - 1){
-				showBtnNext();
-		}else{
-			alert('交換完成');
-		}*/
 
 		showBtnNext();
 
@@ -474,10 +535,14 @@ main = function (){
 	function showBtnNext() {
 		$('.btn-next').css('display', 'block');
 		// TweenMax.from($('.btn-next'),0.5,{scale:0.2,autoAlpha:0,ease: Back.easeOut.config(2)});
+		
+		$('.pickInfoText').css('display', 'block');
+		$('.pickInfoText').text((nowExchangeStep + 1) + ' / 共' + pickStepList.length + '組');
 	}
 
 	function hideBtnNext() {
 		$('.btn-next').css('display', 'none');
+		$('.pickInfoText').css('display', 'none');
 	}
 
 	function showBtnPre() {

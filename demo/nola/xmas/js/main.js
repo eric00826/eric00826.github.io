@@ -137,14 +137,19 @@ main = function (){
 		}
 	}
 
+	var isPlayerClose = false;
+
 	function playerClose () {
 		// $('#content-player').css('display', 'none');
 
-		TweenMax.to($('.btn-start'),0.5,{scale:.2,ease: Back.easeIn.config(2)});
-		TweenMax.to($('#content-player'),0.5,{delay:0.2,autoAlpha:0});
+		if(!isPlayerClose){
+			isPlayerClose = true;
+			TweenMax.to($('.btn-start'),0.5,{scale:.2,ease: Back.easeIn.config(2)});
+			TweenMax.to($('#content-player'),0.5,{delay:0.2,autoAlpha:0});
 
-		//next
-		setTimeout(exchangeInto,500);
+			//next
+			setTimeout(exchangeInto,500);
+		}
 	}
 
 	function addNewPlayer(_name) {
@@ -403,6 +408,7 @@ main = function (){
 		$('.btn-next').click(function(event) {
 
 			if(nowExchangeStep < pickStepList.length - 1){
+				pickCompleteCount = 0;
 				nowExchangeStep++;
 				nextExchangeStep();
 				hideBtnNext();
@@ -477,18 +483,14 @@ main = function (){
 
 			var _focusID = palyerList[_randomArray[_randomIndex]].playerID;
 			_target.find('.gift-item-' + _focusID).css('display', 'block');
-
 			_target.data('randomIndex', _randomIndex);
-
 			var _randomCount = _target.data('randomCount');
 			_randomCount++;
-
 			_target.data('randomCount',_randomCount);
 
 			if (_randomCount > 10) {
 				if(_pickObj.playerID == _focusID){
 					clearInterval(pickInterval);
-
 					setTimeout(function () {
 						pickComplete();
 					},300);
@@ -501,12 +503,18 @@ main = function (){
 		TweenMax.from(_target,0.5,{delay:_delay,scale:.2,ease: Back.easeOut.config(2)});
 	}
 
+	var pickCompleteCount = 0;
+
 	function pickComplete() {
+		console.log('pickComplete');
+		pickCompleteCount++;
 
-		showBtnNext();
-
-		if(nowExchangeStep > 0){
-			showBtnPre();
+		if(pickCompleteCount == 2){
+			// pickCompleteCount = 0;
+			showBtnNext();
+			if(nowExchangeStep > 0){
+				showBtnPre();
+			}
 		}
 	}
 
@@ -534,9 +542,10 @@ main = function (){
 
 	function showBtnNext() {
 		$('.btn-next').css('display', 'block');
-		// TweenMax.from($('.btn-next'),0.5,{scale:0.2,autoAlpha:0,ease: Back.easeOut.config(2)});
+		TweenMax.from($('.btn-next'),0.5,{scale:0.2,autoAlpha:0,ease: Back.easeOut.config(2)});
 		
 		$('.pickInfoText').css('display', 'block');
+		TweenMax.from($('.pickInfoText'),0.5,{delay:0.2,autoAlpha:0});
 		$('.pickInfoText').text((nowExchangeStep + 1) + ' / 共' + pickStepList.length + '組');
 	}
 

@@ -788,6 +788,15 @@ main = function (){
 	{
 		$(document).ready(function() {
 			init();
+
+			var iOS = /iPad|iPhone|iPod/.test(navigator.platform);
+
+      if(iOS){
+  			$('.input-player-name').css({
+  				'width': '470px',
+  				'height' '90px'
+  			});;
+      }
 		});
 	}
 

@@ -782,16 +782,16 @@ main = function (){
 
 	function UIOpen (_className) {
 		var _ui = $(_className);
-		TweenMax.set(_ui,{autoAlpha:0});
-		_ui.css('display', 'block');
-
-		var setFocus = 0;
-
+		
 		if(_className == '.pop-ui-player-name'){
-			TweenMax.to(_ui,0.5,{autoAlpha:1,onComplete:focusPlayerName});
+			_ui.css('display', 'block');
+			focusPlayerName();
 		}else if(_className == '.pop-ui-player-nameEdit'){
-			TweenMax.to(_ui,0.5,{autoAlpha:1,onComplete:focusPlayerNameEdit});
+			_ui.css('display', 'block');
+			focusPlayerNameEdit();
 		}else{
+			TweenMax.set(_ui,{autoAlpha:0});
+			_ui.css('display', 'block');
 			TweenMax.to(_ui,0.5,{autoAlpha:1});
 		}
 	}

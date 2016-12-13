@@ -582,6 +582,7 @@ main = function (){
 		$giftName.text(_pickObj.name);
 		$giftItem.appendTo(_target);
 
+		TweenMax.set(_target,{scale:1});
 		TweenMax.from(_target,0.5,{scale:.2,ease: Back.easeOut.config(2)});
 	}
 

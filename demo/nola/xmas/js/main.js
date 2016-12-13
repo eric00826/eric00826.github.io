@@ -463,7 +463,7 @@ main = function (){
 
 		// startRandomAnimation($('.exchange-item-1'),pickStep[0]);
 		// startRandomAnimation($('.exchange-item-2'),pickStep[1]);
-		TweenMax.to('.exchange-arrow',2,{delay:1,rotation:"-360", ease: Power2.easeInOut});
+		TweenMax.from('.exchange-arrow',2,{delay:1,rotation:"360", ease: Power2.easeInOut});
 		$('.pickInfoText').text((nowExchangeStep + 1) + ' / 共' + pickStepList.length + '組');
 	}
 

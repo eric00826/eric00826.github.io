@@ -88,7 +88,9 @@ main = function (){
 		initUIPlayerEdit();
 
 		$('.btn-add').click(function(event) {
+			$('#input-player-name').val('客人' + (palyerList.length + 1));
 			UIOpen('.pop-ui-player-name');
+			$('#input-player-name').focus();
 		});
 
 		$('.btn-start').click(function(event) {
@@ -125,16 +127,13 @@ main = function (){
 		TweenMax.from($('.btn-add'),0.5,{delay:0.2,scale:.2,autoAlpha:0,ease: Back.easeOut.config(2)});
 	
 		//批次產生
-		var person = prompt("[測試專用]新增多位客人", 4);
+		/*var person = prompt("[測試專用]新增多位客人", 4);
 
 		if (person != null) {
-		    /*document.getElementById("demo").innerHTML =
-		    "Hello " + person + "! How are you today?";*/
-
 		    for (var i = 0; i < person; i++) {
 					addNewPlayer('客人' + (i + 1));
 				};
-		}
+		}*/
 	}
 
 	var isPlayerClose = false;
@@ -392,7 +391,7 @@ main = function (){
 
 	/*******************************/
 	var nowExchangeStep = 0;
-	var lastExchangeStep = 1;
+	var lastExchangeStep = 0;
 
 	function exchangeInto() {
 		$('#content-exchange').css('display', 'block');
@@ -409,9 +408,15 @@ main = function (){
 
 			if(nowExchangeStep < pickStepList.length - 1){
 				pickCompleteCount = 0;
-				nowExchangeStep++;
-				nextExchangeStep();
-				hideBtnNext();
+				
+				if(nowExchangeStep < lastExchangeStep){
+					nowExchangeStep++;
+					showExchangeStep();
+				}else{
+					nowExchangeStep++;
+					nextExchangeStep();
+				}
+				
 			}else{
 				//交換完成
 				exchangeClose();
@@ -420,13 +425,21 @@ main = function (){
 
 		$('.btn-pre').click(function(event) {
 			nowExchangeStep--;
-			showExchangeStep();
+			if(nowExchangeStep < 0){
+				nowExchangeStep = 0;
+			}else{
+				showExchangeStep();
+				$('.pickInfoText').text((nowExchangeStep + 1) + ' / 共' + pickStepList.length + '組');
+			}
 		});
 	}
 
 	function nextExchangeStep() {
+		if(nowExchangeStep > lastExchangeStep){
+			lastExchangeStep = nowExchangeStep;
+		}
 
-		console.log('show step : ' + nowExchangeStep + ', lastExchangeStep = ' + lastExchangeStep);
+		console.log('nowExchangeStep : ' + nowExchangeStep + ', lastExchangeStep = ' + lastExchangeStep);
 
 		$('.exchange-item-1').empty();
 		$('.exchange-item-2').empty();
@@ -435,10 +448,19 @@ main = function (){
 
 		var pickStep = pickStepList[nowExchangeStep];
 
-		startRandomAnimation($('.exchange-item-1'),pickStep[0]);
-		startRandomAnimation($('.exchange-item-2'),pickStep[1]);
+		if(nowExchangeStep == lastExchangeStep){
+			hideBtnNext();
+			startRandomAnimation($('.exchange-item-1'),pickStep[0]);
+			startRandomAnimation($('.exchange-item-2'),pickStep[1]);
+		}else{
+			createGiftItem($('.exchange-item-1'),pickStep[0]);
+			createGiftItem($('.exchange-item-2'),pickStep[1]);
+		}
 
+		// startRandomAnimation($('.exchange-item-1'),pickStep[0]);
+		// startRandomAnimation($('.exchange-item-2'),pickStep[1]);
 		TweenMax.to('.exchange-arrow',2,{delay:1,rotation:"-360", ease: Power2.easeInOut});
+		$('.pickInfoText').text((nowExchangeStep + 1) + ' / 共' + pickStepList.length + '組');
 	}
 
 	function preExchangeStep() {
@@ -512,6 +534,7 @@ main = function (){
 		if(pickCompleteCount == 2){
 			// pickCompleteCount = 0;
 			showBtnNext();
+
 			if(nowExchangeStep > 0){
 				showBtnPre();
 			}
@@ -520,7 +543,7 @@ main = function (){
 
 	function showExchangeStep() {
 
-		console.log('show step : ' + nowExchangeStep + ', lastExchangeStep = ' + lastExchangeStep);
+		console.log('nowExchangeStep : ' + nowExchangeStep + ', lastExchangeStep = ' + lastExchangeStep);
 
 		$('.exchange-item-1').empty();
 		$('.exchange-item-2').empty();
@@ -528,6 +551,7 @@ main = function (){
 		var pickStep = pickStepList[nowExchangeStep];
 		createGiftItem($('.exchange-item-1'),pickStep[0]);
 		createGiftItem($('.exchange-item-2'),pickStep[1]);
+		$('.pickInfoText').text((nowExchangeStep + 1) + ' / 共' + pickStepList.length + '組');
 	}
 
 	function createGiftItem(_target, _pickObj) {
@@ -538,6 +562,8 @@ main = function (){
 		//字數處理
 		$giftName.text(_pickObj.name);
 		$giftItem.appendTo(_target);
+
+		TweenMax.from(_target,0.5,{scale:.2,ease: Back.easeOut.config(2)});
 	}
 
 	function showBtnNext() {
@@ -555,7 +581,7 @@ main = function (){
 	}
 
 	function showBtnPre() {
-		// $('.btn-pre').css('display', 'block');
+ 		$('.btn-pre').css('display', 'block');
 	}
 
 	function hideBtnPre() {
@@ -661,13 +687,13 @@ main = function (){
 
 	function initUIPlayerName() {
 		var _default = '請輸入大名';
-		setDefault('.input-player-name',_default);
+		/*setDefault('.input-player-name',_default);*/
 
 		$('.pop-ui-player-name').find('.btn-panel-player-submit').click(function(event) {
 			var _name = $('.input-player-name').val();
 
 			if(_name != '' && _name != _default){
-				setDefault('.input-player-name',_default);
+				// setDefault('.input-player-name',_default);
 				UIClose('.pop-ui-player-name');
 				addNewPlayer(_name);
 			}else{

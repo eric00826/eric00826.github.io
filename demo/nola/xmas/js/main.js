@@ -793,7 +793,7 @@ main = function (){
 
       if(iOS){
   			$('.input-player-name').css({
-  				'width': '470px',
+  				'width': '450px',
   				'height' '90px'
   			});;
       }

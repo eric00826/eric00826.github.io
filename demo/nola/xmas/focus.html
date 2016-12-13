@@ -1,0 +1,54 @@
+<script src="js/libs/jquery-1.11.1.min.js"></script>
+
+<div class="ui">
+    <input type="text" id="editor" value="Some Text">
+</div>
+
+
+<input type="button" value="Set Focus" onclick="setFocus();" />
+
+<div class="test"></div>
+
+<style>
+  #editor{
+    position: absolute;
+    width: 490px;
+    height: 101px;
+    font-family: '微軟正黑體';
+    font-size: 48px;
+    text-align: center;
+    left: 72px;
+    top: 120px;
+    border: none;
+    background: transparent;
+    color: #965f2c;
+    outline: none;
+  }
+
+  .test{
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    cursor: pointer;
+  }
+
+  .ui{
+    /*display: none;*/
+  }
+</style>
+
+<script>
+  function setFocus() {
+    var editor = $('#editor');
+    var value = editor.val();
+    editor.val("");
+    editor.focus();
+    editor.val(value);
+}
+
+$('.test').click(function(event) {
+    $('.ui').css('display', 'block');
+    setFocus();
+});
+
+</script>

@@ -89,6 +89,8 @@ main = function (){
 
 		$('.btn-add').click(function(event) {
 
+			console.log('btn-add');
+
 			var _player;
 			_player = giftCount + 2;
 
@@ -798,7 +800,14 @@ main = function (){
 
 	function UIClose (_className) {
 		var _ui = $(_className);
-		TweenMax.to(_ui,0.3,{autoAlpha:0});
+
+		if(_className == '.pop-ui-player-name'){
+			_ui.css('display', 'none');
+		}else if(_className == '.pop-ui-player-nameEdit'){
+			_ui.css('display', 'none');
+		}else{
+			TweenMax.to(_ui,0.3,{autoAlpha:0});
+		}
 	}
 
 	/***************************************/

@@ -839,6 +839,11 @@ main = function (){
   				'width': '440px',
   				'height': '90px'
   			});
+
+  			$('.input-player-name-edit').css({
+  				'width': '440px',
+  				'height': '90px'
+  			});
       }
 		});
 	}

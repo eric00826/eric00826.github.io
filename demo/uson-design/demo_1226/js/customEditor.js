@@ -229,12 +229,23 @@ customEditor = function (){
     });
 
     /////////////////
-    initColorPick();
-    initTextTools();
+    initToolsBar();
 
     //////////////////////////
 
     initCanvas();
+    initSidTools();
+	}
+
+	function initToolsBar() {
+		initColorPick();
+    initTextTools();
+
+    TweenMax.set('#main-area-tools',{scale:.8});
+	}
+
+	function initSidTools () {
+		$(".side-tools-option").niceScroll({autohidemode:"false",cursorwidth:"10px",cursorborder:"none",cursoropacitymin:"1",railpadding: { top: 0, right: 5, left: 0, bottom: 0 },cursorcolor:"#28aaad"});
 	}
 
 	function updateToolsBar() {

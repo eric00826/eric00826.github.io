@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html class="ie6 lte9 lte8 lte7" lang="zh-tw"><![endif]-->
+<!--[if IE 8]><html class="ie8 lte9 lte8" lang="zh-tw"><![endif]-->
+<!--[if IE 9]><html class="ie9 lte9" lang="zh-tw"><![endif]-->
+<!--[if IE 7]><html class="ie7 lte9 lte8 lte7" lang="zh-tw"><![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8) | !(IE 9)  ]><!--><html  lang="zh-tw"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta content-language="zh-TW">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=1000,initial-scale=1,maximum-scale=1,user-scalable=0">
+        <meta property="og:title" content=""/>
+        <meta property="og:description" content=""/>
+        <meta property="og:url" content=""/>
+        <meta property="og:image" content=""/>
+
+         <title></title>
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/custom-editor.css">
+        <script src="js/libs/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+
+        <div id="wrapper">
+            <div id="header">
+                <div class="head-left"><img src="images/header-left.png" alt=""></div>
+                <div class="head-right clearfix"><img src="images/header-right.png" alt=""></div>
+            </div><!-- #header -->
+
+            <div id="content">
+                <div id="custom-editor">
+                    <div id="side-area">
+                        <div class="side-tools">
+                            <div class="side-tools-bar"></div>
+                            <div class="side-tools-option">
+                                <!-- 工具列 -->
+                                <fieldset id="tools">
+                <legend>工具列</legend>
+
+                <div>
+                   <button class="btn btn-success btn-load">載入範例</button> 
+                   <button class="btn btn-success btn-load-2">載入範例2</button>
+                   <br>
+                   <button class="btn btn-default btn-save">產生存檔</button> 
+                </div>
+
+                <button class="btn btn-default btn-addShapeObj-1">新增圓形</button>
+                <button class="btn btn-default btn-addShapeObj-2">新增方形</button>
+                
+                <button class="btn btn-default btn-addImageObj-1">新增圖片1</button>
+                <button class="btn btn-default btn-addImageObj-2">新增圖片2</button>
+                <br>
+                
+                <br>
+                <button class="btn btn-default btn-addTextObj">新增文字</button>
+                <br><br>
+                <!-- <div>
+                   <button class="btn btn-success btn-load">載入範例</button> 
+                   <button class="btn btn-success btn-load-2">載入範例2</button>
+                   <br>
+                   <button class="btn btn-default btn-save">產生存檔</button> 
+                </div>
+
+                <div>
+                   <a id="download-large" download="原圖.png"><button class="btn btn-default btn-large">下載原圖</button></a>
+                   <a id="download-small" download="縮圖.jpg"><button class="btn btn-default btn-small">下載縮圖</button></a>
+
+                </div> -->
+
+                <br><br>
+                <!-- <button class="btn btn-default btn-upGroup">解散群組</button> -->
+
+            </fieldset>
+                                <!-- 工具列 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div id="main-area">
+                        <div class="main-area-scroll">
+                            <canvas id="mainCanvas" width="1080" height="660"></canvas>
+                        </div>
+
+                        <div id="text-tools" class="tools-bar">
+                            <div class="tools-bar-column tools-option tools-text">
+                                <div class="text-tools-font-select">
+                                    <select>
+                                      <option class="text-option-arial" value="text-option-arial">Arial
+                                      <option class="text-option-arial" value="text-option-arial">Arial
+                                      <option class="text-option-arial" value="text-option-arial">Arial
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="tools-bar-column tools-option tools-simple">
+                                <button class="btn-tools-color-pick tools-option tools-shape">
+                                    <div class="color-pick color-pick-selected"></div>
+                                </button>
+
+                                <button class="btn-tools-color-pick tools-option tools-text">
+                                    <div class="color-pick color-pick-selected"></div>
+                                </button>
+
+                                <div class="color-pick-menu">
+                                    <p>自訂顏色</p>
+                                    <div class="color-pick-menu-custom"></div>
+                                    <p>常用顏色</p>
+                                    <div class="color-pick-menu-default"></div>
+                                </div>
+
+                                <div class="tools-alpha-slider tools-option tools-simple">
+                                    <div class="alpha-slider">
+                                        <div id="alpha-slider-plugun"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tools-bar-column tools-option tools-text">
+                                <button class="btn-tools-textBold btn-textTools"></button>
+                                <button class="btn-tools-textItalic btn-textTools"></button>
+                                <button class="btn-tools-textAlignLeft"></button>
+                                <button class="btn-tools-textAlignCenter"></button>
+                                <button class="btn-tools-textAlignRight"></button>
+                            </div>
+                            
+                            <div class="tools-bar-column tools-option tools-simple">
+                                <button class="btn-tools-copy"></button>
+                            </div>
+
+                            <div class="tools-bar-column tools-bar-column-end tools-option tools-simple">
+                                <button class="btn-tools-delete"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div><!-- #content -->
+
+            <div id="footer">
+                <div class="footer-left"><img src="images/footer-left.png" alt=""></div>
+                <div class="footer-right clearfix"><img src="images/footer-right.png" alt=""></div>
+            </div><!-- #footer -->
+
+        </div><!-- #wrapper -->
+
+        <script src="js/libs/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="js/libs/easeljs-NEXT.min.js"></script>
+        <script src="js/libs/canvas2image.js"></script>
+        <script src="js/libs/html2canvas.min.js"></script>
+        <script src="js/textInput.js"></script>
+        <script src="js/simpleObject.js"></script>
+        <script src="js/customEditor.js"></script>
+    </body>
+</html>

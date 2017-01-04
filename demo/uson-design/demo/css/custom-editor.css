@@ -20,7 +20,7 @@
 #side-area{
   position: absolute;
   height: 100%;
-  width: 34em;  /*for width ctrl*/
+  width: 25.5em;  /*for width ctrl*/
 }
 
 .side-tools{
@@ -30,9 +30,9 @@
 
 .side-tools-bar{
   position: relative;
-  width: 119px;
+  width: 88px;
   height: 100%;
-  background-color: #4d4d4d;
+  background-color: #fff;
   background-image: url(../images/side-tools-bar-dummy.png);
   background-repeat: no-repeat;
 }
@@ -45,7 +45,7 @@
   position: absolute;
   top:0;
   bottom: 0;
-  left:119px;
+  left:88px;
   right: 0;
   background-color: #3f3f40;
 
@@ -63,7 +63,7 @@
   position: absolute;
   top:0;
   bottom: 0;
-  left:34em; /*for width ctrl*/
+  left:25.5em; /*for width ctrl*/
   right: 0;
 }
 
@@ -318,26 +318,33 @@
 
 .side-tools-option button{
   position: relative;
-  width: 21.5em;
-  height: 12.5em;
+  width: 80%;
+  height: 10em;
   margin: 0 auto;
   padding: 0;
   border:none;
   outline: none;
-  background-color: #4d4d4d;
+  background-color: #626262;
   background-position: center center;
   background-repeat: no-repeat;
   display: inline-block;
 
-  margin:1em;
-  margin-left:2em;
+  margin:0.7em;
+  margin-left:9%;
   margin-right:0px;
 
   font-family: "微軟正黑體";
   /*font-size: 22px;*/
   color: #ccc;
+
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
 }
 
+.side-tools-option button:hover{
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 10px 22px;
+  top:-2px;
+}
 
 /* ==========================================================================
    Responsive class
@@ -345,7 +352,7 @@
 
 @media only screen and (max-width: 1680px) {
   body{
-    font-size: 15px;
+    font-size: 16px;
   }
 
 }

@@ -37,9 +37,9 @@ body {
 
 #header {
   padding-top:0px; /* fixed h1 */
-  height:75px;
+  height:47px;
   background-image: url(../images/header-colorbar.png);
-  background-position: center 0;
+  background-size: 100% 100%;
 }
 
 #header .head-left{
@@ -50,6 +50,61 @@ body {
   float: right;
 }
 
+#header .head-right img{
+  width: auto;
+  height: 47px;
+}
+
+#header .head-logo{
+  float:left;
+  width: 146px;
+  height: 47px;
+  background-image: url(../images/header-logo.png);
+  background-size: 100% auto;
+
+  margin-left: 27px;
+  margin-right: 20px;
+}
+
+#header .head-menu{
+  float:left;
+}
+
+#header .head-menu-ul{
+  padding: 0;
+  margin:0;
+}
+
+#header .head-menu li {
+  list-style-type: none;
+  float:left;
+  outline-width:0;
+  outline: none;
+
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#header .head-menu a{
+  font-family: "微軟正黑體";
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 47px;
+
+  outline-width:0;
+  outline: none;
+
+  transition-property: opacity;
+  transition-duration: 0.5s;
+}
+
+#header .head-menu a:hover{
+ opacity: .5;
+ filter: alpha(opacity=50);
+}
+
 /*********************************/
 
 #content {
@@ -57,7 +112,7 @@ body {
   /*padding-bottom:95px;  Height of the footer element */
 
   position: absolute;
-  top:75px;
+  top:47px;
   bottom:0px;
   left:0;
   right:0;

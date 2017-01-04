@@ -151,6 +151,44 @@ obj.setup = function() {
 
 	};
 
+	//建立寬高控制點
+	for (var i = 4; i < 8; i++) {
+		var UI_scalePoint = new createjs.Container();
+		UI_scalePoint.name = "UI_scalePoint_" + i;
+		UI_scalePoint.containerTarget = this;
+		UI_scalePoint.count = i;
+
+		var circle = new createjs.Shape();
+		var _r = 4;
+	  circle.graphics.setStrokeStyle(1).beginStroke("rgba(0,0,0,.5)").beginFill("rgba(255,255,255,.2)").drawCircle(0, 0, _r);
+	  UI_scalePoint.addChild(circle);
+
+	  containerLayerUI.addChild(UI_scalePoint);
+		// UI_scalePoint.addEventListener("pressmove", scalePointPressmove2);
+
+		circle.containerTarget = UI_scalePoint;
+		circle.count = i;
+
+		switch(i){
+	  	case 4: 
+	  			UI_scalePoint.x = 0;
+	  			UI_scalePoint.y = this.originHeight/2;
+	  		break;
+	  	case 5: 
+	  			UI_scalePoint.x = this.originWidth/2;
+	  			UI_scalePoint.y = this.originHeight;
+	  		break;
+	  	case 6: 
+	  			UI_scalePoint.x = this.originWidth;
+	  			UI_scalePoint.y = this.originHeight/2;
+	  		break;
+	  	case 7: 
+	  			UI_scalePoint.x = this.originWidth/2;
+	  			UI_scalePoint.y = 0;
+	  		break;
+	  }
+	};
+
 	//建立旋轉控制點
 	var UI_rotatePoint = new createjs.Container();
 	UI_rotatePoint.name = "UI_rotatePoint";
@@ -168,13 +206,13 @@ obj.setup = function() {
 	UI_rotatePointImg.onload = function () {
 		var shape = new createjs.Shape();
 		var mtx = new createjs.Matrix2D().translate(0,0);
-		shape.graphics.beginBitmapFill(UI_rotatePointImg, "no-repeat", mtx).drawRect(0, 0, 36, 36);
-		shape.regX = shape.regY = 18;
+		shape.graphics.beginBitmapFill(UI_rotatePointImg, "no-repeat", mtx).drawRect(0, 0, 22, 22);
+		shape.regX = shape.regY = 11;
 		UI_rotatePoint.addChild(shape);
 	}
 
-	UI_rotatePoint.x = 0;
-	UI_rotatePoint.y = this.originHeight/2;
+	UI_rotatePoint.x = this.originWidth/2;
+	UI_rotatePoint.y = this.originHeight;
 
 	UI_rotatePoint.addEventListener("pressmove", rotatePointPressmove);
 
@@ -220,7 +258,7 @@ obj.updateUI = function () {
 	_containerLayerUI.regY = _h*.5;
 
 	//四縮放控制點
-	for (var i = 0; i < 4; i++) {
+	for (var i = 0; i < 8; i++) {
 		var UI_scalePoint = _containerLayerUI.getChildByName("UI_scalePoint_" + i);
 
 		switch(i){
@@ -240,6 +278,22 @@ obj.updateUI = function () {
 	  		UI_scalePoint.x = _w;
 	  		UI_scalePoint.y = _h;
 	  		break;
+	  	case 4: 
+	  			UI_scalePoint.x = 0;
+	  			UI_scalePoint.y = _h/2;
+	  		break;
+	  	case 5: 
+	  			UI_scalePoint.x = _w/2;
+	  			UI_scalePoint.y = _h;
+	  		break;
+	  	case 6: 
+	  			UI_scalePoint.x = _w;
+	  			UI_scalePoint.y = _h/2;
+	  		break;
+	  	case 7: 
+	  			UI_scalePoint.x = _w/2;
+	  			UI_scalePoint.y = 0;
+	  		break;
 	  }
 	}
 
@@ -254,8 +308,8 @@ obj.updateUI = function () {
 
  	//移動旋轉點
  	var UI_rotatePoint = _containerLayerUI.getChildByName("UI_rotatePoint");
- 	UI_rotatePoint.x = 0;
-	UI_rotatePoint.y = _h/2;
+ 	UI_rotatePoint.x = _w/2;
+	UI_rotatePoint.y = _h + 25;
 }
 
 
@@ -302,6 +356,76 @@ function scalePointPressmove(event) {
 	var _scaleX = dWidth/UI_scalePoint.containerTarget.originWidth;
 	var _scaleY = dHeight/UI_scalePoint.containerTarget.originHeight;
 
+	if(_scaleX > _scaleY){
+		_scaleY = _scaleX;
+	}else{
+		_scaleX = _scaleY;
+	}
+
+
+	if(_scaleX > 0 &&  _scaleY > 0){
+	containerTarget.status.originScaleX = _scaleX;
+	containerTarget.status.originScaleY = _scaleY;
+
+	containerTarget.getChildByName("containerLayer").scaleX = containerTarget.status.originScaleX;
+	containerTarget.getChildByName("containerLayer").scaleY = containerTarget.status.originScaleY;
+	}
+
+	UI_scalePointCircle.x = 0;
+	UI_scalePointCircle.y = 0;
+
+	containerTarget.updateUI();
+}
+
+function scalePointPressmove2(event) {
+	// console.log(event.stageX);
+
+	var UI_scalePointCircle = event.target;
+	var UI_scalePoint = event.target.parent;
+	var containerTarget = UI_scalePoint.containerTarget;
+
+	var point = UI_scalePoint.globalToLocal(event.stageX, event.stageY);
+ 	UI_scalePointCircle.x = point.x;
+	UI_scalePointCircle.y = point.y;
+
+	var count = UI_scalePoint.count;
+	var dx;
+	var dy;
+
+	switch(count){
+  	case 4: 
+  		dx = 0 - UI_scalePointCircle.x;
+			dy = 0;
+  		break;
+  	case 5: 
+			dx = 0;
+			dy = 0 - UI_scalePointCircle.y;
+  		break;
+  	case 6: 
+  		dx = UI_scalePointCircle.x;
+			dy = 0 - UI_scalePointCircle.y;
+  		break;
+  	case 7: 
+  		dx = 0;
+			dy = 0 - UI_scalePointCircle.y;
+  		break;
+  }
+
+	var pWidth = UI_scalePoint.containerTarget.originWidth*containerTarget.status.originScaleX;
+	var pHeight = UI_scalePoint.containerTarget.originHeight*containerTarget.status.originScaleY;
+
+	var dWidth = pWidth + dx*2;
+	var dHeight = pHeight + dy*2;
+
+	var _scaleX = dWidth/UI_scalePoint.containerTarget.originWidth;
+	var _scaleY = dHeight/UI_scalePoint.containerTarget.originHeight;
+
+	/*if(_scaleX > _scaleY){
+		_scaleY = _scaleX;
+	}else{
+		_scaleX = _scaleY;
+	}*/
+
 
 	if(_scaleX > 0 &&  _scaleY > 0){
 	containerTarget.status.originScaleX = _scaleX;
@@ -326,10 +450,13 @@ function rotatePointPressmove(event) {
 	var pWidth = containerTarget.originWidth*containerTarget.status.originScaleX;
 	var pHeight = containerTarget.originHeight*containerTarget.status.originScaleY;
 
-	var dx = point.x - (pWidth/2);
-	var dy = point.y;
+	/*var dx = point.x - (pWidth/2);
+	var dy = point.y;*/
 
-	var _rotate = Math.atan2(dy,dx) / (Math.PI) * 180 + 180;
+	var dx = point.x;
+	var dy = point.y + (pHeight/2);
+
+	var _rotate = Math.atan2(dy,dx) / (Math.PI) * 180 - 90;
 
 	containerTarget.addRotate(_rotate);
 }

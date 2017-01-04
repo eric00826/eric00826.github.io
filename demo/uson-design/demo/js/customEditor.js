@@ -245,7 +245,7 @@ customEditor = function (){
 	}
 
 	function initSidTools () {
-		$(".side-tools-option").niceScroll({autohidemode:"false",cursorwidth:"10px",cursorborder:"none",cursoropacitymin:"1",railpadding: { top: 0, right: 5, left: 0, bottom: 0 },cursorcolor:"#28aaad"});
+		$(".side-tools-option").niceScroll({cursorwidth:"8px",cursorborder:"none",cursoropacitymin:"0.5",railpadding: { top: 0, right: 3, left: 0, bottom: 0 },cursorcolor:"#28aaad"});
 	}
 
 	function updateToolsBar() {

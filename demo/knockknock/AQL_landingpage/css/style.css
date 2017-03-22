@@ -118,6 +118,18 @@ body {
   filter: alpha(opacity=100);
 }
 
+.top-menu-nav-2{
+  position: relative;
+  width: 117px;
+  height: 20px;
+}
+
+.top-menu-nav-2 img{
+  position: absolute;
+  left:0;
+  top:0px;
+}
+
 .nav-point{
   position: absolute;
   width: 117px;

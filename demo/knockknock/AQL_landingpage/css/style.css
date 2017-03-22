@@ -93,8 +93,8 @@ body {
 
   /*background-image: url(../images/menu_dummy.png);*/
   background-image: url(../images/menu_bg.png);
-  opacity: .7;
-  filter: alpha(opacity=70);
+  /*opacity: .7;
+  filter: alpha(opacity=70);*/
   pointer-events: none;
 }
 
@@ -107,8 +107,8 @@ body {
 .top-menu-nav{
   display: inline-block;
   margin-right: 36px;
-  /*opacity: .7;
-  filter: alpha(opacity=70);*/
+  opacity: .7;
+  filter: alpha(opacity=70);
   transition: All 0.4s;
   cursor: pointer;
 }

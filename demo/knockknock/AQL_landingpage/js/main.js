@@ -108,6 +108,14 @@ main = function (){
 		
 		// kvIntro.from('.tvc-title',2.5,{delay:1, y:-20,autoAlpha:0,ease: Expo.easeOut});
 
+		kvIntro.from('.kv-title',8,{y:0,scale:0.95,autoAlpha:0, ease: Expo.easeOut});
+		kvIntro.to('.kv-white',6,{autoAlpha:0,ease: Expo.easeOut},"-=7.0");
+		kvIntro.from('.kv-product',4,{y:40,scale:1.05,ease: Expo.easeOut},"-=7.2");
+		kvIntro.from('.kv-bg',4,{y:10,ease: Expo.easeOut},"-=7.2");
+		kvIntro.from('.top-menu-bg',3,{autoAlpha:0,ease: Expo.easeOut},"-=7");
+		// kvIntro.from('.kv-logo',4,{y:10,ease: Expo.easeOut},"-=4");
+
+
 		//TVC Page
 		tvcIntro = new TimelineMax();
 		tvcIntro.from('.tvc-title',2.5,{y:-20,autoAlpha:0,ease: Expo.easeOut});

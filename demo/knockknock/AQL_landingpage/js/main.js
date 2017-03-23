@@ -210,7 +210,7 @@ main = function (){
 		});
 
 		TweenMax.set($('.menu-list-mobile'),{autoAlpha:0});
-		$('.menu-list-mobile').css('display', 'block');
+		if(isMobile) $('.menu-list-mobile').css('display', 'block');
 
 		$('.top-menu-nav-close').click(function(event) {
 			TweenMax.to('.menu-list-mobile',0.5,{autoAlpha:0});

@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+//顏色色系
+$blue: #428bca;
+$white: #ffffff;
+$black: #000000;
+$pink: #f0ad4e;
+$gray: #ccc;
+
+//抽象命名
+$btn-primary-color: $white;
+$btn-primary-bg: $blue;
+$btn-primary-border: darken($blue, 5%);
+
+$btn-second-color: $white;
+$btn-second-bg: $blue;
+$btn-second-border: darken($blue, 5%);
+
+$btn-third-color: $white;
+$btn-third-bg: $blue;
+$btn-third-border: darken($blue, 5%);
+
+
+//color
+.blue{ color: $blue; }
+.white{ color: $white; }
+.black{ color: $black; }
+.pink{ color: $pink; }
+.gray{ color: $gray; }
+
+//bg color
+.bg-blue{ background: $blue; }
+.bg-white{ background: $white; }
+.bg-black{ background: $black; }
+.bg-pink{ background: $pink; }
+.bg-gray{ background: $gray; }

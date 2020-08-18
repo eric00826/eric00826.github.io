@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+.header{
+  position: fixed;
+  width: 768px;
+  left: 50%;
+  top: 0;
+
+  margin-left: -384px;
+  z-index: 999;
+
+  &__logo{
+    position: absolute;
+    left: 2.2em;
+    top: 2.2em;
+  }
+
+  &__menu__btn{
+    position: absolute;
+    right: 1.2em;
+    top: 1.2em;
+  }
+}
+
+.wrapper{
+  position: relative;
+  width: 768px;
+  margin: 0 auto;
+  background-color: #fff;
+
+  min-height: 100vh;
+}
+
+/***********************************************/
+
+.kv{
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
+  overflow: hidden;
+
+  .kv__bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .kv__bottom{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    bottom: 0.5em;
+    text-align: center;
+  }
+
+  &__title, &__title__sub{
+    margin-top: 1.2em;
+  }
+  &__more{
+    margin-top: 3em;
+  }
+}

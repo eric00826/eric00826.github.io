@@ -1,21 +1,19 @@
 @charset "UTF-8";
 
-body {
-}
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
-.container-fluid {
-  padding: 0 !important;
-}
-
 body, html {
   position: relative;
   background: #ccc;
   font-size: 16px;
-  font-family: "微軟正黑體", "LiHei Pro Medium", Geneva, Verdana, sans-serif !important;
+  font-family: 'Noto Sans TC', sans-serif !important;
   -webkit-text-size-adjust: 100%;
+
+  background-image: url(../images/pc_display.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  letter-spacing: 0.05em;
+}
+
+.container-fluid {
+  padding: 0 !important;
 }

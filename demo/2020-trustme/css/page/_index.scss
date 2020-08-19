@@ -39,6 +39,7 @@
 
   overflow: auto;
   padding-top: 120px;
+  padding-bottom: 40px;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -54,10 +55,12 @@
   -webkit-align-items: center;
   align-items: center;
 
+  display: none;
+
   .close__btn {
     position: absolute;
-    right: 3em;
-    top: 3em;
+    right: 75px;
+    top: 69px;
     cursor: pointer;
 
     &:hover {
@@ -87,6 +90,12 @@
 
   .menu__content {
     text-align: center;
+  }
+
+  .social{
+    a{
+      margin:.2em;
+    }
   }
 }
 

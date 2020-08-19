@@ -56,20 +56,21 @@ main = function () {
       });
     }
 
-    TweenMax.set('.menu__container',{x:768,autoAlpha:0});
+    $('.menu__container').css('display','flex');
+    TweenMax.set('.menu__container',{y:-768,autoAlpha:0});
 
     $('.header__menu__btn').click(function (e) {     
-      TweenMax.to('.menu__container',0.5,{x:0,autoAlpha:1});
+      TweenMax.to('.menu__container',0.5,{y:0,autoAlpha:1});
     });
 
     $('.close__btn').click(function (e) {     
-      TweenMax.to('.menu__container',0.3,{x:768,autoAlpha:0});
+      TweenMax.to('.menu__container',0.3,{y:-768,autoAlpha:0});
     });
 
-    $('a').click(function (e) {
-      e.preventDefault();
+    $('a').click(function (e) {      
       var target = $(this).attr('href');
       if (target[0] == '#' && target.length > 1 && target != '#pills-Virtual' && target != '#pills-Physical') {
+        e.preventDefault();
         $('html,body').animate({ scrollTop: $(target).offset().top }, 1000);        
       }
       $('.close__btn').click();

@@ -12,6 +12,10 @@ body, html {
   background-size: cover;
   background-position: center;
   letter-spacing: 0.05em;
+
+  @media screen and (min-width: 769px){
+    font-size: 12px;
+  }
 }
 
 .container-fluid {

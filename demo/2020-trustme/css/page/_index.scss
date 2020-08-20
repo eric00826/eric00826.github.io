@@ -5,20 +5,24 @@
   width: 768px;
   left: 50%;
   top: 0;
-
   margin-left: -384px;
+  @media screen and (min-width: 769px) {
+    width: 576px;
+    margin-left: -288px;
+  }
+
   z-index: 999;
 
   &__logo {
     position: absolute;
     left: 2.2em;
-    top: 2.2em;
+    top: 1.875em;
   }
 
   &__menu__btn {
     position: absolute;
     right: 2.2em;
-    top: 2.2em;
+    top: 1.875em;
     cursor: pointer;
 
     &:hover {
@@ -37,9 +41,17 @@
   background-color: rgba(250,136,67,.95);
   z-index: 999999;
 
-  overflow: auto;
-  padding-top: 120px;
-  padding-bottom: 40px;
+  font-size: 12px;
+
+  @media screen and (min-width: 769px) {
+    width: 576px;
+    margin-left: -288px;
+    font-size: 8px;
+  }
+
+  overflow: hidden;
+  padding-top: 7.5em;
+  padding-bottom: 2.5em;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -59,8 +71,8 @@
 
   .close__btn {
     position: absolute;
-    right: 75px;
-    top: 69px;
+    right: 4.6875em;
+    top: 4.3125em;
     cursor: pointer;
 
     &:hover {
@@ -69,14 +81,14 @@
   }
 
   .hr {
-    width: 480px;
+    width: 30em;
     height: 2px;
     background-color: rgba(255,255,255,.5);
   }
 
   .item {
-    padding: 15px;
-    font-size: 40px;
+    padding: 0.9375em;
+    font-size: 2.5em;
   }
 
   a {
@@ -92,9 +104,9 @@
     text-align: center;
   }
 
-  .social{
-    a{
-      margin:.2em;
+  .social {
+    a {
+      margin: .5em;
     }
   }
 }
@@ -102,12 +114,16 @@
 .footer {
   position: fixed;
   width: 768px;
-  height: 78px;
+  height: 4.875em;
   left: 50%;
   bottom: 0;
   margin-left: -384px;
   z-index: 999;
   background-color: #fff;
+  @media screen and (min-width: 769px) {
+    width: 576px;
+    margin-left: -288px;
+  }
 
   box-shadow: 0 -9px 44px -23px rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 0 -9px 44px -23px rgba(0, 0, 0, 0.7);
@@ -125,12 +141,12 @@
 
     &--0 {
       background-image: url("../images/float-btn-0.png");
-      // background-size: 100% 100%;
+      background-size: 100% auto;
     }
 
     &--1 {
       background-image: url("../images/float-btn-1.png");
-      // background-size: 100% 100%;
+      background-size: 100% auto;
       left: 50%;
       margin-left: -1px;
     }
@@ -148,12 +164,13 @@
   -webkit-box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.575);
   -moz-box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.575);
   -o-box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.575);
-  padding-bottom: 80px;
-
-  font-size: 28px;
-  color: #000;
+  padding-bottom: 5em;
+  color: #222222;
 
   overflow: hidden;
+  @media screen and (min-width: 769px) {
+    width: 576px;
+  }
 }
 
 p {
@@ -166,7 +183,7 @@ p {
 section {
   position: relative;
   width: 100%;
-  padding: 2.8em 42px;
+  padding: 2.8em 2.625em;
   background-color: #fff;
   text-align: center;
   overflow: hidden;
@@ -186,6 +203,10 @@ section {
       color: #fff;
     }
   }
+
+  p {
+    font-size: 1.75em;
+  }
 }
 
 .kv {
@@ -193,6 +214,15 @@ section {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  @media screen and (min-width: 769px) {
+    height: 960px;
+  }
+
+  /*font-size: 28px;
+
+  @media screen and (min-width: 769px){
+    font-size: 21px;
+  }*/
 
   .kv__bg {
     position: absolute;
@@ -205,7 +235,7 @@ section {
     width: 100%;
     height: auto;
     left: 0;
-    bottom: 90px;
+    bottom: 7em;
     text-align: center;
   }
 
@@ -232,10 +262,10 @@ section {
 
     .vidoe__loader {
       position: absolute;
-      width: 685px;
-      height: 380px;
+      width: 42.8125em;
+      height: 23.75em;
       left: 0;
-      top: 20px;
+      top: 1.25em;
     }
   }
 }
@@ -257,17 +287,17 @@ section {
 
     &--2 {
       text-align: right;
-      margin-top: -180px;
+      margin-top: -11.25em;
     }
 
     &--3 {
       text-align: left;
-      margin-top: -85px;
+      margin-top: -5.3125em;
     }
 
     &__people {
       &--1 {
-        padding-left: 42px;
+        padding-left: 2.625em;
       }
 
       &--2 {
@@ -278,35 +308,38 @@ section {
 
       &--3 {
         position: absolute;
-        top: -35px;
+        top: -2.1875em;
         left: 0;
       }
     }
 
     &__text {
       position: absolute;
-      font-size: 26px;
-      padding-top: 80px;
+      padding-top: 5em;
+
+      p {
+        font-size: 1.625em;
+      }
 
       &--1 {
-        top: 50px;
-        right: 42px;
+        top: 3.125em;
+        right: 2.625em;
       }
 
       &--2 {
-        top: 191px;
-        left: 42px;
+        top: 11.9em;
+        left: 2.625em;
         text-align: left;
         color: #fff;
       }
 
       &--3 {
-        top: 112px;
-        right: 42px;
+        top: 7em;
+        right: 2.625em;
       }
 
       &--title {
-        font-size: 40px;
+        font-size: 2.5em;
         color: #ff8831;
         border-left: 1px #ff8831 solid;
         border-bottom: 1px #ff8831 solid;
@@ -314,13 +347,13 @@ section {
         // font-weight: 500;
 
         position: absolute;
-        width: 600px;
-        left: -16px;
+        width: 30em;
+        left: -0.5em;
         top: 0;
       }
 
       &--title--right {
-        font-size: 40px;
+        font-size: 2.5em;
         color: #fff;
         border-right: 1px #fff solid;
         border-bottom: 1px #fff solid;
@@ -328,8 +361,8 @@ section {
         // font-weight: 500;
 
         position: absolute;
-        width: 600px;
-        right: 58px;
+        width: 630em;
+        right: 1.625em;
         top: 0;
         text-align: right;
       }
@@ -348,14 +381,14 @@ section {
   background-repeat: no-repeat;
 
   .training__title__img {
-    margin-top: -50px;
+    margin-top: -3.125em;
   }
 
   .content {
     .group {
       text-align: left;
-      padding-left: 42px;
-      padding-right: 42px;
+      padding-left: 2.625em;
+      padding-right: 2.625em;
     }
 
     p {
@@ -363,7 +396,7 @@ section {
     }
 
     .title {
-      font-size: 40px;
+      font-size: 2.5em;
       color: #ff8831;
       font-weight: 500;
       margin-top: .5em;
@@ -380,43 +413,43 @@ section {
       cursor: pointer;
 
       &--1 {
-        left: 50px;
-        top: 68px;
+        left: 3.125em;
+        top: 4.25em;
       }
 
       &--2 {
-        left: 300px;
-        top: 10px;
+        left: 18.75em;
+        top: .625em;
       }
 
       &--3 {
-        left: 524px;
-        top: 95px;
+        left: 32.75em;
+        top: 5.9375em;
       }
 
       &--4 {
-        left: 590px;
-        top: 283px;
+        left: 36.875em;
+        top: 17.6875em;
       }
 
       &--5 {
-        left: 473px;
-        top: 467px;
+        left: 29.5625em;
+        top: 29.1875em;
       }
 
       &--6 {
-        left: 239px;
-        top: 535px;
+        left: 14.9375em;
+        top: 33.4375em;
       }
 
       &--7 {
-        left: 77px;
-        top: 420px;
+        left: 4.8125em;
+        top: 26.25em;
       }
 
       &--8 {
-        left: 23px;
-        top: 200px;
+        left: 1.4375em;
+        top: 12.5em;
       }
     }
 
@@ -427,10 +460,10 @@ section {
 
   .text__area {
     position: absolute;
-    width: 300px;
-    height: 300px;
-    left: 232px;
-    top: 181px;
+    width: 15.625em;
+    height: 12.5em;
+    left: 16.3125em;
+    top: 14.0625em;
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -448,7 +481,7 @@ section {
 
     .text__area__content {
       text-align: left;
-      font-size: 26px;
+      font-size: 1.625em;
     }
   }
 
@@ -464,7 +497,7 @@ section {
   }
 
   .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 14px;
+    margin: 0 0.875em;
   }
 
   .swiper-pagination-bullet-active {
@@ -474,8 +507,8 @@ section {
   .swiper-button-next-custom {
     position: absolute;
     top: 50%;
-    margin-top: 20px;
-    right: 10px;
+    margin-top: 1.25em;
+    right: 0.625em;
     z-index: 1000;
     cursor: pointer;
     outline: none;
@@ -484,8 +517,8 @@ section {
   .swiper-button-prev-custom {
     position: absolute;
     top: 50%;
-    margin-top: 20px;
-    left: 10px;
+    margin-top: 1.25em;
+    left: .625em;
     z-index: 1000;
     cursor: pointer;
     outline: none;
@@ -495,6 +528,36 @@ section {
 .compare {
   background-image: url("../images/compare-bg.png");
   background-size: 100% 100%;
+  padding-left: 0;
+  padding-right: 0;
+
+  .content{
+    position: relative;
+  }
+
+  .win{
+    position: absolute;
+
+    &--1{
+      left:29.75em;
+      top: 11.375em;
+    }
+
+    &--2{
+      left:29.75em;
+      top: 15.625em;
+    }
+
+    &--3{
+      left:29.75em;
+      top: 49.4375em;
+    }
+
+    &--4{
+      left:29.75em;
+      top: 59.125em;
+    }
+  }
 }
 
 .comment {
@@ -509,17 +572,20 @@ section {
 
     text-align: left;
     position: relative;
-    width: 640px;
-    border-left: #ff8831 6px solid;
-    padding-left: 18px;
-    font-size: 26px;
+    width: 40em;
+    border-left: #ff8831 .375em solid;
+    padding-left: 1.125em;
+
+    p {
+      font-size: 1.625em;
+    }
 
     &--1 {
-      margin-left: 82px;
+      margin-left: 5.125em;
     }
 
     &--2 {
-      margin-left: 35px;
+      margin-left: 2.1875em;
     }
 
   }
@@ -535,37 +601,42 @@ section {
     position: relative;
 
     &--2 {
-      margin-top: -100px;
+      margin-top: -6.25em;
     }
 
     .content__group {
-      padding: 42px;
+      padding: 2.625em;
 
       &--1 {
         position: absolute;
-        top: 200px;
-        top: 350px;
+        top: 12.5em;
+        top: 21.875em;
         color: #fff;
       }
 
       &--2 {
-        top: 350px;
+        top: 21.875em;
         color: #4a4a4a;
       }
     }
 
     .text {
       text-align: left;
-      font-size: 26px;
       margin-top: .5em;
+
+      p {
+        font-size: 1.625em;
+      }
     }
   }
 }
 
 .copyright {
-  height: 183px;
-  font-size: 20px;
+  height: 11.4375em;
+  font-size: 1.25em;
   color: #222222;
   background-color: #dfdfdf;
-  padding-top: 40px;
+  padding-top: 2.5em;
+  text-shadow: 0 1px 1px white;
+
 }

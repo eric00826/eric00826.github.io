@@ -15,6 +15,8 @@ main = function () {
     // new WOW().init();
     // TweenMax.set('.wrapper',{scale:.75});
 
+    TweenMax.to('.loading',0.5,{delay:0.5,autoAlpha:0});
+
     $('.menu__container').css('display', 'flex');
     TweenMax.set('.menu__container', { y: -768, autoAlpha: 0 });
 

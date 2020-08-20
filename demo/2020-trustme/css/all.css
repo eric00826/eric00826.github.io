@@ -12227,7 +12227,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .menu__container .item {
-  padding: 0.9375em;
+  padding: .9375em;
   font-size: 2.5em;
 }
 
@@ -12308,7 +12308,7 @@ h1, h2, h3, h4, h5, h6,
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../images/loading.gif) no-repeat center center;
+  background: url("../images/loading.gif") no-repeat center center;
   background-size: auto 100%;
   z-index: 1;
 }
@@ -12373,11 +12373,6 @@ section p {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  /*font-size: 28px;
-
-  @media screen and (min-width: 769px){
-    font-size: 21px;
-  }*/
 }
 
 @media screen and (min-width: 769px) {
@@ -12399,6 +12394,20 @@ section p {
   left: 0;
   bottom: 7em;
   text-align: center;
+}
+
+.kv--small {
+  height: 669px;
+}
+
+@media screen and (min-width: 769px) {
+  .kv--small {
+    height: 501px;
+  }
+}
+
+.kv--small .kv__bottom {
+  bottom: 0;
 }
 
 .kv__title, .kv__title__sub {
@@ -12642,7 +12651,7 @@ section p {
 }
 
 .training .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 0.875em;
+  margin: 0 .875em;
 }
 
 .training .swiper-pagination-bullet-active {
@@ -12653,7 +12662,7 @@ section p {
   position: absolute;
   top: 50%;
   margin-top: 1.25em;
-  right: 0.625em;
+  right: .625em;
   z-index: 1000;
   cursor: pointer;
   outline: none;
@@ -12775,12 +12784,77 @@ section p {
 }
 
 .copyright {
-  height: 11.4375em;
+  height: 9em;
   font-size: 1.25em;
   color: #222222;
   background-color: #dfdfdf;
-  padding-top: 2.5em;
+  padding-top: 2.2em;
   text-shadow: 0 1px 1px white;
+}
+
+/********************************************/
+.course .content .title {
+  text-align: left;
+}
+
+.course .content p {
+  text-align: left;
+}
+
+.course--1 {
+  background: url("../images/course-bg.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.course .note {
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+
+.wrapper--thankyou {
+  padding-bottom: 0;
+  background-color: #dfdfdf;
+}
+
+.thankyou {
+  height: 1103px;
+}
+
+@media screen and (min-width: 769px) {
+  .thankyou {
+    height: 827px;
+    min-height: 827px;
+  }
+}
+
+.thankyou .kv__bottom {
+  bottom: 1.5em;
+}
+
+.thankyou .kv__title__sub {
+  margin-top: 0;
+  color: #fff;
+}
+
+.thankyou .thankyou__join {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.thankyou .thankyou__join .effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.thankyou .thankyou__join:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
 }
 
 body, html {

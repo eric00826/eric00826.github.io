@@ -102,6 +102,8 @@ main = function () {
     });
 
     TweenMax.to('.win__icon', 0.3, { scale: 1.2, y: -3, yoyo: true, repeat: -1 });
+    TweenMax.to('.effect', 0.5, { autoAlpha: 0, yoyo: true, repeat: -1 });
+    
   }
 
   //constructor
